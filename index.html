@@ -2,8 +2,8 @@
 <html lang="zh-CN">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>浙江教师招聘 · 结构化面试真题库 + AI 模拟考官</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>浙江教招结构化面试</title>
 <meta name="description" content="浙江教师招聘结构化面试备考神器：300+ 道各地市真题、AI 模拟考官限时打分、每日打卡、七大类题型专业答题框架与避坑自查，纯网页免费练。">
 <meta property="og:title" content="浙江教师招聘 · 结构化面试真题库 + AI 模拟考官">
 <meta property="og:description" content="300+ 真题、AI 模拟考官打分、每日打卡、专业答题框架，免费练结构化面试。">
@@ -444,6 +444,56 @@
   .fav-actions button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 16px;font-size:13.5px;font-weight:700;color:#334155;cursor:pointer}
   .fav-actions button:hover{border-color:#f59e0b;color:#ea580c}
   @media(max-width:560px){.speak-btn{top:12px;right:50px;font-size:12px;padding:3px 8px}.fav-actions button{flex:1}}
+
+  /* ===== 手机端整体优化（≤640px） ===== */
+  @media(max-width:640px){
+    /* 顶部 hero 紧凑化 */
+    header{padding:30px 0 18px;padding-top:calc(28px + env(safe-area-inset-top,0px))}
+    header .eyebrow{font-size:11px;letter-spacing:1.5px;display:none} /* 隐藏英文 eyebrow 省位 */
+    header h1{font-size:19px;margin-top:2px;line-height:1.32}
+    header p{font-size:12.5px;margin-top:7px;line-height:1.6;opacity:.95}
+    /* 统计卡 2x2 + 收紧 */
+    .stats{margin-top:14px;gap:6px;background:rgba(255,255,255,.16);padding:6px}
+    .stats div{padding:9px 4px;min-width:0;border-right:0;background:rgba(255,255,255,.16);border-radius:10px}
+    .stats .si{font-size:14px;margin-bottom:1px}
+    .stats b{font-size:17px}
+    .stats span{font-size:11px;line-height:1.2}
+    /* 导航横向滚动，避免换行挤压 */
+    .nav{position:sticky;top:0}
+    .nav .wrap{overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none}
+    .nav .wrap::-webkit-scrollbar{display:none}
+    .navtab{flex:0 0 auto;padding:11px 14px;font-size:14px;border-bottom-width:2px}
+    /* 工具栏搜索/按钮 换行更紧凑 */
+    .toolbar{gap:8px;margin:14px 0 12px}
+    .search{flex:1 1 100%;font-size:13px}
+    .randbtn{font-size:12.5px;padding:7px 11px}
+    /* 题型来源条更紧凑 */
+    .srcbar{gap:8px;flex-wrap:wrap;font-size:12px}
+    .srcseg{padding:3px}
+    .srcseg div{padding:5px 9px;font-size:12px}
+    /* 卡片更紧凑 */
+    .q{padding:14px 14px}
+    .q .qt{font-size:14.5px;line-height:1.55}
+    .q .toggle{font-size:12.5px;padding:6px 10px}
+    /* AI 考官区紧凑 */
+    .coach-hero{padding:18px 18px;margin:12px 0}
+    .coach-hero h2{font-size:18px}
+    .coach-hero p{font-size:12.5px}
+    /* 打卡 hero 紧凑 */
+    .ck-hero{padding:18px 18px;margin:12px 0}
+    .ck-streak{font-size:38px}
+    /* 复习 hero 紧凑 */
+    .rv-hero{padding:18px 18px;margin:12px 0}
+    .rv-hero h2{font-size:18px}
+    .rv-due{font-size:36px}
+    .rv-hero-l{padding-right:0;padding-bottom:12px;border-right:0;border-bottom:1px solid rgba(255,255,255,.25);width:100%}
+    /* 区段大标题 */
+    .sec-title{font-size:17px}
+    /* 页脚 */
+    footer{padding:24px 0 calc(40px + env(safe-area-inset-bottom,0px));font-size:11.5px}
+    /* 回到顶部缩小 */
+    .to-top{width:42px;height:42px;font-size:18px;right:14px;bottom:16px}
+  }
 </style>
 </head>
 <body>
