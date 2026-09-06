@@ -1,0 +1,2395 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>浙江教师招聘 · 结构化面试真题库 + AI 模拟考官</title>
+<meta name="description" content="浙江教师招聘结构化面试备考神器：300+ 道各地市真题、AI 模拟考官限时打分、每日打卡、七大类题型专业答题框架与避坑自查，纯网页免费练。">
+<meta property="og:title" content="浙江教师招聘 · 结构化面试真题库 + AI 模拟考官">
+<meta property="og:description" content="300+ 真题、AI 模拟考官打分、每日打卡、专业答题框架，免费练结构化面试。">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="zh_CN">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="浙江教师招聘 · 结构化面试真题库 + AI 模拟考官">
+<meta name="twitter:description" content="300+ 真题、AI 模拟考官打分、每日打卡、专业答题框架，免费练结构化面试。">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='88'>🎯</text></svg>">
+<style>
+  :root{
+    --bg:#f4f6fa; --card:#ffffff; --line:#e7ebf1; --ink:#1c2430; --sub:#6b7280;
+    --brand:#3b6ef5; --brand2:#7c5cf0; --brand-soft:#eef3ff;
+    --t1:#6366f1; --t2:#0ea5e9; --t3:#14b8a6; --t4:#f59e0b; --t5:#8b5cf6; --t6:#10b981; --t7:#ef4444;
+    --shadow-sm:0 1px 2px rgba(20,30,50,.05);
+    --shadow:0 6px 22px rgba(30,50,90,.09);
+    --radius:16px;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI","PingFang SC","Hiragino Sans GB","Microsoft YaHei",sans-serif;
+    background:var(--bg);color:var(--ink);line-height:1.72;-webkit-font-smoothing:antialiased;font-size:15px}
+  a{color:inherit}
+  .wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+  /* header */
+  header{position:relative;overflow:hidden;background:linear-gradient(135deg,#3b6ef5 0%,#6a5cf0 100%);color:#fff;padding:44px 0 30px}
+  header::after{content:"";position:absolute;right:-60px;top:-90px;width:260px;height:260px;border-radius:50%;background:rgba(255,255,255,.10)}
+  header::before{content:"";position:absolute;left:-50px;bottom:-100px;width:210px;height:210px;border-radius:50%;background:rgba(255,255,255,.07)}
+  header .wrap{position:relative;z-index:1}
+  header .eyebrow{font-size:12.5px;letter-spacing:2px;opacity:.85;font-weight:600}
+  header h1{font-size:27px;font-weight:800;letter-spacing:.5px;margin-top:7px}
+  header p{margin-top:10px;font-size:14.5px;opacity:.92;max-width:720px}
+  .stats{display:flex;gap:0;margin-top:24px;flex-wrap:wrap;background:rgba(255,255,255,.22);border:1px solid rgba(255,255,255,.22);
+    border-radius:18px;backdrop-filter:blur(6px);overflow:hidden;max-width:760px}
+  .stats div{flex:1 1 auto;padding:14px 10px;text-align:center;color:#fff;min-width:110px;border-right:1px solid rgba(255,255,255,.16)}
+  .stats div:last-child{border-right:0}
+  .stats .si{font-size:16px;display:block;margin-bottom:3px;opacity:.92}
+  .stats b{font-size:24px;display:block;font-weight:800;line-height:1.2}
+  .stats span{font-size:12.5px;opacity:.9}
+  /* region tabs */
+  .regions{position:sticky;top:48px;z-index:20;background:rgba(244,246,250,.92);backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);padding:13px 0}
+  .rtabs{display:flex;gap:8px;flex-wrap:wrap;padding-bottom:3px}
+  .rtab{flex:0 0 auto;border:1px solid var(--line);background:var(--card);color:var(--sub);
+    padding:8px 16px;border-radius:22px;font-size:13.5px;cursor:pointer;white-space:nowrap;transition:.18s;font-weight:500}
+  .rtab:hover{border-color:var(--brand);color:var(--brand);transform:translateY(-1px)}
+  .rtab.on{background:linear-gradient(135deg,#3b6ef5,#6a5cf0);border-color:transparent;color:#fff;font-weight:600;
+    box-shadow:0 4px 12px rgba(59,110,245,.3)}
+  /* feature banner */
+  .feature{margin:20px 0 6px;background:var(--card);border:1px solid var(--line);border-left:5px solid var(--brand);
+    border-radius:var(--radius);padding:18px 20px;box-shadow:var(--shadow-sm)}
+  .feature h3{font-size:16px;color:var(--brand);margin-bottom:9px;font-weight:700}
+  .feature .meta{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:11px}
+  .feature .meta span{font-size:12px;background:var(--brand-soft);color:var(--brand);padding:4px 11px;border-radius:8px;font-weight:500}
+  .feature p{font-size:13.5px;color:var(--sub);line-height:1.78}
+  .feature .tip{margin-top:11px;font-size:13px;color:#b45309;background:#fff8ed;border:1px solid #fde9cf;
+    border-radius:10px;padding:9px 13px;line-height:1.75}
+  /* toolbar */
+  .toolbar{display:flex;gap:11px;align-items:center;flex-wrap:wrap;margin:20px 0 15px}
+  .srcbar{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:4px 0 0}
+  .srcbar .src-lab{font-size:12px;color:var(--sub);font-weight:600}
+  .srcseg{display:inline-flex;background:#eef1f5;border-radius:10px;padding:3px;gap:2px}
+  .srcseg div{padding:5px 14px;font-size:12.5px;border-radius:8px;color:var(--sub);cursor:pointer;font-weight:600;transition:.15s;user-select:none}
+  .srcseg div:hover{color:var(--ink)}
+  .srcseg div.on{background:var(--card);color:var(--brand);box-shadow:0 1px 3px rgba(20,30,50,.1)}
+  .src-note{font-size:12px;color:#9aa3b1}
+  .chips{display:flex;gap:7px;flex-wrap:wrap}
+  .chip{font-size:12.5px;border:1px solid var(--line);background:var(--card);color:var(--sub);
+    padding:6px 13px;border-radius:9px;cursor:pointer;transition:.15s;font-weight:500}
+  .chip:hover{border-color:#cdd5e0;color:var(--ink)}
+  .chip.on{background:var(--ink);border-color:var(--ink);color:#fff;font-weight:600}
+  .search{flex:1;min-width:180px;display:flex;align-items:center;gap:9px;border:1px solid var(--line);
+    background:var(--card);border-radius:11px;padding:9px 14px;transition:.18s}
+  .search:focus-within{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+  .search input{border:0;outline:0;width:100%;font-size:14px;background:transparent;color:var(--ink)}
+  .count{font-size:13px;color:var(--sub);margin-left:auto;white-space:nowrap}
+  .randbtn{flex:0 0 auto;border:1px solid var(--brand);color:var(--brand);background:var(--card);
+    padding:9px 16px;border-radius:11px;font-size:13px;cursor:pointer;font-weight:600;transition:.15s}
+  .randbtn:hover{background:var(--brand-soft);transform:translateY(-1px)}
+  /* cards */
+  .grid{display:grid;grid-template-columns:1fr;gap:13px;margin-bottom:22px}
+  .loadmore{text-align:center;margin:2px 0 26px}
+  .loadmore button{border:1px solid var(--brand);background:var(--card);color:var(--brand);padding:11px 26px;border-radius:12px;font-size:13.5px;cursor:pointer;font-weight:600;transition:.15s}
+  .loadmore button:hover{background:var(--brand-soft);transform:translateY(-1px)}
+  .loadmore .lm-info{display:block;font-size:12px;color:#9aa3b1;margin-top:7px}
+  .q{background:var(--card);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;position:relative;
+    transition:.18s;box-shadow:var(--shadow-sm)}
+  .q:hover{border-color:#cdd9ee;box-shadow:var(--shadow);transform:translateY(-2px)}
+  .q .tags{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:10px;padding-right:34px}
+  .badge{font-size:11.5px;padding:3px 10px;border-radius:7px;font-weight:600}
+  .b-region{background:#eef2f7;color:#475569}
+  .src-cls{background:#f0f4ff;color:#64748b;border:1px solid #dbe4f5}
+  .src-sim{background:#fff7ed;color:#b45309;border:1px solid #fde9cf}
+  .q .qt{font-size:15.5px;font-weight:600;line-height:1.65;padding-right:34px}
+  .q .src{font-size:12px;color:#9aa3b1;margin-top:7px}
+  .q .toggle{margin-top:12px;font-size:13px;color:var(--brand);cursor:pointer;font-weight:600;user-select:none;
+    display:inline-flex;align-items:center;gap:4px}
+  .q .toggle:hover{text-decoration:underline}
+  .q .ans{display:none;margin-top:12px;padding-top:13px;border-top:1px dashed var(--line)}
+  .q .ans.show{display:block;animation:fade .25s ease}
+  @keyframes fade{from{opacity:0;transform:translateY(-4px)}to{opacity:1;transform:none}}
+  .q .ans ul{list-style:none}
+  .q .ans li{font-size:13.5px;color:#3a4250;padding-left:20px;position:relative;margin-bottom:8px;line-height:1.72}
+  .q .ans li:before{content:"▸";position:absolute;left:0;color:var(--brand);font-weight:700}
+  .q .ans .lab{font-size:12px;color:var(--sub);font-weight:600;margin-bottom:7px;display:block}
+  .q-note{margin-top:16px;padding-top:14px;border-top:1px dashed var(--line)}
+  .q-note label{font-size:13px;font-weight:700;color:var(--ink);display:block;margin-bottom:6px}
+  .q-note textarea{width:100%;min-height:96px;border:1px solid var(--line);border-radius:11px;padding:10px 12px;font-size:14px;line-height:1.65;color:var(--ink);resize:vertical;outline:0;background:#fbfcff}
+  .q-note textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+  .q-note-actions{display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-top:8px}
+  .q-note-actions button{border:1px solid var(--line);background:#fff;border-radius:9px;padding:7px 13px;font-size:12.5px;cursor:pointer;font-weight:600;color:var(--sub);transition:.15s}
+  .q-note-actions button:hover{border-color:var(--brand);color:var(--brand);background:#f8faff}
+  .q-note-actions .save{background:var(--brand);border-color:var(--brand);color:#fff}
+  .q-note-actions .save:hover{background:#2959d4}
+  .q-note-tip{font-size:12px;color:#9aa3b1;margin-left:auto}
+  .q-note-saved{margin-top:10px;background:#f0f9ff;border:1px solid #c7e3f7;border-radius:10px;padding:10px 12px;font-size:13px;color:#1c3a5f;line-height:1.65;white-space:pre-wrap}
+  .q-note-saved b{color:var(--brand)}
+  .q-note-exemplar{margin-top:12px;background:#fffdf4;border:1px solid #f3e6c6;border-radius:11px;padding:12px 14px}
+  .q-note-exemplar .lab{font-size:12px;color:#92400e;font-weight:700;margin-bottom:6px;display:block}
+  .q-note-exemplar p{font-size:13.5px;color:#4a3b1f;line-height:1.75;white-space:pre-wrap}
+  .frame-steps{display:flex;flex-wrap:wrap;gap:6px;margin:9px 0 4px}
+  .frame-steps span{font-size:11.5px;font-weight:700;color:#fff;background:#94a3b8;padding:3px 9px;border-radius:12px}
+  .ans ul li .fs,.fs{color:#1d4ed8;font-weight:700;margin-right:5px}
+  .tips-list{margin:4px 0 10px;padding-left:18px;font-size:12.8px;color:#475569;line-height:1.62}
+  .tips-list li{margin:3px 0}
+  .ans .lab,.ck-ref .lab{display:block;font-size:12px;color:#64748b;font-weight:700;margin:8px 0 3px}
+  .tips-list li::marker{color:#cbd5e1}
+  .ammo-line{font-size:12.8px;color:#5b21b6;background:#f5f3ff;border:1px solid #e9d5ff;border-radius:8px;padding:8px 10px;line-height:1.6;margin-top:2px}
+  /* method modal */
+  .overlay{display:none;position:fixed;inset:0;background:rgba(15,23,42,.5);z-index:40;
+    align-items:flex-end;justify-content:center}
+  .overlay.show{display:flex}
+  .sheet{background:var(--card);width:100%;max-width:580px;max-height:84vh;overflow-y:auto;border-radius:20px 20px 0 0;
+    padding:24px 22px 32px;box-shadow:0 -10px 40px rgba(0,0,0,.2)}
+  .sheet h2{font-size:18px;margin-bottom:5px;font-weight:800}
+  .sheet .sub{font-size:12.5px;color:var(--sub);margin-bottom:16px}
+  .sheet .m{border:1px solid var(--line);border-radius:12px;padding:14px 15px;margin-bottom:11px;transition:.15s}
+  .sheet .m:hover{border-color:#cdd9ee;box-shadow:var(--shadow-sm)}
+  .sheet .m .mt{font-weight:800;font-size:14.5px;margin-bottom:6px}
+  .sheet .m .md{font-size:13px;color:#3a4250;line-height:1.75}
+  .sheet .close{position:sticky;top:0;text-align:right;font-size:13px;color:var(--brand);cursor:pointer;margin-bottom:8px;font-weight:600}
+  footer{text-align:center;font-size:12px;color:#9aa3b1;padding:28px 0 44px;line-height:1.8}
+  .to-top{position:fixed;right:18px;bottom:22px;width:46px;height:46px;border-radius:50%;border:none;
+    background:linear-gradient(135deg,#3b6ef5,#6a5cf0);color:#fff;font-size:20px;line-height:1;cursor:pointer;
+    box-shadow:0 6px 18px rgba(59,110,245,.35);opacity:0;visibility:hidden;transform:translateY(8px);transition:.25s;z-index:30}
+  .to-top.show{opacity:1;visibility:visible;transform:none}
+  .to-top:hover{transform:translateY(-2px) scale(1.06)}
+  .to-top:active{transform:scale(.92)}
+  .to-top.flying{transition:transform .9s cubic-bezier(.22,.61,.36,1),background .25s,box-shadow .25s;transform:translateY(-200vh)!important;opacity:.9;background:linear-gradient(135deg,#94a3ff,#a99bff)}
+
+  /* ===== 间隔复习 ===== */
+  .rv-hero{display:flex;gap:22px;align-items:center;background:linear-gradient(135deg,#0d9488,#4f46e5);color:#fff;border-radius:18px;padding:22px 24px;margin:18px 0}
+  .rv-hero-l{text-align:center;flex:0 0 auto;padding-right:22px;border-right:1px solid rgba(255,255,255,.25)}
+  .rv-due{font-size:46px;font-weight:800;line-height:1}
+  .rv-due-lab{font-size:13px;opacity:.9;margin-top:4px}
+  .rv-hero-r{flex:1;min-width:0}
+  .rv-hero-r h2{font-size:19px;font-weight:800;margin-bottom:5px}
+  .rv-hero-r p{font-size:13.5px;opacity:.94;line-height:1.75}
+  .rv-hero-r b{color:#fde047}
+  .rv-stats{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:14px}
+  .rv-stat{flex:1 1 auto;min-width:110px;background:#fff;border:1px solid var(--line);border-radius:13px;padding:12px 14px;text-align:center}
+  .rv-stat b{font-size:22px;display:block;color:var(--brand);font-weight:800}
+  .rv-stat span{font-size:12px;color:var(--sub)}
+  .rv-startbar{text-align:center;margin:6px 0 16px}
+  .rv-startbtn{border:0;background:linear-gradient(135deg,#0d9488,#14b8a6);color:#fff;font-size:15px;font-weight:700;padding:14px 30px;border-radius:14px;cursor:pointer;box-shadow:0 6px 18px rgba(13,148,136,.3)}
+  .rv-startbtn:hover{transform:translateY(-1px)}
+  .rv-empty{font-size:13.5px;color:var(--sub);background:var(--card);border:1px dashed var(--line);border-radius:12px;padding:26px;text-align:center;line-height:1.8}
+  .rv-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px;margin-bottom:14px;box-shadow:var(--shadow-sm);max-width:760px;margin-left:auto;margin-right:auto}
+  .rv-q-head{display:flex;align-items:center;gap:8px;flex-wrap:wrap;margin-bottom:10px}
+  .rv-q .tags{margin-bottom:0}
+  .rv-q .qt{font-size:16.5px;font-weight:700;line-height:1.7;margin:8px 0 12px}
+  .rv-reveal{display:block;width:100%;border:1px solid var(--brand);background:var(--brand-soft);color:var(--brand);font-size:14px;font-weight:700;padding:12px;border-radius:12px;cursor:pointer;margin-bottom:12px}
+  .rv-reveal:hover{background:#e3edff}
+  .rv-ans{display:none;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:14px 16px;margin-bottom:14px;animation:fade .25s ease}
+  .rv-ans.show{display:block}
+  .rv-ans ul{list-style:none}
+  .rv-ans li{font-size:13.5px;color:#3a4250;padding-left:20px;position:relative;margin-bottom:8px;line-height:1.7}
+  .rv-ans li:before{content:"▸";position:absolute;left:0;color:var(--brand);font-weight:700}
+  .rv-rate{display:flex;gap:9px}
+  .rv-rate button{flex:1;border:1px solid var(--line);background:#fff;border-radius:11px;padding:11px 6px;font-size:13px;font-weight:700;cursor:pointer;transition:.15s}
+  .rv-rate button.good:hover{background:#dcfce7;border-color:#86efac;color:#15803d}
+  .rv-rate button.mid:hover{background:#fef9c3;border-color:#fde047;color:#a16207}
+  .rv-rate button.low:hover{background:#fee2e2;border-color:#fca5a5;color:#b91c1c}
+  .rv-progress{margin:2px 0 16px;text-align:center;font-size:13px;color:var(--sub)}
+  @media(max-width:560px){.rv-hero{flex-direction:column;text-align:center;gap:14px}.rv-hero-l{border-right:0;border-bottom:1px solid rgba(255,255,255,.25);padding-right:0;padding-bottom:12px;width:100%}}
+  @media(min-width:720px){.grid{grid-template-columns:1fr 1fr}}
+
+  /* ===== 主导航 ===== */
+  .nav{background:#fff;border-bottom:1px solid var(--line);position:sticky;top:0;z-index:25}
+  .nav .wrap{display:flex;gap:0;padding:0}
+  .navtab{flex:1 1 0;min-width:0;padding:12px 0;border:0;font-size:15px;font-weight:700;cursor:pointer;color:var(--sub);
+    background:transparent;border-bottom:3px solid transparent;transition:.15s;text-align:center}
+  .navtab:hover{color:var(--brand);background:#f8faff}
+  .navtab.on{color:var(--brand);border-bottom-color:var(--brand);background:#fff}
+
+  /* ===== AI 模拟考官 ===== */
+  .coach{max-width:860px;padding-bottom:30px}
+  .coach-hero{background:linear-gradient(135deg,#6d28d9,#2f6fed);color:#fff;border-radius:16px;padding:22px 24px;margin:18px 0}
+  .coach-hero h2{font-size:21px;font-weight:800}
+  .coach-hero p{margin-top:8px;font-size:13.5px;opacity:.92;line-height:1.7}
+  .coach-controls{display:flex;gap:12px;flex-wrap:wrap;align-items:flex-end;background:var(--card);border:1px solid var(--line);
+    border-radius:14px;padding:16px 18px;margin-bottom:16px}
+  .cc-group{display:flex;flex-direction:column;gap:5px}
+  .cc-group label{font-size:12px;color:var(--sub);font-weight:600}
+  .cc-group select{border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13.5px;background:#fff;color:var(--ink);min-width:130px;outline:none}
+  .cc-group select:focus{border-color:var(--brand)}
+  .coach-draw{margin-left:auto;border:0;background:linear-gradient(135deg,#2f6fed,#5b8def);color:#fff;font-weight:700;
+    padding:11px 20px;border-radius:10px;font-size:14px;cursor:pointer;box-shadow:0 4px 14px rgba(47,111,237,.25);transition:.15s}
+  .coach-draw:hover{transform:translateY(-1px)}
+  .coach-ghost{background:#fff;border:1px solid var(--line);color:var(--sub);padding:10px 16px;border-radius:10px;font-size:13px;cursor:pointer}
+  .coach-ghost:hover{border-color:var(--brand);color:var(--brand)}
+  .coach-ghost.sm{padding:7px 13px;font-size:12px;margin-top:12px}
+  .coach-q{background:var(--card);border:1px solid var(--line);border-left:4px solid var(--brand);border-radius:14px;
+    padding:18px 20px;margin-bottom:16px;animation:fade .25s ease}
+  .coach-q .cq-text{font-size:16.5px;font-weight:700;line-height:1.7;margin:10px 0 6px}
+  .coach-q .cq-src{font-size:12px;color:#9aa3b1}
+  .coach-ans{margin-top:14px;padding-top:12px;border-top:1px dashed var(--line)}
+  .coach-ans .lab{font-size:12px;color:var(--sub);font-weight:600;display:block;margin-bottom:6px}
+  .coach-ans ul{list-style:none}
+  .coach-ans li{font-size:13.5px;color:#374151;padding-left:18px;position:relative;margin-bottom:6px}
+  .coach-ans li:before{content:"▸";position:absolute;left:0;color:var(--brand)}
+  .coach-answer{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:18px 20px;margin-bottom:16px}
+  .coach-answer label{font-size:13px;color:var(--sub);font-weight:600;display:block;margin-bottom:9px}
+  .coach-answer textarea{width:100%;min-height:150px;border:1px solid var(--line);border-radius:10px;padding:13px 15px;
+    font-size:14px;line-height:1.7;resize:vertical;outline:none;font-family:inherit;color:var(--ink)}
+  .coach-answer textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+  .coach-timerbar{display:flex;align-items:center;gap:12px;margin-bottom:13px;flex-wrap:wrap}
+  .coach-timer{font-size:14px;font-weight:700;color:var(--brand);background:var(--brand-soft);padding:6px 14px;border-radius:20px;letter-spacing:.5px}
+  .coach-timer.over{color:#dc2626;background:#fee2e2;animation:pulse 1s infinite}
+  .coach-timer.ready{color:var(--sub);background:#f1f5f9}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.5}}
+  .coach-timer-set{font-size:12px;color:var(--sub);display:flex;align-items:center;gap:6px}
+  .coach-timer-set select{border:1px solid var(--line);border-radius:7px;padding:3px 7px;font-size:12px;background:#fff;color:var(--ink)}
+  .coach-mini{font-size:12.5px;border:1px solid var(--line);background:#fff;color:var(--sub);padding:6px 13px;border-radius:9px;cursor:pointer}
+  .coach-mini:hover{border-color:var(--brand);color:var(--brand)}
+  .coach-mini.primary{background:var(--brand);border-color:var(--brand);color:#fff}
+  .coach-mini.primary:hover{background:#2959d4}
+  .coach-exemplar{margin-top:14px;padding:14px 16px;border-radius:12px;background:linear-gradient(135deg,#eef4ff,#f8fbff);border:1px solid #d8e3f7;display:none;animation:fade .25s ease}
+  .coach-exemplar.show{display:block}
+  .coach-exemplar .lab{font-size:12px;color:#4f7fe0;font-weight:700;display:block;margin-bottom:9px}
+  .coach-exemplar p{font-size:14px;color:#283042;line-height:1.9;margin:0}
+  .coach-actions{display:flex;align-items:center;gap:14px;margin-top:12px}
+  .coach-wc{font-size:12.5px;color:#9aa3b1}
+  .coach-result{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:22px 22px;margin-bottom:18px;animation:fade .25s ease}
+  .score-hero{display:flex;align-items:center;gap:18px;flex-wrap:wrap;padding-bottom:16px;border-bottom:1px solid var(--line);margin-bottom:16px}
+  .score-num{font-size:46px;font-weight:800;color:var(--brand);line-height:1}
+  .score-num span{font-size:16px;color:var(--sub);font-weight:600;margin-left:4px}
+  .score-level{padding:6px 14px;border-radius:20px;font-weight:700;font-size:14px}
+  .score-level.lv-good{background:#dcfce7;color:#16a34a}
+  .score-level.lv-good2{background:#dbeafe;color:#2563eb}
+  .score-level.lv-mid{background:#fef9c3;color:#ca8a04}
+  .score-level.lv-low{background:#fee2e2;color:#dc2626}
+  .score-sub{font-size:12.5px;color:var(--sub);margin-left:auto}
+  .dim{margin-bottom:11px}
+  .dim-top{display:flex;justify-content:space-between;font-size:13px;margin-bottom:4px}
+  .dim-top b{color:var(--brand)}
+  .bar{height:8px;background:#eef1f5;border-radius:6px;overflow:hidden}
+  .bar i{display:block;height:100%;border-radius:6px;background:linear-gradient(90deg,#2f6fed,#5b8def);transition:width .5s ease}
+  .advice{margin-top:16px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:14px 16px}
+  .advice h4{font-size:13.5px;margin-bottom:8px}
+  .advice ul{list-style:none}
+  .advice li{font-size:13px;color:#374151;padding-left:20px;position:relative;margin-bottom:7px;line-height:1.7}
+  .advice li:before{content:"💡";position:absolute;left:0}
+  @keyframes fade{from{opacity:0;transform:translateY(6px)}to{opacity:1;transform:none}}
+  .coach-history h3{font-size:15px;margin:6px 0 12px}
+  .hist-card{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:14px 16px 10px;margin-bottom:12px}
+  .hist-card-top{display:flex;justify-content:space-between;align-items:baseline;gap:10px;flex-wrap:wrap;margin-bottom:6px}
+  .hist-card-top b{color:var(--brand);font-size:14px}
+  .hist-sum{font-size:12px;color:var(--sub)}
+  .hist-sum b{padding:1px 7px;border-radius:12px;font-size:12px}
+  .hist-sum b.lv-good,.hist-score.lv-good{background:#dcfce7;color:#16a34a}
+  .hist-sum b.lv-good2{background:#dbeafe;color:#2563eb}
+  .hist-sum b.lv-mid{background:#fef9c3;color:#ca8a04}
+  .hist-sum b.lv-low{background:#fee2e2;color:#dc2626}
+  .coach-history-list{max-height:420px;overflow-y:auto}
+  .hist{border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-bottom:9px;background:var(--card)}
+  .hist-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .hist-q{font-size:13.5px;font-weight:600;color:var(--ink)}
+  .hist-score{font-size:12px;font-weight:700;padding:3px 9px;border-radius:14px;white-space:nowrap}
+  .hist-score.lv-good{background:#dcfce7;color:#16a34a}
+  .hist-score.lv-good2{background:#dbeafe;color:#2563eb}
+  .hist-score.lv-mid{background:#fef9c3;color:#ca8a04}
+  .hist-score.lv-low{background:#fee2e2;color:#dc2626}
+  .hist-meta{font-size:11.5px;color:#9aa3b1;margin-top:5px}
+  .empty{font-size:13px;color:var(--sub);padding:18px;text-align:center;background:var(--card);border:1px dashed var(--line);border-radius:11px}
+  .ai-panel{background:#fbfaff;border:1px solid #e2dcf5;border-radius:14px;padding:18px 20px;margin:14px 0;animation:fade .25s ease}
+  .ai-panel-head{font-size:14.5px;font-weight:700;color:#6d28d9;margin-bottom:14px;display:flex;justify-content:space-between;align-items:center}
+  .ai-close{cursor:pointer;color:#9aa3b1;font-size:17px;line-height:1}
+  .ai-row{display:flex;align-items:center;gap:12px;margin-bottom:11px}
+  .ai-row label{width:72px;font-size:13px;color:var(--sub);font-weight:600;flex:0 0 auto}
+  .ai-row input,.ai-row select{flex:1;border:1px solid var(--line);border-radius:9px;padding:9px 12px;font-size:13.5px;outline:none;font-family:inherit;color:var(--ink);background:#fff;min-width:0}
+  .ai-row input:focus,.ai-row select:focus{border-color:#7c3aed;box-shadow:0 0 0 3px #ede9fe}
+  .ai-tip{font-size:12px;color:#7c3aed;background:#f3effe;border-radius:8px;padding:9px 12px;margin:4px 0 12px;line-height:1.6}
+  .ai-actions{display:flex;gap:10px}
+  .ai-hint{display:inline-flex;align-items:center;justify-content:center;width:18px;height:18px;border-radius:50%;background:#ede9fe;color:#7c3aed;font-size:12px;font-weight:700;margin-left:5px;cursor:pointer;position:relative;user-select:none}
+  .ai-hint:hover{background:#7c3aed;color:#fff}
+  .ai-hint .tt{position:absolute;left:24px;top:50%;transform:translateY(-50%);width:260px;background:#1e293b;color:#fff;font-size:12px;font-weight:400;line-height:1.55;padding:9px 11px;border-radius:8px;box-shadow:0 4px 12px rgba(0,0,0,.18);opacity:0;visibility:hidden;transition:.15s;z-index:10}
+  .ai-hint:hover .tt,.ai-hint:focus .tt{opacity:1;visibility:visible}
+  .ai-hint .tt:before{content:"";position:absolute;left:-6px;top:50%;transform:translateY(-50%);border:6px solid transparent;border-right-color:#1e293b}
+  .ai-guide{display:flex;align-items:center;gap:8px;font-size:12.5px;color:#4f46e5;background:#eef2ff;border-radius:10px;padding:10px 12px;margin-top:12px}
+  .ai-guide a{color:#2f6fed;font-weight:700;text-decoration:none}
+  .ai-guide a:hover{text-decoration:underline}
+  @media(max-width:420px){.ai-hint .tt{left:auto;right:24px}.ai-hint .tt:before{left:auto;right:-6px;border-right-color:transparent;border-left-color:#1e293b}}
+  .ai-badge{margin-right:auto;background:linear-gradient(135deg,#7c3aed,#2f6fed);color:#fff;padding:5px 13px;border-radius:20px;font-size:12.5px;font-weight:700}
+  .ai-comment{background:#f7f5ff;border:1px solid #e7e0fb;border-radius:10px;padding:12px 14px;margin-bottom:14px;font-size:13.5px;color:#374151;line-height:1.7}
+  .followup{margin-top:16px;background:#fff7ed;border:1px solid #fed7aa;border-radius:12px;padding:13px 15px;font-size:13.5px;color:#374151;line-height:1.7}
+  .followup b{color:#c2410c}
+  @media(max-width:560px){.coach-controls{flex-direction:column;align-items:stretch}.coach-draw{margin-left:0}}
+  @media(max-width:560px){
+    .navtab{font-size:13px;padding:10px 0}
+    .rtabs{flex-wrap:nowrap;overflow-x:auto;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+    .rtab{white-space:nowrap}
+    .ck-hero{flex-direction:column;text-align:center;gap:14px}
+    .ck-hero-l{border-right:0;border-bottom:1px solid rgba(255,255,255,.25);padding-right:0;padding-bottom:14px;width:100%}
+    .ck-cal-card{padding:15px 14px}
+  }
+
+  /* ===== 每日打卡 ===== */
+  .ck-hero{display:flex;gap:22px;align-items:center;background:linear-gradient(135deg,#0ea5e9,#6366f1);color:#fff;border-radius:18px;padding:22px 24px;margin:18px 0}
+  .ck-hero-l{text-align:center;flex:0 0 auto;padding-right:22px;border-right:1px solid rgba(255,255,255,.25)}
+  .ck-streak{font-size:48px;font-weight:800;line-height:1}
+  .ck-streak-lab{font-size:13px;opacity:.9;margin-top:4px}
+  .ck-hero-r{flex:1;min-width:0}
+  .ck-date{font-size:16px;font-weight:700}
+  .ck-sub{font-size:13px;opacity:.92;margin-top:4px}
+  .ck-status{background:#fff;border:1px solid var(--line);border-radius:14px;padding:14px 16px;margin-bottom:16px;font-size:13.5px;color:#374151;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .ck-status .dot{width:9px;height:9px;border-radius:50%;background:#22c55e}
+  .ck-status.done{background:#f0fdf4;border-color:#bbf7d0;color:#15803d}
+
+  .ck-q{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin-bottom:14px;box-shadow:var(--shadow-sm)}
+  .ck-q .qt{font-size:15.5px;font-weight:700;line-height:1.65;margin:8px 0}
+  .ck-q .src{font-size:12px;color:#9aa3b1;margin-top:4px}
+  .ck-tabs{display:flex;gap:6px;margin:12px 0 4px}
+  .ck-tab{flex:1;text-align:center;font-size:12.5px;padding:8px 0;border:1px solid var(--line);border-radius:9px;cursor:pointer;color:var(--sub);font-weight:600;background:#fff;transition:.15s}
+  .ck-tab.on{background:var(--ink);color:#fff;border-color:var(--ink)}
+  .ck-pane{display:none;margin-top:10px}
+  .ck-pane.on{display:block}
+  .ck-rec{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+  .ck-rec button{border:1px solid var(--brand);background:#fff;color:var(--brand);border-radius:10px;padding:9px 15px;font-size:13px;font-weight:600;cursor:pointer;transition:.15s}
+  .ck-rec button.recording{background:var(--brand);color:#fff;animation:pulse 1s infinite}
+  .ck-rec .filelabel{border:1px solid var(--line);background:#fff;color:var(--sub);border-radius:10px;padding:9px 15px;font-size:13px;cursor:pointer;display:inline-block}
+  .ck-rec input[type=file]{display:none}
+  .ck-rectime{font-size:12px;color:var(--sub)}
+  .ck-media-prev{margin-top:10px}
+  .ck-media-prev audio,.ck-media-prev video{max-width:100%;border-radius:10px}
+  .ck-textarea{width:100%;min-height:110px;border:1px solid var(--line);border-radius:10px;padding:11px 13px;font-size:14px;line-height:1.65;resize:vertical;outline:none;font-family:inherit;color:var(--ink)}
+  .ck-textarea:focus{border-color:var(--brand);box-shadow:0 0 0 3px var(--brand-soft)}
+  .ck-q-actions{display:flex;gap:9px;align-items:center;flex-wrap:wrap;margin-top:12px}
+  .ck-advice-btn{border:1px solid var(--brand);background:var(--brand);color:#fff;border-radius:9px;padding:7px 13px;font-size:12.5px;font-weight:600;cursor:pointer}
+  .ck-advice-btn:hover{background:#2959d4}
+  .ck-advice-hint{font-size:12px;color:#9aa3b1}
+  .ck-advice-out{margin-top:12px;background:#f8fafc;border:1px solid var(--line);border-radius:12px;padding:14px 16px;animation:fade .25s ease}
+  .ck-submit{display:block;width:100%;border:0;background:linear-gradient(135deg,#2f6fed,#5b8def);color:#fff;font-size:15px;font-weight:700;padding:14px;border-radius:14px;cursor:pointer;margin:4px 0 18px;box-shadow:0 6px 18px rgba(47,111,237,.28)}
+  .ck-submit:disabled{opacity:.55;cursor:not-allowed}
+
+  .ck-cal-card{background:#fff;border:1px solid var(--line);border-radius:16px;padding:18px 20px;margin-bottom:18px}
+  .ck-cal-card h3{font-size:15px;margin-bottom:12px}
+  .ck-cal-head{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+  .ck-cal-nav{border:1px solid var(--line);background:#fff;border-radius:8px;width:34px;height:34px;font-size:16px;cursor:pointer;color:var(--sub)}
+  .ck-cal-nav:hover{border-color:var(--brand);color:var(--brand)}
+  .ck-cal-title{font-size:14px;font-weight:700}
+  .ck-cal{display:grid;grid-template-columns:repeat(7,1fr);gap:6px}
+  .ck-cal .wd{text-align:center;font-size:11.5px;color:#9aa3b1;padding:4px 0}
+  .ck-cal .day{aspect-ratio:1;text-align:center;font-size:13px;display:flex;align-items:center;justify-content:center;border-radius:9px;color:var(--ink);position:relative}
+  .ck-cal .day.muted{color:#d7dbe2}
+  .ck-cal .day.checked{background:linear-gradient(135deg,#2f6fed,#5b8def);color:#fff;font-weight:700}
+  .ck-cal .day.today{box-shadow:0 0 0 2px #f59e0b inset}
+  .ck-cal .day.clickable{cursor:pointer}
+  .ck-cal .day.clickable:hover{background:#eef3ff}
+
+  .ck-hist{border:1px solid var(--line);border-radius:11px;padding:12px 14px;margin-bottom:9px;background:#fff}
+  .ck-hist-top{display:flex;justify-content:space-between;align-items:center;gap:10px}
+  .ck-hist-date{font-size:13.5px;font-weight:700}
+  .ck-hist-q{font-size:12.5px;color:#475569;margin-top:6px}
+  .ck-hist-media{margin-top:8px}
+  .ck-hist-media audio,.ck-hist-media video{max-width:100%;border-radius:8px}
+  .ck-hist-text{font-size:12.5px;color:#374151;margin-top:6px;white-space:pre-wrap;line-height:1.6}
+  .ck-empty{font-size:13px;color:#9aa3b1;text-align:center;padding:18px 0}
+  .ck-done-tag{display:inline-block;font-size:12px;font-weight:700;color:#15803d;background:#f0fdf4;border:1px solid #bbf7d0;border-radius:8px;padding:3px 10px;margin-bottom:8px}
+  .ck-textarea[readonly]{background:#f3f4f6;color:#555;cursor:default}
+
+  /* 收藏 */
+  .fav-hero{background:linear-gradient(135deg,#f59e0b,#ef4444);color:#fff;border-radius:18px;padding:22px 24px;margin:18px 0}
+  .fav-hero h2{font-size:20px;margin-bottom:6px}
+  .fav-hero p{font-size:13px;opacity:.95;line-height:1.6;margin-bottom:12px}
+  .fav-count{font-size:14px;font-weight:700;background:rgba(255,255,255,.18);display:inline-block;padding:6px 12px;border-radius:20px}
+  .card-fav{position:absolute;top:14px;right:14px;font-size:17px;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:50%;width:32px;height:32px;display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow-sm);transition:.15s;z-index:5}
+  .card-fav:hover{transform:scale(1.08);border-color:#f59e0b}
+  .card-fav.on{background:#fef3c7;border-color:#f59e0b}
+  /* 打卡成功弹窗 */
+  .ck-modal{position:fixed;inset:0;background:rgba(15,23,42,.55);display:none;align-items:center;justify-content:center;z-index:1000;padding:16px;backdrop-filter:blur(4px)}
+  .ck-modal.on{display:flex}
+  .ck-modal-box{background:#fff;border-radius:22px;padding:28px 26px;max-width:420px;width:100%;text-align:center;box-shadow:0 22px 70px rgba(0,0,0,.22);animation:pop .28s ease}
+  .ck-modal-icon{font-size:52px;margin-bottom:8px}
+  .ck-modal-title{font-size:20px;font-weight:800;color:var(--ink);margin-bottom:6px}
+  .ck-modal-streak{font-size:56px;font-weight:800;background:linear-gradient(135deg,#0ea5e9,#6366f1);-webkit-background-clip:text;-webkit-text-fill-color:transparent;line-height:1;margin:14px 0 4px}
+  .ck-modal-streak span{font-size:15px;font-weight:600;-webkit-text-fill-color:#64748b;display:block;margin-top:4px}
+  .ck-modal-q{text-align:left;background:#f8fafc;border-radius:12px;padding:14px 16px;margin:14px 0;font-size:13.5px;color:#334155;line-height:1.55}
+  .ck-modal-q b{display:block;font-size:12px;color:#64748b;margin-bottom:4px;font-weight:600}
+  .ck-modal-tip{font-size:13px;color:#64748b;margin:14px 0 18px}
+  .ck-modal-btn{display:block;width:100%;border:0;background:linear-gradient(135deg,#2f6fed,#5b8def);color:#fff;font-size:15px;font-weight:700;padding:13px;border-radius:13px;cursor:pointer}
+  .ck-modal-btn.ghost{background:#f1f5f9;color:#475569;margin-bottom:10px}
+  @keyframes pop{from{opacity:0;transform:scale(.92) translateY(14px)}to{opacity:1;transform:scale(1) translateY(0)}}
+
+  /* 朗读按钮 */
+  .speak-btn{position:absolute;top:14px;right:54px;font-size:12.5px;cursor:pointer;background:#fff;border:1px solid var(--line);border-radius:20px;padding:4px 10px;color:#475569;box-shadow:var(--shadow-sm);transition:.15s;z-index:5}
+  .speak-btn:hover{border-color:#0ea5e9;color:#0ea5e9}
+  .speak-btn.on{background:#e0f2fe;border-color:#0ea5e9;color:#0284c7}
+  /* 打卡参考思路 */
+  .ck-ref-btn{margin-left:auto;border:0;background:#eef2ff;color:#4338ca;font-size:12.5px;font-weight:700;padding:6px 12px;border-radius:9px;cursor:pointer;white-space:nowrap}
+  .ck-ref-btn.on{background:#c7d2fe}
+  .ck-q-head{display:flex;align-items:flex-start;gap:8px;flex-wrap:wrap;margin-bottom:6px}
+  .ck-q{position:relative}
+  .ck-ref{margin-top:10px;border-top:1px dashed var(--line);padding-top:10px;font-size:13.5px;color:#374151;line-height:1.7}
+  .ck-ex{white-space:pre-wrap;margin-top:6px;font-size:13px;color:#4a3b1f;line-height:1.75}
+  .ck-ref .lab{display:block;font-size:12px;color:#64748b;font-weight:600;margin:8px 0 4px}
+  .ck-ref ul{margin:4px 0;padding-left:18px}
+  .ck-ref .ck-ex{background:#fffbeb;border:1px solid #fde68a;border-radius:10px;padding:10px 12px}
+  /* 打卡徽章 */
+  .ck-badges{display:flex;gap:8px;flex-wrap:wrap;margin-top:10px}
+  .ck-badge{font-size:12px;font-weight:700;padding:5px 11px;border-radius:20px;background:rgba(255,255,255,.22);color:#fff;display:flex;align-items:center;gap:5px}
+  .ck-badge.locked{background:rgba(255,255,255,.12);opacity:.6}
+  .ck-next{font-size:12.5px;margin-top:8px;opacity:.92;width:100%}
+  /* 重新作答 */
+  .ck-redo{margin-top:10px;border:0;background:rgba(255,255,255,.22);color:#fff;font-size:12.5px;font-weight:700;padding:7px 14px;border-radius:20px;cursor:pointer}
+  .ck-redo:hover{background:rgba(255,255,255,.32)}
+  /* 薄弱题型 */
+  .ck-weak{background:#fff;border:1px solid var(--line);border-radius:16px;padding:16px 18px;margin:16px 0;box-shadow:var(--shadow-sm)}
+  .ck-weak h3{font-size:15px;margin-bottom:10px}
+  .ck-weak-row{display:flex;align-items:center;gap:10px;margin:7px 0;font-size:13px}
+  .ck-weak-name{width:72px;flex:none;color:#475569}
+  .ck-weak-bar{flex:1;height:9px;background:#eef2f7;border-radius:6px;overflow:hidden}
+  .ck-weak-bar i{display:block;height:100%;border-radius:6px}
+  .ck-weak-val{width:118px;flex:none;text-align:right;color:#64748b;font-variant-numeric:tabular-nums}
+  .ck-weak-empty{font-size:13px;color:#9aa3b1;line-height:1.6}
+  .weak-tag{font-size:11px;font-weight:700;color:#fff;background:#ef4444;border-radius:6px;padding:1px 6px;margin-left:4px}
+  /* 收藏导出 */
+  .fav-actions{display:flex;gap:10px;margin-bottom:16px;flex-wrap:wrap}
+  .fav-actions button{border:1px solid var(--line);background:var(--card);border-radius:10px;padding:9px 16px;font-size:13.5px;font-weight:700;color:#334155;cursor:pointer}
+  .fav-actions button:hover{border-color:#f59e0b;color:#ea580c}
+  @media(max-width:560px){.speak-btn{top:12px;right:50px;font-size:12px;padding:3px 8px}.fav-actions button{flex:1}}
+</style>
+</head>
+<body>
+<header>
+  <div class="wrap">
+    <div class="eyebrow">ZHEJIANG TEACHER · 结构化面试</div>
+    <h1>浙江教师招聘 · 结构化面试真题库</h1>
+    <p>按 11 大地市考情分化 ｜ 每题附答题思路 ｜ 考生回忆版真题汇编</p>
+    <div class="stats">
+      <div><i class="si">📚</i><b id="stQ">0</b><span>道真题</span></div>
+      <div><i class="si">📍</i><b>11</b><span>个地市</span></div>
+      <div><i class="si">🧩</i><b>7</b><span>大题型</span></div>
+      <div><i class="si">⏳</i><b>2024–2026</b><span>届提前批 / 社招</span></div>
+    </div>
+  </div>
+</header>
+
+<nav class="nav">
+  <div class="wrap">
+    <div class="navtab on" data-v="bank" onclick="showView('bank')">📚 真题库</div>
+    <div class="navtab" data-v="coach" onclick="showView('coach')">🎯 AI 模拟考官</div>
+    <div class="navtab" data-v="checkin" onclick="showView('checkin')">📅 每日打卡</div>
+    <div class="navtab" data-v="review" onclick="showView('review')">🔁 复习</div>
+    <div class="navtab" data-v="fav" onclick="showView('fav')">⭐ 收藏</div>
+  </div>
+</nav>
+
+<div id="bankView">
+<div class="regions">
+  <div class="wrap">
+    <div class="rtabs" id="rtabs"></div>
+  </div>
+</div>
+
+<div class="wrap">
+  <div class="feature" id="feature"></div>
+
+  <div class="srcbar">
+    <span class="src-lab">题型来源</span>
+    <div class="srcseg" id="srcChips"></div>
+    <span class="src-note" id="srcNote"></span>
+  </div>
+
+  <div class="toolbar">
+    <div class="chips" id="typeChips"></div>
+    <div class="search">🔍<input id="search" placeholder="搜题：如 早恋 / AI / 家校 / 双减 …"></div>
+    <span class="count" id="count"></span>
+    <button class="randbtn" id="randBtn">🎲 随机抽一题</button>
+    <button class="randbtn" id="methodBtn" style="background:#f8faff;color:var(--brand);border-color:var(--brand-soft)">📘 答题方法</button>
+  </div>
+
+  <div class="grid" id="grid"></div>
+  <div class="loadmore" id="loadMore" style="display:none"></div>
+</div>
+
+<div class="overlay" id="overlay">
+  <div class="sheet">
+    <div class="close" id="closeSheet">收起 ✕</div>
+    <h2>结构化面试 · 七大题型通用答题法</h2>
+    <div class="sub">同一道题，先套对"题型逻辑"再开口，比背模板管用得多。</div>
+    <div id="methodList"></div>
+  </div>
+</div>
+</div>
+
+<div id="coachView" class="view" style="display:none">
+  <div class="wrap coach">
+    <div class="coach-hero">
+      <h2>🎯 AI 模拟考官</h2>
+      <p>随机抽一道结构化真题 → 你口述 / 打字作答 → 考官按 <b>7 个维度</b>智能打分 + 给改进建议。纯本地运行，零成本、数据不出本机，练完对照参考答案查漏补缺。</p>
+    </div>
+
+    <div class="coach-controls">
+      <div class="cc-group">
+        <label>题型</label>
+        <select id="coachType"></select>
+      </div>
+      <div class="cc-group">
+        <label>地市</label>
+        <select id="coachRegion"></select>
+      </div>
+      <button class="coach-draw" id="coachDraw">🎲 抽一道题</button>
+      <button class="coach-ghost" id="coachShowAns" style="display:none">👀 看参考答案</button>
+      <button class="coach-ghost" id="coachShowEx" style="display:none">📝 看满分模板</button>
+      <button class="coach-ghost" id="aiSetBtn">⚙️ AI 设置</button>
+    </div>
+
+    <div class="ai-panel" id="aiPanel" style="display:none">
+      <div class="ai-panel-head">🤖 真 AI 考官设置 <span class="ai-close" id="aiClose">✕</span></div>
+      <div class="ai-row"><label>服务商</label><select id="aiProvider">
+        <option value="deepseek">DeepSeek（api.deepseek.com）</option>
+        <option value="openrouter">OpenRouter</option>
+        <option value="custom">自定义</option>
+      </select></div>
+      <div class="ai-row"><label>API Key<i class="ai-hint" tabindex="0">?<span class="tt">从 DeepSeek / OpenRouter 官网注册后领到的“密码串”。这里只存你手机/电脑浏览器，不上传服务器，请放心填写。</span></i></label><input id="aiKey" type="password" placeholder="sk-... （粘贴后保存）"></div>
+      <div class="ai-row"><label>接口地址（Base URL）<i class="ai-hint" tabindex="0">?<span class="tt">AI 服务的服务器地址。选 DeepSeek 会自动填好，一般不用改；只有用 OpenRouter 或自建接口时才需要手动改。</span></i></label><input id="aiBase" placeholder="https://api.deepseek.com/v1"></div>
+      <div class="ai-row"><label>模型名称<i class="ai-hint" tabindex="0">?<span class="tt">你调用的 AI 版本名。DeepSeek 默认 deepseek-chat，OpenRouter 默认 deepseek/deepseek-chat，一般也不用改。</span></i></label><input id="aiModel" placeholder="deepseek-chat"></div>
+      <div class="ai-tip">🔒 Key 只存在你自己的浏览器（localStorage），不会上传任何服务器。不填则使用原规则打分；填了之后点「让考官打分」即走真 AI，还能智能追问。</div>
+      <div class="ai-guide">💡 没有 Key？先去 <a href="https://platform.deepseek.com/api_keys" target="_blank">DeepSeek 官网免费领</a>（或 OpenRouter 注册），领到后粘贴保存即可。也可以留空，直接用免费规则打分。</div>
+      <div class="ai-actions"><button class="coach-draw" id="aiSave">保存</button><button class="coach-ghost" id="aiCancel">取消</button></div>
+    </div>
+
+    <div class="coach-q" id="coachQuestion" style="display:none">
+      <div class="tags"><span class="badge b-region" id="cqRegion"></span><span class="badge" id="cqType"></span></div>
+      <div class="cq-text" id="cqText"></div>
+      <div class="cq-src" id="cqSrc"></div>
+      <div class="coach-ans" id="cqAns" style="display:none">
+        <span class="lab">参考思路（通用框架，非标准答案）</span>
+        <ul id="cqAnsList"></ul>
+      </div>
+      <div class="coach-exemplar" id="cqEx">
+        <span class="lab">📝 满分模板（照着背 · 基于参考要点生成，非唯一标准答案）</span>
+        <p id="cqExText"></p>
+      </div>
+    </div>
+
+    <div class="coach-answer" id="coachAnswer" style="display:none">
+      <div class="coach-timerbar">
+        <span class="coach-timer" id="coachTimer">⏱ 03:00</span>
+        <span class="coach-timer-set">限时
+          <select id="coachDur">
+            <option value="180">3 分钟（结构化标准）</option>
+            <option value="300">5 分钟</option>
+            <option value="120">2 分钟</option>
+            <option value="0">不限时</option>
+          </select>
+        </span>
+        <button class="coach-mini primary" id="coachTimerReset">▶ 开始计时</button>
+      </div>
+      <label>✍️ 你的作答（建议口述后转文字粘贴，或直接打字）</label>
+      <textarea id="coachInput" placeholder="在这里作答… 考官会按「观点鲜明 / 逻辑结构 / 教育理念 / 问题解决 / 语言表达 / 情境处置 / 仪态自信」7 个维度打分。"></textarea>
+      <div class="coach-actions">
+        <button class="coach-draw" id="coachScore">🎯 让考官打分</button>
+        <span class="coach-wc" id="coachWordCount">0 字</span>
+      </div>
+    </div>
+
+    <div class="coach-result" id="coachResult" style="display:none"></div>
+
+    <div class="coach-history">
+      <h3>📜 我的练习记录</h3>
+      <div id="coachHistory"></div>
+      <button class="coach-ghost sm" id="coachClearHist">清空记录</button>
+    </div>
+  </div>
+</div>
+
+<div id="checkinView" class="view" style="display:none">
+  <div class="wrap coach">
+    <div class="ck-hero">
+      <div class="ck-hero-l">
+        <div class="ck-streak" id="ckStreak">0</div>
+        <div class="ck-streak-lab">天连续打卡</div>
+      </div>
+      <div class="ck-hero-r">
+        <div class="ck-date" id="ckDate"></div>
+        <div class="ck-sub" id="ckTotalLab">累计打卡 0 天</div>
+        <div class="ck-sub" style="opacity:.85;margin-top:6px">完成 2 道题即可打卡，截图发群 👇</div>
+        <div class="ck-badges" id="ckBadges"></div>
+        <button class="ck-redo" id="ckRedo" style="display:none" onclick="ckRedoToday()">🔄 重新作答（覆盖今天）</button>
+      </div>
+    </div>
+
+    <div class="ck-status" id="ckStatus"></div>
+
+    <div class="ck-weak" id="ckWeak"></div>
+
+    <div id="ckQuestions"></div>
+
+    <button class="ck-submit" id="ckSubmit">📅 完成今日打卡</button>
+
+    <div class="ck-cal-card">
+      <h3>📅 打卡日历</h3>
+      <div class="ck-cal-head">
+        <button class="ck-cal-nav" id="ckPrevM">‹</button>
+        <span class="ck-cal-title" id="ckCalTitle"></span>
+        <button class="ck-cal-nav" id="ckNextM">›</button>
+      </div>
+      <div class="ck-cal" id="ckCal"></div>
+    </div>
+
+    <div class="coach-history">
+      <h3>📜 我的打卡记录</h3>
+      <div id="ckHistory"></div>
+    </div>
+  </div>
+</div>
+
+<div id="reviewView" class="view" style="display:none">
+  <div class="wrap">
+    <div class="rv-hero">
+      <div class="rv-hero-l">
+        <div class="rv-due" id="rvDue">0</div>
+        <div class="rv-due-lab">今天待复习</div>
+      </div>
+      <div class="rv-hero-r">
+        <h2>🔁 间隔复习</h2>
+        <p>按记忆曲线自动安排：<b>记住了 → 拉长间隔；模糊 → 短期重看；忘了 → 明天重来。</b>答过 AI 考官或打卡的题会进入这里，到期自动提醒。靠「少量多次」把薄弱题真正记住。</p>
+      </div>
+    </div>
+
+    <div class="rv-stats" id="rvStats"></div>
+    <div class="rv-startbar" id="rvStart"></div>
+    <div id="rvBody"></div>
+  </div>
+</div>
+
+<div id="favView" class="view" style="display:none">
+  <div class="wrap">
+    <div class="fav-hero">
+      <h2>⭐ 我的收藏</h2>
+      <p>做题时遇到「还没想透」「想之后再练」的题目，点卡片上的 ⭐ 收藏，就会出现在这里。</p>
+      <div class="fav-count">已收藏 <b id="favCount">0</b> 题</div>
+      <div class="fav-actions">
+        <button onclick="exportFav('txt')">📄 下载清单</button>
+        <button onclick="exportFav('print')">🖨 打印</button>
+      </div>
+    </div>
+    <div id="favList" class="grid"></div>
+  </div>
+</div>
+
+<script>
+/* ===== 题型定义 ===== */
+const TYPES = {
+  "自我认知":{c:"#6366f1",desc:"考察你与教师岗位的匹配度：经历、特质、职业动机。"},
+  "人际沟通":{c:"#0ea5e9",desc:"与学生/家长/同事/领导的矛盾处理，重分寸与行动。"},
+  "组织管理":{c:"#14b8a6",desc:"活动/班会/家长会策划，重计划与时间线、分工。"},
+  "应急应变":{c:"#f59e0b",desc:"突发情境处置，先保安全再处理，重优先级排序。"},
+  "综合分析":{c:"#8b5cf6",desc:"社会现象与名言观点，亮观点→析原因→提对策→升华。"},
+  "教育教学":{c:"#10b981",desc:"学科教学与学生教育，理论+实际，以学生为中心。"},
+  "时政热点":{c:"#ef4444",desc:"新课标、双减、AI、心理健康等政策落地，重校本行动。"}
+};
+
+/* ===== 地区考情 ===== */
+const REGIONS = {
+  "嘉兴":{
+    time:"多与试讲搭配，结构化 2–3 分钟；平湖赴华师大 2 题 2 分钟",
+    focus:["新教师适应","学生差异性","班级管理实务","AI 赋能教学"],
+    tip:"平湖 / 秀洲 / 海盐 / 嘉善各区形式接近，重点都在「怎么站稳讲台」。"
+  },
+  "金华":{
+    time:"金东 / 义乌 / 武义复试结构化 3 分钟 1–2 题",
+    focus:["教育实务情境","家长不配合","早恋 / 学生低落","漫画 / 案例分析题"],
+    tip:"义乌题量最大也最活，常结合社会热点；金东爱出漫画题，先描述寓意再亮观点。"
+  },
+  "杭州":{
+    time:"多数区作辅助环节；萧山 2 题 6 分钟占 60%，临平 / 余杭 1 题 4 分钟，富阳 3 分钟",
+    focus:["教育热点综合分析","教育家精神","双减 / 新课标","多有追问环节"],
+    tip:"主城区重理论深度，答题要「有观点、有依据」，别只讲套话；部分区有追问。"
+  },
+  "宁波":{
+    time:"3–5 分钟 1 题 / 6–8 分钟 2 题；象山、鄞州卓越岗结构化占 100%",
+    focus:["教育实践类最高频","名人名言类多","社会现象类","有追问 + 倒计时"],
+    tip:"教育实践（项目化学习、跨学科）和名言（叶圣陶、陶行知）是宁波特色；限时训练必备。"
+  },
+  "温州":{
+    time:"多以「面谈」含结构化；龙港 10 分钟 2 题；鹿城 / 瓯海 / 乐清偏简历 + 求职 + 学科",
+    focus:["简历个人类","求职动机","学科核心素养","压力与热点"],
+    tip:"外地生源常被问「为何留温、家人是否支持」，提前准备好真诚答案。"
+  },
+  "绍兴":{
+    time:"越城初试 7 分钟 3 题；柯桥 10 分钟情景结构化；上虞全程 6+6 分钟 3 题",
+    focus:["情景结构化","因材施教 / 终身学习","青春期教育","AI 作文"],
+    tip:"越城常要求「不透露个人信息」做自我介绍；柯桥偏情景化设题。"
+  },
+  "台州":{
+    time:"椒江 2 分钟自我介绍 + 2 问；温岭结构化 8 分钟；临海偏课改跨学科",
+    focus:["教育实务情境","好课要素","AI 辅助教学","家校矛盾"],
+    tip:"台州与金华都偏实务，少空谈；课堂活跃度、家校矛盾是高频。"
+  },
+  "湖州":{
+    time:"市直属结构化 3 分钟 + 提问 2 分钟；德清 2 分钟手写 + 口述 4 分钟；吴兴 2 分钟",
+    focus:["自身优势","学科核心素养落地","学生主体性","AI 对教育影响"],
+    tip:"德清要求「手写 + 口述」，练过板书表达；整体题风偏稳重。"
+  },
+  "衢州":{
+    time:"市直多「面谈（无领导小组）+ 半结构化」；柯城 / 衢江 / 江山以试讲 + 答辩为主",
+    focus:["立德树人","教育公平","AI 与教学","家校矛盾","自我介绍 / 求职动机"],
+    tip:"衢州市直面谈环节很重「无领导小组讨论」，要练协作与逻辑；区县试讲为主，结构化常考教育公平与家校矛盾。衢州有「南孔圣地、有礼文化」，可结合谈教育认同。"
+  },
+  "舟山":{
+    time:"以试讲 + 结构化为主，时长参考各地市 2–5 分钟",
+    focus:["小班化教学","海岛教育情怀","教育公平","家校沟通","AI 辅助教学"],
+    tip:"舟山真题回忆较少，结构化以浙江通用题型为主；可重点练教育公平、因材施教、家校矛盾，并准备「为什么来海岛从教」的真诚动机。"
+  },
+  "丽水":{
+    time:"以试讲 + 结构化为主，时长参考各地市 2–5 分钟",
+    focus:["县域 / 山区教育情怀","因材施教","家校沟通","创新能力培养","AI 辅助教学"],
+    tip:"丽水结构化真题回忆较少，以浙江通用题型为主；重视「为什么来丽水」的真诚动机表达，以及对山区 / 县域教育的理解。"
+  },
+  "通用":{
+    time:"浙江各地通用结构化题型，不限地市，适合所有考区练手",
+    focus:["职业认知","人际沟通","组织管理","应急应变","综合素质"],
+    tip:"省统考与各地通用题型（含机构模拟题）。真题回忆少的地区（舟山、丽水）尤其适合先练通用题打底；凡标「机构模拟题」的均为练习用，非考生回忆真题。"
+  }
+};
+
+/* ===== 真题数据 ===== */
+const Q = [
+  /* 嘉兴 */
+  {c:"嘉兴",t:"自我认知",q:"你为什么选择来嘉兴（平湖）从教？",a:["结合个人经历与职业认同：师范背景 + 实习体验，明确想当老师","地缘 / 家庭因素若属实可提，但重点落到「认同本地教育环境、愿意长期扎根」","表达规划：先站稳讲台，再成骨干，服务本地教育"],s:"平湖提前批"},
+  {c:"嘉兴",t:"教育教学",q:"作为一名新教师，你会如何快速适应学校生活、站稳讲台？",a:["角色转换：主动听老教师课、熟悉课标与教材","班级管理：前几周立规矩 + 建信任，先抓习惯","教学：备好前两月课，错题与反馈及时复盘","心态：接受不完美，定期写教学反思"],s:"秀洲 2024.11"},
+  {c:"嘉兴",t:"教育教学",q:"作为教师，你如何看待学生之间的差异性？",a:["承认差异是常态，拒绝「一刀切」","因材施教：分层目标、分组任务、多元评价","关注弱势生闪光点，用发展眼光看学生"],s:"秀洲 2024.11"},
+  {c:"嘉兴",t:"教育教学",q:"在教学中，你会如何处理教学难点？",a:["诊断难点成因：认知跨度大 / 经验缺失 / 概念混淆","拆解：化抽象为具体，搭脚手架，用类比与情境","课堂检测 + 个别辅导巩固"],s:"平湖 2024.9 武大场"},
+  {c:"嘉兴",t:"应急应变",q:"学生总是发生矛盾冲突，作为班主任你怎么处理？",a:["及时介入分开，先降温，防止冲突升级","分别倾听与调查，不偏袒任何一方","引导换位思考，促成和解，必要时家校协同","班级建设：立规则、设矛盾调解机制、班会育情"],s:"平湖 2024.9"},
+  {c:"嘉兴",t:"时政热点",q:"如何用 AI 人工智能提升教学质量？",a:["备课时用 AI 生成素材、做学情分析，提效不替代思考","课堂用 AI 做个性化练习与即时反馈","守住人文底色：情感、价值观、师生互动不可替代","注意数据隐私与学术诚信"],s:"平湖赴华师大"},
+  {c:"嘉兴",t:"人际沟通",q:"家长只关注成绩，对班主任开展的其他活动不理解，怎么办？",a:["换位思考，家长焦虑源于「不了解」","主动沟通：说明活动的育人价值（习惯 / 合作 / 身心）","用案例或数据展示综合素质的收益","邀请家长参与，增进理解"],s:"平湖赴华师大"},
+  {c:"嘉兴",t:"教育教学",q:"学生上课走神、表现出倦怠，教师如何做？并说明用到的教育原理。",a:["先观察归因：内容太难 / 太易、疲劳、家庭因素","原理：有意注意规律、最近发展区、学习动机理论","做法：调整节奏、增加互动、降低认知负荷、正向反馈"],s:"平湖第二批"},
+  {c:"嘉兴",t:"应急应变",q:"紧急上任班主任，学生出现「手机上瘾」现象，作为班主任该怎么做？",a:["不一刀切禁，先调研成瘾程度与原因","契约管理：约定使用时段，班级共定规则","替代活动：丰富课间与社团，满足社交娱乐需求","家校协同，睡前离手机"],s:"平湖第二批"},
+
+  /* 金华 */
+  {c:"金华",t:"人际沟通",q:"你是一名刚入职的老师，家长不希望你给他们的孩子上课，作为教师怎么办？",a:["保持专业与尊重，不防卫","了解家长顾虑：不信任 / 过往经历 / 孩子特殊情况","用行动证明：邀请听公开课、定期反馈孩子进步","借班主任或教研组建立信任"],s:"金东 2025.7"},
+  {c:"金华",t:"应急应变",q:"你是初三班主任，发现学生小红和隔壁班小刚有早恋倾向，怎么办？",a:["不贴标签、不公开，保护自尊心","分别谈心，引导正确交往边界","家校沟通，请家长温和关注","班集体开展青春期 / 人际交往主题班会"],s:"金东 2025.7"},
+  {c:"金华",t:"综合分析",q:"请观察下面这幅漫画，谈谈你的看法。",a:["描述漫画寓意（多为教育现象讽刺，如唯分数、抢跑）","亮明观点，分析成因：评价单一、家长焦虑","提对策：多元评价、缓解焦虑、回归育人","落到教师日常可为的事"],s:"金东 2025.7"},
+  {c:"金华",t:"自我认知",q:"在你看来，应当如何建立教师威信？",a:["威信 = 专业能力 + 人格魅力，而非靠严厉","业务过硬：课讲得好、班级带得稳","公平公正、言出必行","关爱学生，亦师亦友"],s:"金东 2024.10"},
+  {c:"金华",t:"综合分析",q:"山东济宁一男孩要零花钱未果殴打母亲，母亲纵容说「让他打吧」，从现代教育角度谈看法。",a:["否定纵容，指出溺爱危害","现代教育观：爱与规则并行、尊重平等","家庭：立边界、教情绪管理；学校：家校共育","教师可做的家庭教育指导"],s:"金东 2024.10"},
+  {c:"金华",t:"自我认知",q:"在教师职业生涯中难免遇到困难与挑战，面对这些情况你会怎么做？",a:["承认困难是常态：生源、家长期待、教学瓶颈","心态：把挑战当成长机会","具体：请教前辈、持续学习、复盘调整","用自身经历说明韧性"],s:"义乌 2024.9 西南大学场"},
+  {c:"金华",t:"应急应变",q:"学生小明因家庭原因心情低落，总不参加集体活动，作为班主任怎么引导？",a:["私下关怀，建立信任，不强迫","联动家长了解情况，给予支持","小步参与：安排其擅长的事，体验成就感","持续关注，必要时心理老师介入"],s:"义乌 2024.9"},
+  {c:"金华",t:"应急应变",q:"高二小明此前成绩优秀，近期下滑焦虑，找你说「我学不好了」，作为班主任怎么做？",a:["共情减压，肯定其能力","一起找原因：方法 / 心态 / 家庭","拆解目标，小步前进，重建自信","关注睡眠与情绪，必要时转介"],s:"义乌赴杭师大"},
+  {c:"金华",t:"综合分析",q:"AI / deepseek 兴起，学生依赖 AI 写作文，你怎么看？",a:["辩证：AI 是工具也是诱惑","危害：思维惰性、表达空心化","引导：把 AI 当「陪练」而非「代写」，训练审题与构思","明确学术诚信边界"],s:"义乌赴杭师大"},
+  {c:"金华",t:"综合分析",q:"班主任为节省时间全用 AI 写评语，你对这个现象怎么看？",a:["否定：评语是人与人的对话，AI 缺温度","效率可用，但须教师二次个性化","建议：AI 草稿 + 教师手写温度","守住教育的人文性"],s:"义乌 2024.12"},
+  {c:"金华",t:"应急应变",q:"你提问无人回答，有一生举手却逻辑混乱答错，引起其他同学哄笑，怎么处理？",a:["先控场：示意安静，保护举手学生","肯定其勇气，拆解问题降低难度","借机教「如何倾听不同答案」，化尴尬为资源","课后鼓励该生"],s:"义乌 2024.12"},
+  {c:"金华",t:"教育教学",q:"在教学中如何落实以学生为中心的教学原则？",a:["从「教」转向「学」：目标基于学情","设计探究与合作任务，让学生做主体","差异化支持，关注每个学生的参与","评价多元，重过程"],s:"金东赴湖师大"},
+  {c:"金华",t:"应急应变",q:"如果你是班主任，发现有同学被霸凌了，你会怎么做？",a:["立即介入保护受欺者，隔离双方","严肃处理，按校规与法律底线","心理安抚受欺者，疏导双方","班会反霸凌 + 家校沟通 + 长期跟进"],s:"武义"},
+
+  /* 杭州 */
+  {c:"杭州",t:"综合分析",q:"请结合时代背景，谈谈教育家精神的意义。",a:["教育家精神内涵：心有大我、言为士则、躬耕态度等","时代背景：教育强国、双减、AI 冲击","意义：引领教师价值、提升育人质量","青年教师如何践行"],s:"萧山 2024.12"},
+  {c:"杭州",t:"综合分析",q:"在「双减」政策下，请结合具体学科，谈谈如何进行作业设计。",a:["作业功能转变：减量提质、育能力","分层 + 弹性 + 实践类作业","学科举例：语文阅读、数学探究、英语口语","控总量、重反馈"],s:"萧山 2024.12"},
+  {c:"杭州",t:"时政热点",q:"教育部《中小学科学教育工作指南》要求激发学生科技报国志向，作为教师你会如何做？",a:["在学科中渗透科学家精神与家国情怀","设计探究与实验，保护好奇心","联系国之重器案例，树立志向","家校社协同科学实践"],s:"余杭 2025.7"},
+  {c:"杭州",t:"综合分析",q:"有人认为 AI 既要发挥优势，也要坚守教育的人文底色，对此你怎么看？",a:["肯定 AI 提效","人文底色不可让：价值观、情感、审美","教师角色升级为「引路人」","守住育人本质"],s:"余杭 2025.7"},
+  {c:"杭州",t:"综合分析",q:"刘老师担心学生「偏轨」，私自拆看学生信件，是否合法？谈谈看法。",a:["明确违法：侵犯隐私权，《未成年人保护法》有规定","动机善意但手段错误","正确做法：沟通 + 信任 + 正当途径","教师须依法执教"],s:"临平 2025.7 中学段"},
+  {c:"杭州",t:"教育教学",q:"学生一二年级常考双百，三年级后成绩下滑偏科，原因有哪些？作为教师怎么做？",a:["归因：思维跨度（形象→抽象）、习惯、兴趣分化","教师：关注学习困难，分层辅导","家校：培养阅读与习惯，缓解焦虑","多元评价，防标签化"],s:"临平 2025.7 小学段"},
+  {c:"杭州",t:"教育教学",q:"谈谈你对教育公平的理解。",a:["内涵：机会 / 过程 / 结果公平","课堂落地：面向全体、关注弱势","资源均衡与因材施教并行","教师日常可为之事"],s:"钱塘赴东北师大"},
+  {c:"杭州",t:"教育教学",q:"反思对教师很重要，谈谈你了解的反思方法；结合学科谈谈如何利用班级授课制。",a:["反思方法：写教学日志、录像回看、学生反馈","班级授课制优点：效率高、社会化","利用：在集体中兼顾差异（小组 / 分层）","扬长避短"],s:"西湖区"},
+
+  /* 宁波 */
+  {c:"宁波",t:"综合分析",q:"弗莱雷说「没有了对话就没有真正的教育」，作为班主任如何与学生聊得有效？",a:["对话 = 平等尊重，而非说教","选时机（课后 / 活动）、用学生语言","倾听为主，少评判多追问","在对话中观察与引导"],s:"市直高洽会 2025.9"},
+  {c:"宁波",t:"应急应变",q:"北仑研学 30 多名学生上吐下泻，家长不断打电话询问，作为带队老师怎么处理？",a:["第一优先级：送医救治、报告学校与疾控","统一信息出口，专人接家长电话安抚","留样溯源，配合调查","后续健康跟踪 + 反思预案"],s:"北仑 2024.11"},
+  {c:"宁波",t:"综合分析",q:"「双减」下不少初中生作业写到 11 点、老师职业倦怠，作为初中教师怎么办？",a:["看见真问题：形式减负实质没减","教师：优化课堂效率、精简作业","家校：引导合理期待","向上反馈，推动系统性改进"],s:"江北 2024.11"},
+  {c:"宁波",t:"综合分析",q:"教育内卷严重，从孩子出生就卷入，你如何看待、如何应对？",a:["辨析内卷：过度竞争伤身心","教师立场：守住儿童立场，不推波助澜","在班内减负增效、关注个体","引导家长理性"],s:"宁海 2024.3"},
+  {c:"宁波",t:"自我认知",q:"「要给学生一杯水，教师要有一桶水」，谈谈理解，并说你的优势。",a:["旧喻可更新：教师要持续学习，做「活水」","优势结合专业 / 沟通 / 耐心","落到「终身学习」行动"],s:"宁海 2024.3"},
+  {c:"宁波",t:"教育教学",q:"如何推进项目化学习（PBL）？",a:["设计真实驱动性问题","跨学科整合，学生主导探究","过程性评价 + 成果展示","结合本校学情小步试点"],s:"宁波高频题"},
+  {c:"宁波",t:"教育教学",q:"怎样激发学生创新思维？",a:["创设安全表达氛围，鼓励提问","开放任务，留探究空间","联系生活，跨学科","容错，重过程"],s:"宁波高频题"},
+  {c:"宁波",t:"综合分析",q:"叶圣陶「为人师表」、陶行知「教学生学」等名言，谈谈你的理解。",a:["以身立教，言行示范","教学重心在「学」：教方法而非灌知识","课堂落地：少讲多导"],s:"宁波高频题"},
+  {c:"宁波",t:"应急应变",q:"课堂中学生争执打闹 / 晕倒受伤 / 公开课失误 / 情绪崩溃，如何处理？",a:["通用原则：先保安全与人权，再处理","区分轻重：身体 > 情绪 > 秩序","冷静、简短、专业","课后复盘"],s:"宁波高频题"},
+  {c:"宁波",t:"综合分析",q:"中小学生沉迷短视频，抑郁检出率上升，作为教师怎么看、怎么做？",a:["数据背后：网络依存 + 心理危机","学校：心育课程、无屏时段","班级：用联结感与成就感替代","及时识别转介，家校协同"],s:"鄞州强师"},
+  {c:"宁波",t:"自我认知",q:"你为什么报考宁波市北仑区？",a:["区域教育认同 + 个人规划","结合专业匹配度","表达扎根意愿"],s:"北仑"},
+  {c:"宁波",t:"教育教学",q:"如何引导学生将课堂知识迁移到实践中？",a:["在情境中用知识：项目 / 生活任务","变式练习，促进概括","鼓励应用于真实问题","反思迁移漏洞"],s:"江北"},
+
+  /* 温州 */
+  {c:"温州",t:"自我认知",q:"结合简历做自我介绍；为何留鹿城 / 温州从教，家人是否支持？",a:["结构：我是谁 → 经历亮点 → 匹配点","外地生源重点答「认同 + 扎根意愿」","家人支持可加分，但落脚职业自主"],s:"鹿城"},
+  {c:"温州",t:"教育教学",q:"本学科核心素养哪一项最重要？课堂教学中趣味性与知识性如何取舍？",a:["选一项深入谈（如语文语言 + 思维）","趣味为钩，知识为核，不本末倒置","用情境把二者统一"],s:"鹿城"},
+  {c:"温州",t:"综合分析",q:"给自己备考压力打分并说解压方式；谈谈郑州 23 岁女教师跳楼这一社会热点。",a:["坦诚压力 + 健康解压方式","热点：共情同行，谈教师心理支持机制","体现自我关怀意识"],s:"鹿城"},
+  {c:"温州",t:"综合分析",q:"结合《礼记》名句谈教师上岗实践；于漪老师教育名言如何理解？",a:["引名句释义，落到「知行合一」","于漪：一辈子学做老师，爱岗爱生","新教师行动：勤学常反思"],s:"龙港温大专场"},
+  {c:"温州",t:"应急应变",q:"学生扰乱课堂但其他课表现良好，怎么处理？学生痴迷直播想辍学如何劝导？",a:["先找因：是否针对你 / 内容 / 关系","个别谈，调整互动方式","辍学：共情 + 前景教育 + 家校，紧急干预"],s:"龙港"},
+  {c:"温州",t:"自我认知",q:"教师如何践行终身学习？课堂学生打架双方沉默对峙如何处置？",a:["终身学习：教研 / 阅读 / 培训 / 反思","打架：先分离降温，再倾听，不逼当场认错","后续班会 + 个别辅导"],s:"龙港浙师大专场"},
+  {c:"温州",t:"组织管理",q:"结合五育目标谈龙港教育现状与未来；请设计一节主题班会。",a:["五育并举现状与短板","未来：融合课程、评价改革","班会设计：目标 - 流程 - 评价清晰"],s:"龙港本地专场"},
+  {c:"温州",t:"时政热点",q:"AI 技术赋能课堂（二选一作答）。",a:["场景：个性化练习、学情画像、备课","边界：不替代师生情感与价值引领","教师新要求：会用、会判、会管"],s:"龙港 25 届浙师大专场"},
+  {c:"温州",t:"自我认知",q:"多地区同时进面如何取舍？为什么选择本校、对学校了解多少？",a:["取舍标准：匹配度 > 名气","对本校的研究：理念 / 特色 / 需求","真诚，不贬低其他"],s:"瓯海"},
+  {c:"温州",t:"教育教学",q:"新旧义务教育课标对比新增哪些要素？什么是过程性评价？",a:["新增：核心素养、跨学科、学业质量等","过程性评价：贯穿教学的诊断与反馈","举例课堂如何使用"],s:"瓯海"},
+  {c:"温州",t:"人际沟通",q:"是否愿意担任跟岗班主任？如何看待班主任压力？",a:["积极态度：班主任是成长快车道","压力正视：用系统方法减负","价值：最懂学生"],s:"瓯海"},
+
+  /* 绍兴 */
+  {c:"绍兴",t:"自我认知",q:"做简要自我介绍（不得透露个人信息）；结合报考学科谈谈如何传承中华优秀传统文化。",a:["模板化但不套：经历 + 特质 + 匹配","文化：挖掘学科中的文化元素（古诗文 / 节气）","活动化传承：诵读 / 实践"],s:"越城 2024.11"},
+  {c:"绍兴",t:"自我认知",q:"谈谈自身优势；结合学科如何在课堂上体现核心素养。",a:["优势具体可证","素养：学科四维落地路径","用一课例说明"],s:"越城 2024"},
+  {c:"绍兴",t:"综合分析",q:"陶行知说「你的教鞭下有瓦特，你的冷眼下有牛顿」，同意吗？谈谈看法。",a:["深表赞同：反对偏见与粗暴","用发展眼光看学生，唤醒潜能","做法：爱心耐心 + 因材施教"],s:"越城 2023"},
+  {c:"绍兴",t:"应急应变",q:"你上课的时候有同学在哭泣，应该怎么办？",a:["轻声安抚，给情绪缓冲","课后单聊找因，联动班主任 / 家长","兼顾课堂秩序与关怀"],s:"越城 2023"},
+  {c:"绍兴",t:"教育教学",q:"对「因材施教」的理解，如何在教学中进行实践？",a:["承认差异，测学情","分层目标 / 任务 / 评价","跟踪调整"],s:"越城"},
+  {c:"绍兴",t:"自我认知",q:"如何落实「终身学习」？",a:["理念 + 行动：阅读 / 教研 / 培训","反思性实践","转化为教学创新"],s:"越城"},
+  {c:"绍兴",t:"教育教学",q:"处在青春期的初中生有哪些生理心理特点？你要实施什么教育？",a:["特点：自我意识强、情绪波动、同伴影响大","教育：尊重 + 引导 + 价值澄清","班级：安全感与归属感"],s:"越城聘用制 2025"},
+  {c:"绍兴",t:"应急应变",q:"学生用豆包 / AI 直接生成作文，应该怎么办？",a:["不严禁，重在引导","训练构思与修改能力，AI 当陪练","明确原创边界，过程性留痕"],s:"越城聘用制 2025 语文"},
+  {c:"绍兴",t:"教育教学",q:"结合学科谈一谈如何做「四有好老师」。",a:["四有：理想信念 / 道德情操 / 扎实学识 / 仁爱之心","学科化表达","日常践行"],s:"柯桥 / 上虞"},
+
+  /* 台州 */
+  {c:"台州",t:"自我认知",q:"请做 2 分钟自我介绍。",a:["精炼：身份 - 亮点 - 匹配","控制时长，留互动","不透露违规信息"],s:"椒江 2024.11"},
+  {c:"台州",t:"教育教学",q:"在新课改背景下，你认为一堂好课应该具备哪些要素？",a:["学生主体、目标清晰、情境真实","思维可见、评价伴随","举例说明"],s:"椒江 2024.11"},
+  {c:"台州",t:"自我认知",q:"请谈谈你印象中最深刻的一节课。",a:["选有成长意义的课","说清：设计 - 意外 - 反思","体现教学观"],s:"椒江 2024.11"},
+  {c:"台州",t:"教育教学",q:"历史学科如何体现德育？如何落实核心素养？",a:["史料浸润、价值引领","素养：唯物史观 / 时空 / 史料实证等","课例说明"],s:"椒江"},
+  {c:"台州",t:"时政热点",q:"如何用 AI 辅助教学帮助学生？如何处理家校矛盾？",a:["AI：个性化、减负，但要注意边界","家校矛盾：先共情再协商，聚焦孩子利益","机制化沟通"],s:"椒江"},
+  {c:"台州",t:"教育教学",q:"学生随年段升高课堂活跃度降低，怎么解决？",a:["归因：学业压力 / 羞于表达 / 教学方式","营造安全表达、低门槛参与","小组 + 真实任务唤醒"],s:"台州市直高中语文"},
+  {c:"台州",t:"应急应变",q:"学生在课上做数学作业，你会怎么办？",a:["不当众激化，课后谈","了解是否听不懂 / 赶作业","调整教学吸引 + 个别帮助"],s:"镇海中学台州分校"},
+  {c:"台州",t:"教育教学",q:"课改要求跨学科融合教学，但不符合学校实施与评价进度，怎么做？",a:["在现有框架内「微融合」","用校本 / 社团先行试点","向上建议，积累证据"],s:"临海"},
+  {c:"台州",t:"应急应变",q:"某同学经常作息不规律、违背学校规定，怎么办？",a:["先关怀原因：家庭 / 身心","契约管理 + 同伴支持","联动家长，必要时心理介入"],s:"临海"},
+  {c:"台州",t:"应急应变",q:"女生被调侃「胖」产生自卑情绪，如何应对？",a:["及时制止嘲讽，保护自尊","个体辅导 + 身体意象教育","班会反偏见、建包容班风"],s:"上虞"},
+
+  /* 湖州 */
+  {c:"湖州",t:"自我认知",q:"谈谈自身优势；结合学科如何在课堂体现核心素养。",a:["优势具体可证","素养落地路径","课例说明"],s:"吴兴 / 市直"},
+  {c:"湖州",t:"教育教学",q:"如何在教学中落实学生主体性？",a:["让学生参与目标与任务设计","探究合作，教师退后半步","多元评价看见每一个"],s:"德清"},
+  {c:"湖州",t:"综合分析",q:"人工智能出现，粉笔板书是否可被取代？谈谈看法。",a:["板书价值：思维可视化、示范、温度","AI 不可替代现场生成与师生共创","二者结合"],s:"湖州（类市直题）"},
+  {c:"湖州",t:"人际沟通",q:"班级学生发生矛盾冲突，作为老师如何处理？",a:["降温 - 倾听 - 引导和解 - 建机制","班会育情","家校必要时协同"],s:"吴兴"},
+  {c:"湖州",t:"自我认知",q:"为什么选择湖州从教？自身优势是什么？",a:["区域认同 + 规划","优势与岗位匹配","表达扎根意愿"],s:"湖州"},
+  {c:"湖州",t:"教育教学",q:"识字教学有什么建议？如何理解「文化自信」？（小语答辩）",a:["识字：情境 + 字理 + 在运用中反复","文化自信：认同优秀传统文化并传递","课堂落地方式"],s:"吴兴"},
+  {c:"湖州",t:"自我认知",q:"你报考该岗位的优势是什么？",a:["立足师范专业 + 实习经历，说明专业匹配","结合具体能力：沟通、耐心、学科功底","落到岗位：愿意扎根湖州教育"],s:"2025 浙江湖州（职业认知真题）"},
+  {c:"湖州",t:"教育教学",q:"高中学生每周只有一节阅读课，如何在一个学期里阅读完整本《红楼梦》？",a:["把大目标拆小：每周固定章节 + 导读问题","多种形式：读书分享、角色扮演、片段精读","借课内阅读课 + 课外打卡推进","过程性评价，重兴趣而非刷题"],s:"湖州行知中学高中语文结构化"},
+  {c:"湖州",t:"自我认知",q:"你认为你当中职的班主任有哪些优势和不足？",a:["优势：有耐心、善沟通、专业对口","不足：年轻缺经验，突发处置待练","改进：多跟老班主任学、建预案、勤反思"],s:"湖州农业学校结构化"},
+  {c:"湖州",t:"时政热点",q:"如何看待 AI 以及其在教育中的应用？",a:["AI 能备课、个性化练习、学情分析，提效","边界：不替代师生情感与价值引领","教师要做「会用的引路人」"],s:"湖州华东师大实验高中结构化"},
+  {c:"湖州",t:"教育教学",q:"在作文教学中，如何落实你提出的教学建议？",a:["先明确建议：如增加过程指导、多示范","落到课堂：审题—构思—草稿—互评—修改","用量表评价，让学生看得见进步"],s:"湖州吴兴中学英语结构化"},
+
+  /* 衢州 */
+  {c:"衢州",t:"自我认知",q:"做 2 分钟自我介绍（面谈环节）。",a:["结构：我是谁 → 经历亮点 → 匹配点","控制时长，留互动","不透露违规信息"],s:"衢州市直面谈"},
+  {c:"衢州",t:"自我认知",q:"你为什么选择来衢州？对衢州教育了解多少？",a:["区域认同 + 个人规划结合","展示对衢州教育（南孔圣地、有礼文化）的了解","表达扎根意愿，避免空话"],s:"衢州市直面谈"},
+  {c:"衢州",t:"组织管理",q:"无领导小组讨论：围绕「教师如何落实立德树人」展开讨论。",a:["先亮观点：立德树人是根本任务","结合课堂 / 活动 / 家校三路径","讨论中主动推进、尊重他人、会总结","体现协作与逻辑"],s:"衢州市直面谈"},
+  {c:"衢州",t:"综合分析",q:"谈谈你对「教育公平」的理解。",a:["内涵：机会 / 过程 / 结果公平","课堂落地：面向全体、关注弱势","资源均衡与因材施教并行","教师日常可为之事"],s:"衢州结构化"},
+  {c:"衢州",t:"人际沟通",q:"学生多次不交作业、迟到，你多次劝阻仍不听，同事说「只是关爱学生是不可行的」，你怎么看？",a:["不同意「只关爱不够」的极端","关爱是前提，但需配规则与方法","做法：建立契约、家校协同、个别辅导","与同事求同存异、共同育人"],s:"衢州结构化"},
+  {c:"衢州",t:"人际沟通",q:"有家长反映教学进度太快、有家长说太慢，面对这一矛盾怎么办？",a:["共情双方诉求，不急着辩解","调研真实学情与差异","分层：弹性作业 + 个别辅导","用数据沟通，争取理解"],s:"衢州结构化"},
+  {c:"衢州",t:"时政热点",q:"如何看待 AI 技术发展对教育的影响？AI 会代替教师吗？请结合学科谈如何利用 AI 辅助教学。",a:["辩证：AI 提效但不可替代育人","教师角色升级为引路人","学科举例：个性化练习、学情画像","守住情感与价值引领"],s:"衢州结构化"},
+  {c:"衢州",t:"应急应变",q:"课堂上两个学生发生争执，一个摔倒在地，另一个沉默不语，你怎么处理？",a:["先保安全：查看伤情、分开双方","冷静控场，避免扩大","课后分别了解，引导和解","班级建规则 + 反思"],s:"衢州结构化"},
+  {c:"衢州",t:"教育教学",q:"谈谈你对「因材施教」的理解，请举例说明。",a:["承认差异，测学情","分层目标 / 任务 / 评价","举例：同一任务不同难度","跟踪调整"],s:"衢州结构化"},
+  {c:"衢州",t:"自我认知",q:"你如何理解「四有好老师」？",a:["四有：理想信念 / 道德情操 / 扎实学识 / 仁爱之心","结合学科与经历谈","日常践行"],s:"衢州结构化"},
+  {c:"衢州",t:"人际沟通",q:"家长在家长群里公开质疑你的教学，你怎么回应？",a:["公开回应保持专业、不情绪化","私信家长单独沟通，了解诉求","用事实与方案化解，必要时请班主任协调","把危机变信任契机"],s:"衢州结构化"},
+
+  /* 舟山（真题回忆较少，以浙江通用题型补充） */
+  {c:"舟山",t:"自我认知",q:"你为什么选择来舟山（海岛）从教？",a:["区域认同 + 个人规划","可提海岛教育的独特价值（小班、联结感）","表达扎根意愿"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"教育教学",q:"如何在小班化教学中关注到每一个学生？",a:["小班优势：更多互动与个别关注","差异化任务 + 走下讲台","建立每个学生成长档案","让沉默生也有表达机会"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"综合分析",q:"谈谈你对「教育公平」的理解。",a:["内涵：机会 / 过程 / 结果公平","海岛 / 乡村校更需资源倾斜","课堂面向全体、关注弱势","教师可为之事"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"应急应变",q:"课堂上两个学生发生争执，一个摔倒在地，另一个沉默不语，你怎么处理？",a:["先保安全：查看伤情、分开","冷静控场","课后分别了解、引导和解","建规则 + 反思"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"人际沟通",q:"家长在家长群里公开质疑你的教学，你怎么回应？",a:["公开回应保持专业","私信单独沟通","用事实与方案化解","化危机为信任"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"时政热点",q:"如何看待 AI 对教育的影响？请结合学科谈如何利用 AI 辅助教学。",a:["辩证：提效不替代育人","学科举例个性化练习","守住情感价值引领"],s:"舟山（参考通用题）"},
+  {c:"舟山",t:"教育教学",q:"谈谈你对「因材施教」的理解，举例说明。",a:["承认差异测学情","分层目标任务评价","举例说明","跟踪调整"],s:"舟山（参考通用题）"},
+
+  /* 丽水（真题回忆较少，以浙江通用题型补充） */
+  {c:"丽水",t:"自我认知",q:"你为什么选择来丽水从教？",a:["区域认同 + 规划","可提山区 / 县域教育情怀","表达扎根意愿"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"教育教学",q:"谈谈你对「因材施教」的理解，举例说明。",a:["承认差异测学情","分层目标 / 任务 / 评价","举例","跟踪调整"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"综合分析",q:"谈谈你对「教育公平」的理解。",a:["内涵：机会 / 过程 / 结果公平","山区县域更需资源均衡","课堂面向全体","教师可为之事"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"应急应变",q:"课堂上两个学生发生争执，一个摔倒在地，另一个沉默不语，你怎么处理？",a:["先保安全","冷静控场","课后分别了解","建规则反思"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"人际沟通",q:"家长不配合你的工作，怎么办？",a:["换位理解家长顾虑","主动沟通、用行动证明","借班主任 / 教研组建立信任","家校共育"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"教育教学",q:"如何培养学生的创新能力？",a:["营造安全表达氛围","开放任务留探究空间","容错重过程","联系生活跨学科"],s:"丽水（参考通用题）"},
+  {c:"丽水",t:"时政热点",q:"如何利用 AI 辅助教学？",a:["场景：个性化、学情画像、备课","边界：不替代师生情感","教师新要求：会用会判会管"],s:"丽水（参考通用题）"},
+
+  /* 通用：机构模拟题（练习用，非考生回忆真题） */
+  {c:"通用",t:"自我认知",q:"你为什么选择成为一名教师？",a:["真实动机：热爱 + 实习体验 + 价值感","不只说稳定，要落到「育人」","表达长期深耕意愿"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"谈谈你自身的优点和不足，以及如何发挥优势、改进不足？",a:["优点具体可证（耐心 / 沟通 / 专业）","不足真诚不致命（如经验少），并给改进","体现成长型思维"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"入职后，你未来三年的职业发展如何规划？",a:["第一年站稳讲台、熟悉学情","第二年打磨方法、做小课题","第三年形成风格、出成果"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"你和同事在教学方法上有较大分歧，怎么处理？",a:["尊重差异、坦诚沟通","各取所长、求同存异","以学生学习效果为共同目标"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"学生向你抱怨某老师教学枯燥，你怎么回应？",a:["先安抚，不背后贬低同事","引导学生换个角度适应","必要时与该老师善意沟通"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"组织管理",q:"请设计一次关于传统文化的主题班会。",a:["定主题目标 → 分组准备 → 环节（视频 / 表演 / 讨论）","重参与感，避免老师独角戏","课后延伸（手抄报 / 实践）"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"组织管理",q:"如何策划一次家长会，怎么安排流程？",a:["会前定主题通知 + 备材料","会中：整体情况 + 学科分析 + 互动","会后跟进反馈，建长效沟通"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"组织管理",q:"组织一次校外实践活动，你的计划是？",a:["定地点主题（博物馆等）+ 安全预案","行前教育、途中指导、事后总结","重收获与反思"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"组织管理",q:"如何组织一次校园文化节？",a:["成立筹备组、征集方案","宣传 + 分板块活动 + 后勤保障","复盘表彰，形成传统"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"应急应变",q:"上课过程中突然停电，你会怎么处理？",a:["先稳住秩序，用自然光 / 手机照明","短停：互动回顾；长停：布置任务或调整","课后检修、反思预案"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"综合分析",q:"如何看待素质教育与应试教育的关系？",a:["二者不对立：应试检验知识，素质培养能力","现实中易偏一端，需平衡","教师：课堂提效 + 关注全面发展"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何在教学中实施素质教育、关注学生个性差异？",a:["转变观念：从分数导向到育人","多样化教学 + 实践活动","关注个体差异、因材施教"],s:"机构模拟题（练习用）"},
+
+  /* 通用：各地真实结构化真题（网友回忆，跨地市通用） */
+  {c:"通用",t:"教育教学",q:"「语言是思维的外壳，思维是语言的内核」，结合学科教学谈谈你的理解。",a:["语言与思维互为表里：思维靠语言外化，语言靠思维充实","教学：用表达训练思维（说清楚 → 想清楚）","学科举例：语文读写、数学说理"],s:"杭州富阳 2024.6 结构化真题"},
+  {c:"通用",t:"综合分析",q:"新课标提倡「大单元教学」，你怎么理解并落实？",a:["大单元 = 打破课时碎片化，围绕大概念整合","落实：定主题—统目标—设计任务链—教评一体","不能为「大」而大，要真有核心"],s:"温州市直属 2024 结构化真题"},
+  {c:"通用",t:"人际沟通",q:"孩子别的都好，就是讨厌某门课的老师，怎么办？",a:["先共情，不强迫喜欢老师","找原因：教学风格 / 一次冲突 / 从众","帮建桥梁：从学科兴趣切入，必要时家校协同"],s:"浙江结构化真题（网友回忆）"},
+  {c:"杭州",t:"综合分析",q:"电影《哪吒》里说「他们说我是妖怪，我就当妖怪给你们瞧瞧」，请结合儿童身心健康发展规律谈谈你的理解。",a:["儿童自我概念易受外界评价影响，「标签效应」会让负面评价自我实现","发展规律：先接纳再引导，用正面期待（罗森塔尔效应）替代贴标签","教育姿态：做看见孩子、给正向反馈的成人，帮其建立积极自我形象"],s:"钱塘新区 2025.3 结构化真题"},
+  {c:"杭州",t:"应急应变",q:"初三某班班主任对学生要求十分严格，学生不适应联名投诉要求换班主任，家长也向学校反映，假如你是该教师会怎么做？",a:["先接住情绪：感谢反馈、不辩解、承诺调研","找原因：是方式过严还是沟通不够，召开学生/家长座谈会听真实声音","调整：保留严格底线、优化表达方式，建立定期沟通机制，必要时请年级组协助"],s:"钱塘新区 2025.3 结构化真题"},
+  {c:"金华",t:"综合分析",q:"「双减」后部分家长对课后服务提出更高要求，希望增加学科辅导内容，你怎么看？",a:["理解家长期待，但课后服务定位是「拓展+兴趣+素养」，不是补习延伸","坚持五育并举：融入学科拓展、兴趣培养、心理指导，避免加重负担","家校共识：说明设计理念，必要时给个性化家庭辅导建议"],s:"金华 2025（机构汇编）"},
+  {c:"金华",t:"综合分析",q:"随着 AI 发展，有人提出教师角色将被替代，你怎么看？",a:["AI 可辅助备课、学情分析，但无法替代情感沟通与价值引导","教师核心价值：个性化关怀、人格示范、立德树人","定位：做人机协同的「主导者」，提升数字素养而非被取代"],s:"金华 2025（机构汇编）"},
+  {c:"金华",t:"人际沟通",q:"同事在公开场合批评你的教学方法，你会如何处理？",a:["现场冷静，不当面争执，保护双方体面","事后私下沟通，先听对方依据，再展示设计初衷与改进","求同存异：合理处采纳，误解处解释，以教学实效为共同目标"],s:"金华 2025（机构汇编）"},
+  {c:"金华",t:"人际沟通",q:"家长对学校某项决策不满、多次到校反映，你会如何应对？",a:["热情接待、认真倾听，记录核心诉求","解释决策依据，用数据与案例说明出发点","建立反馈闭环：能改的推动优化，不能改的争取理解，持续沟通"],s:"金华 2025（机构汇编）"},
+  {c:"温州",t:"综合分析",q:"谈谈你对当前温州教育改革趋势的理解及应对措施。",a:["趋势：重素质教育与创新能力、项目式/小组合作","更新理念：多元教学法，关注个性发展","自身：参与培训、提升专业，结合改革优化教学"],s:"温州 2025（机构汇编）"},
+  {c:"温州",t:"综合分析",q:"如何看待「双减」政策对温州教育的影响及教师应对？",a:["回归教育本质，减轻负担但提质","转变方式：提课堂效率、优作业设计、关注心理","家校协同：引导家长关注全面发展，营造好生态"],s:"温州 2025（机构汇编）"},
+  {c:"温州",t:"综合分析",q:"分析温州教育资源不均衡现象及解决办法。",a:["表现：城乡、校际差异","加大薄弱校投入、教师轮岗、优质课线上共享","优化招生政策促公平，让每个学生享优质资源"],s:"温州 2025（机构汇编）"},
+  {c:"通用",t:"综合分析",q:"学生用 AI 智能写作业，你怎么看？",a:["现象：技术便利但催生依赖与诚信风险","引导：明确使用边界，鼓励用 AI 辅助思考而非代写","教学：设计重过程、重原创、重探究的作业，提升辨别力"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"小浩父母离异后经常迟到早退、成绩直线下降，父母也不管不顾，作为老师你怎么办？",a:["先共情关怀，单独谈心了解真实困难","联动：联系监护人尽责任，必要时请学校/社区介入","学业+心理双帮扶：小目标计划、同伴互助，持续跟踪"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"家长不关注孩子学习，成绩下滑就说是老师的责任，你怎么看/怎么办？",a:["理解家长焦虑，但不把责任单边化","沟通：用数据呈现孩子在校表现，共商家庭陪伴方案","边界：家校协同、各司其职，以孩子利益为最大公约数"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"组织管理",q:"一个班级需要各科老师团结合作才能办好，你是班主任会怎么做？",a:["主动牵头：建立定期班科联席会","信息共享：同步学情、统一要求、互补管理","营造合力：让科任老师参与班级活动，增强归属感"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"小明是单亲家庭的孩子，他很自卑，你怎么做？",a:["保护自尊：不在公开场合特殊化","搭建支点：发现闪光点、委以小事、正向反馈","联结支持：联系监护人、同伴结对，逐步建立自信"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"陈立群扎根大山、退休后仍支教教学，你怎么看？",a:["精神：教育情怀与无私奉献的典范","价值：教育阻断贫困代际传递，点亮山区孩子","践行：以之为榜样，坚守育人初心，做有温度的教师"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"学生说你上课讲错了题，下课后才悄悄告诉你，你怎么办？",a:["当场不恼：感谢学生的认真与坦诚","核实：确有错误则下次课坦然更正并致谢","反思：提升备课精度，鼓励「即时指正」的课堂文化"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"李老师讲课认真细致但经常拖堂，你怎么看？",a:["肯定敬业，但拖堂侵占学生休息、影响下一节","建议：优化节奏、精炼内容、向课堂要效率","共情协作：以年级整体节奏为重，互不打扰"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"数学课代表最近成绩下滑，老师就不让他当课代表了，你怎么看？",a:["做法欠妥：用职务惩罚成绩，易伤自尊","应：了解下滑原因并帮扶，而非剥夺锻炼机会","理念：岗位是成长平台，评价应多元"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"吴老师上课不管学生纪律、任由学生打闹，作为同事你该怎么办？",a:["善意提醒：以关心学生为出发点私下交流","分享方法：课堂管理小技巧、共建班规","必要时上报：若影响教学秩序，请年级组协调"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"班里有学生有多动症，老师说了这个学生，家长很不满意，你作为班主任该怎么办？",a:["先安抚家长情绪，表达对孩子处境的共同关心","专业沟通：说明多动症特点与管理初衷，避免标签化","家校方案：医教结合、正向行为支持，统一口径"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"上课时你喊错了同学的名字，并被当场指出错误，你怎么办？",a:["坦诚认错、幽默化解，不掩饰不恼火","借机拉近关系：记住名字是对学生的尊重","后续：尽快熟悉全班姓名，体现用心"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"教育教学",q:"接手新班级，前任任课老师说班里学生基础差距大，你怎么办？",a:["摸底：前测+访谈，厘清差异结构与成因","分层教学：目标、任务、作业差异化","动态跟踪：小步进阶，让每层都有获得感"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"家长认为「教育孩子是老师的事」，作为班主任你怎么看？",a:["观念偏差：教育是家校共同责任","沟通：用案例说明家庭环境的决定性影响","引导：提供家庭陪伴建议，建立协同育人机制"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"李老师总拖堂、学生意见很大，你怎么看？",a:["尊重教学投入，但须守边界","建议：提升单位时间效率、预留弹性","从学生出发：休息权也是学习质量的组成部分"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"学生沉迷电子产品、家长不管，你怎么办？",a:["理解成因：陪伴缺失、内容吸引","校内：丰富活动替代屏幕时间，培养兴趣","家校：给家长具体陪伴清单，约定使用规则"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"公开课上，一位老师建议你预先把答案发给同学，你怎么看？",a:["拒绝：违背真实课堂与学生主体","公开课价值在真实生成，不是表演","可：课前充分铺垫、课中搭脚手架，而非给答案"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"人际沟通",q:"你是语文老师，发表的文章里用了学生的作文，家长说你侵权，你怎么办？",a:["立即正视：先道歉并沟通使用初衷","合规：取得授权、隐去实名、说明教育用途","制度：今后使用学生作品走同意流程"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"班上有学生有多动症、上课来回走动，教师罚站该学生，你怎么看？",a:["罚站不妥：伤及尊严、可能违规","应先理解行为背后的生理因素","正向行为支持：座位安排、信号提醒、家校协同"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"有老师说「课堂应该鸦雀无声、井然有序」，你是怎么看的？",a:["有序必要，但不等于绝对安静","高效课堂也需讨论、合作、生成的声音","主张：有规则的活而不乱，动静结合"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"上课时有学生突然打架，作为老师你会怎么处理？",a:["立即制止、隔开双方、保安全","冷处理：先继续/调整教学，课后再谈","复盘：查清原因、分别教育、班会共识"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"小组讨论时学生七嘴八舌、讲题外话，你怎么办？",a:["及时收束：明确任务与时间盒","给结构：角色分工、记录员、汇报人","复盘规则：讨论要有主题与产出"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"张老师周末请专家到学校给家长和学生开心理座谈会，有人说这么做不对，你怎么看？",a:["肯定用心：心理健康是育人重要一环","协调边界：占用周末须自愿、不强制","优化：改线上/家校选修，提升参与体验"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"督促学生学习的同时也要让学生适当放松，你怎么看？",a:["辩证：张弛有度才可持续","只会紧绷易厌学、伤身心","做法：科学作息、留白、关注情绪价值"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"教育教学",q:"学生上课回答问题积极性不高，你怎么办？",a:["诊断原因：不会、不敢、不想","搭台阶：低门槛问题、思考时间、无错氛围","长效：积分激励、同伴示范、正向强化"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"综合分析",q:"李老师说学生压力大、要给学生缓解压力，你怎么看？",a:["认同：关注心理是负责任的表现","但缓解不等于放松要求","系统：减负提质+情绪支持+生涯引导"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"小组讨论时你发现某某被孤立，你怎么办？",a:["敏锐察觉、不忽视","介入：调整分组、安排角色，让其有贡献点","氛围：倡导包容，班会谈「被需要」的价值"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"应急应变",q:"上课组织学生讨论，有个别学生讨论课外题目并很大声，你怎么办？",a:["温和收回注意力：先肯定好奇，再拉回主题","规则：讨论要围绕任务，声音适度","课后引导：课外兴趣可课后交流"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"教育教学",q:"班级里有学生对校园霸凌现象漠不关心，作为班主任你会怎么做？",a:["先唤醒认知：霸凌不是「别人的事」","教育：旁观者的责任、报告文化","建设：友善班级公约、情景演练、心理支持"],s:"2024下教资结构化真题（浙江）"},
+  {c:"通用",t:"自我认知",q:"请简要阐述你对教师职业的理解，以及你认为教师应具备最重要的品质是什么？",a:["理解：知识传播者+学生成长的引路人","最重要品质：爱心与责任心","落到行动：关爱每位学生、对成长负责"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"如果你的教学理念与学校传统教学理念有冲突，你会怎么做？",a:["先研究传统理念的优势与出发点","主动沟通、阐述合理性、寻求共识","尊重安排，在自身课堂适度创新以成果说话"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"实习中你遇到最具挑战性的教育场景是什么？如何解决的？对未来有何启示？",a:["用「观察—共情—行动」逻辑讲真实故事","突出蹲下来看学生、建立信任、家校协同","启示：避免一刀切，关注行为背后的原因"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"有人认为「教师是知识传递者」，也有人认为是「学生成长的引路人」，你更认同哪种？",a:["二者递进而非对立","新时代需从传递者转向引路人","以知识为载体、以育人为核心"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"和其他竞争者相比，你报考教师岗位的核心竞争力是什么？",a:["用「能力模型匹配」讲：专业+实践+证书","突出教研/学生管理/规划等差异化优势","证明入职即可胜任、可成长"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"自我认知",q:"《新时代基础教育强师计划》要求教师成为「大先生」、做到「经师」与「人师」统一，你怎么理解？",a:["经师：精于传道授业、业务过硬","人师：以人格润人、价值引领","统一：既教书又育人，以德立身"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"应急应变",q:"学生上课扔纸团扰乱纪律，你如何处理？",a:["课上：眼神/走近轻敲桌面，不激化","课后：单独沟通找原因，重申规则","长效：小组积分等正向纪律机制"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"家长投诉「作业量太少」，你如何回应？",a:["共情需求，解释「双减」下的作业设计理念","提供可选的拓展练习并批改反馈","借家长会讲科学作业观，争取理解"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何让学困生对学科产生兴趣？",a:["归因：先分析学困的真实原因","差异化：游戏化/小步渐进/情境任务","激励：进步可视、正向反馈"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"应急应变",q:"实验课酒精灯倾倒引发恐慌，如何处理？",a:["安全优先：湿布灭火、有序撤离、查伤","心理安抚：讲解逃生与灭火要点","转化为安全教育契机：角色演练"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"综合分析",q:"如何看待「没有教不好的学生」这句话？",a:["强调教师责任，但需理性看待","差异化教学能激发潜力，但受多因素影响","更认同「让每个学生成为更好的自己」"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"应急应变",q:"如何引导学生正确处理同学间的矛盾？",a:["建规则：冲突先冷静、书写事件经过","用非暴力沟通模板引导对话","练同理心：班会+情景模拟"],s:"机构模拟题（练习用）"},
+  {c:"通用",t:"综合分析",q:"「双减」后家长焦虑「作业少了成绩下降」、教师反映「课后服务难设计」，你怎么看？",a:["理解双方痛点，但方向不动摇","提质：课堂增效、作业分层、评价多元","沟通：给家长科学陪伴指南，缓解焦虑"],s:"机构模拟题（练习用）"},
+  {c:"杭州",t:"人际沟通",q:"两个学生发生矛盾摩擦，导致家长之间产生纠纷，你作为老师会怎么做？",a:["先分开双方、分别安抚，阻止矛盾升级","约双方家长到校，客观陈述事实、共商对策","后续：关注两生关系，班级开展友善教育，防微杜渐"],s:"杭州建德 23届提前批"},
+  {c:"杭州",t:"综合分析",q:"说一句你喜欢的教育家名言，并谈谈你的理解。",a:["亮明名言（如陶行知「爱满天下」/ 雅斯贝尔斯「一棵树摇动另一棵树」）","阐释内核：教育是用生命影响生命、以爱育人","落到行动：以言导行，做有温度、有情怀的教师"],s:"杭州建德 23届提前批"},
+  {c:"杭州",t:"人际沟通",q:"如果有家长要求给自己孩子换座位，你会怎么做？",a:["先听诉求、了解真实原因（视力/人际/注意力）","结合全班座位轮换规则综合权衡，不迁就也不拒绝","做好解释与后续观察，必要时微调并同步家长"],s:"杭州余杭 23届提前批"},
+  {c:"杭州",t:"综合分析",q:"卢梭《爱弥儿》中提到寓言部分内容对孩子有害，你是否同意？",a:["辩证：寓言有教化价值，但需年龄适配与引导","低龄儿童宜选正向、可理解素材，避免恐吓式","教学：精选内容+教师解读，培养判断力而非盲从"],s:"杭州余杭 23届提前批"},
+  {c:"杭州",t:"综合分析",q:"随着网课、作业帮等新型教学模式出现，与传统教学你认为哪种好？",a:["不二元对立：传统重系统互动，新型重个性与便捷","善用技术赋能（预习/答疑/资源），但不替代师生情感","主张：以传统为主、技术为辅，人机协同"],s:"杭州余杭 22届提前批"},
+  {c:"杭州",t:"综合分析",q:"「网红老师」现象引发争议，有人点赞与时俱进，有人担心耽误正课，你怎么看？",a:["理解：善用新媒体可科普、扩影响","边界：教师主责在课堂，流量不能喧宾夺主","若做：守住专业底线，做有教育价值的「网红」"],s:"杭州余杭 22届提前批"},
+  {c:"杭州",t:"自我认知",q:"作为一名教师，你认为应当如何建立教师威信？",a:["威信来自「威」与「信」：专业过硬+人格可信","严慈相济、言出必行，公正对待每个学生","身教重于言教，以能力与关爱赢得信服"],s:"杭州西湖区 23届提前批"},
+  {c:"杭州",t:"教育教学",q:"请结合你的学科，谈谈如何在教学中进行情境创设？",a:["原则：贴近生活、问题导向、激发卷入","举例：用真实任务/实验/角色扮演搭建情境","目的：让知识「有用」「可感」，促深度学习"],s:"杭州西湖区 23届提前批"},
+  {c:"杭州",t:"教育教学",q:"道德教育很重要但很难落地，请结合所教学科谈如何把德育渗透进教学。",a:["挖掘学科德育点（如数学严谨、语文家国情怀）","润物无声：在探究、合作、评价中嵌入价值引导","避免说教，用情境与榜样让学生内生认同"],s:"杭州临平 23届"},
+  {c:"杭州",t:"综合分析",q:"某老师对学生实施不当惩戒，从教师职业道德角度你怎么看？",a:["不当惩戒违背关爱学生、教书育人准则","危害：伤自尊、损信任、易引发对立","应：依法执教、以教化为先，惩戒有度有据"],s:"杭州临平 23届"},
+  {c:"杭州",t:"教育教学",q:"请根据你所教学科的特点，说一说你要怎么发展学生？",a:["立足学科核心素养（如思维/审美/探究）","设计分层任务，让不同学生各得其所","课内外打通，培养可持续的学习力"],s:"杭州钱塘 23届提前批"},
+  {c:"杭州",t:"组织管理",q:"以班主任身份，从家、校、社合作促进社会和谐发展的角度，你会怎么开家长会？",a:["定位：家长会是协同育人枢纽，非「告状会」","设计：共育目标+案例分享+互动共识+资源链接","延伸：建长效家校社沟通机制，形成合力"],s:"杭州钱塘 23届提前批"},
+  {c:"杭州",t:"综合分析",q:"有老师喜欢一直用「鼓励学生质疑」的方法教学，你有什么看法？",a:["肯定：质疑是批判性思维与主体性体现","过犹不及：需引导有序、有依据的质疑","平衡：在夯实基础之上鼓励求真发问"],s:"杭州萧山 23届提前批"},
+  {c:"杭州",t:"应急应变",q:"你在批评小王时，小王脾气爆发、顶撞老师，你会怎么处理？",a:["当场冷处理：先停顿、不硬刚，给彼此台阶","课后单独沟通，倾听其情绪与诉求","反思方式：批评对事不对人，重引导而非压制"],s:"杭州萧山 23届提前批"},
+  {c:"杭州",t:"教育教学",q:"学生要养成哪些好习惯？你认为有哪些好习惯，会怎么培养？",a:["习惯：预习复习、专注、守时、阅读、反思","培养：微习惯起步+榜样示范+家校同步","机制：打卡激励、及时反馈，让习惯成自然"],s:"杭州萧山 22届提前批"},
+  {c:"杭州",t:"综合分析",q:"有老师说「教案抄抄就行了」，你对此怎么看？",a:["不认同：教案是教学设计思考的载体","照搬易脱离班情学情，课堂失鲜活","应：备教材更备学生，常教常新"],s:"杭州萧山 22届提前批"},
+  {c:"杭州",t:"综合分析",q:"叶圣陶说「教是为了不教」，你怎么理解？",a:["核心：教学终极目标是教会学生学习","教师是引导者，培养自主、探究能力","做法：授法赋能，让学生能自学、会迁移"],s:"杭州萧山 22届提前批"},
+  {c:"杭州",t:"自我认知",q:"陈老师刚入职想树立威信，平时板着面孔、不敢跟学生嘻嘻哈哈，他存在什么问题？",a:["误解威信=距离感，易疏远师生关系","威信靠专业与公正，而非「凶」与疏离","建议：亲和而有原则，亦师亦友更长效"],s:"杭州萧山 22届提前批"},
+  {c:"杭州",t:"教育教学",q:"作为任课老师，怎么样在学科教学中渗透德育教育？",a:["找准结合点：知识背后的价值与精神","潜移默化：在探究、合作中育人与育心","避免生硬嫁接，做到润物无声"],s:"杭州萧山 21届提前批"},
+  {c:"杭州",t:"教育教学",q:"你认为教师应该如何备课，备课哪些内容？",a:["备课标、备教材、备学生、备教法、备评价","核心在备学生：摸清起点与差异","写教案更要想清「学生怎么学」"],s:"杭州萧山 21届提前批"},
+  {c:"杭州",t:"综合分析",q:"现在中小学班干部出现「官本位」「官僚主义」现象，你怎么看？",a:["警觉：过早功利化不利品格养成","成因：角色定位偏差、引导缺位","对策：轮岗服务制，强调「为同学服务」"],s:"杭州萧山 20届提前批"},
+  {c:"杭州",t:"教育教学",q:"请谈谈合作学习的策略。",a:["分组异质、任务驱动、角色分工","建规则：倾听、互评、共担成果","教师巡导，避免「搭便车」与形式化"],s:"杭州萧山 20届提前批"},
+  {c:"杭州",t:"自我认知",q:"你如何理解「教育是培养什么人、怎样培养人、为谁培养人」？",a:["这是教育的根本问题，也是育人导向","回答：培养德智体美劳全面发展的社会主义建设者","落脚：为党育人、为国育才，立德树人"],s:"杭州长河高中 23届提前批"},
+  {c:"杭州",t:"自我认知",q:"谈谈你对「班主任」这一角色的理解。",a:["班主任是班集体建设者与成长引路人","兼具管理者、陪伴者、家校纽带多重身份","关键：用爱与规则，带出有温度的班级"],s:"杭州长河高中 23届提前批"},
+  {c:"杭州",t:"综合分析",q:"一名学生为和在外工作的父母联系把手机带进班级，班主任多次提醒不改便罚抄作业，你怎么看？如果是你怎么做？",a:["罚抄治标未治本，且易引发逆反","先共情需求（联系父母），再立规矩（课上收存）","家校约定使用时机，替代惩罚为契约管理"],s:"杭州余杭 2023.7 中学岗"},
+  {c:"杭州",t:"综合分析",q:"新冠期间学校「停课不停学」实施线上教学，对此你怎么看？",a:["肯定：保障学习连续，技术赋能应急教育","问题：互动弱、视力与自律挑战","优化：线上重资源、线下补互动，混合提质"],s:"杭州余杭 21届提前批"},
+  {c:"杭州",t:"综合分析",q:"在疫情等影响下，你认为教育工作应该怎么进行？",a:["守住育人初心，灵活切换教学形态","更重心理健康与自主学习能力培养","家校协同，关注每一个孩子的真实状态"],s:"杭州余杭 21届提前批"},
+  {c:"宁波",t:"组织管理",q:"作为五年级班主任，你会怎么召开班会？",a:["定主题：贴近年段真实问题（如习惯/友谊）","流程：情境导入-讨论-行动约定-总结","让学生做主角，重体验而非说教"],s:"宁波象山 23届提前批"},
+  {c:"宁波",t:"自我认知",q:"成为老师，你的职业规划是什么？",a:["短期：站稳讲台、吃透教材与学生","中期：形成风格、参与教研","长期：成为骨干/名师，反哺团队"],s:"宁波象山 23届提前批"},
+  {c:"宁波",t:"自我认知",q:"成为老师，你的职业规划是什么？（慈溪）",a:["一年入门、三年成型、五年骨干","以赛促练、以研提质","扎根课堂，做学生喜欢的老师"],s:"宁波慈溪 23届提前批"},
+  {c:"金华",t:"自我认知",q:"对于你报考的岗位，你有什么优势？",a:["专业匹配：学科背景与资格契合","实践匹配：实习/家教/支教经验","特质匹配：耐心、共情与责任心"],s:"金华婺城 23届提前批"},
+  {c:"金华",t:"教育教学",q:"作为一名老师，你会如何进行教学设计？",a:["以学情为起点，定清晰可测目标","设计「情境-任务-探究-评价」闭环","预留生成空间，让教学有弹性"],s:"金华婺城 23届提前批"},
+  {c:"温州",t:"综合分析",q:"「师者，教之以事而喻诸德者也」，谈谈对这句话的理解。",a:["释义：教书与育德本为一体","教师既传知识，更以事明理、以德育人","落到日常：每节课都应是「转识成智、化识为德」"],s:"温州龙港 23届提前批"},
+  {c:"温州",t:"时政热点",q:"首次把「家庭教育」加入中小学教师评审条件，谈谈你的看法。",a:["导向：教师职责从「教学生」扩展到「联家庭」","意义：强化家校协同，落实协同育人","行动：主动指导家长科学育儿，不越位不缺位"],s:"温州龙港 23届提前批"},
+  {c:"绍兴",t:"综合分析",q:"疫情之下，对你的教育教学思想有什么影响？",a:["更珍视健康与心理，把「全人」放首位","更善用技术，混合式教学成常态","更重自主与责任，培养学生内生动力"],s:"绍兴上虞 23届提前批"},
+  {c:"绍兴",t:"综合分析",q:"「双减」后培训机构不得上市、民转公等，你怎么看？",a:["肯定：促教育回归公益、缓解焦虑","关注：公办承接力与质量均衡","教师担当：用课堂增效兑现「双减」红利"],s:"绍兴上虞 23届提前批"},
+  {c:"绍兴",t:"自我认知",q:"请谈谈你报考该岗位的优势。",a:["学科与资格对口，专业底气足","实习/实践积累真实带班经验","性格特质适合做有温度的教师"],s:"绍兴越城 24届聘用制"},
+  {c:"绍兴",t:"教育教学",q:"请结合所教学科，谈谈你会如何在教学中体现核心素养。",a:["先读懂本学科核心素养内涵","转化为课堂目标与任务（如探究/表达）","用表现性评价看学生真实素养达成"],s:"绍兴越城 24届聘用制"},
+  {c:"绍兴",t:"应急应变",q:"学生打架，双方家长来校针锋相对、互不谦让，你作为老师怎么办？",a:["先隔离双方、降温情绪，避免现场冲突","分别沟通事实，再约双方理性协商","以孩子利益为锚，促成共识与和解"],s:"绍兴越城 2026.1 提前批"},
+  {c:"通用",t:"自我认知",q:"请做一段三分钟的自我介绍。",a:["结构：是谁→为什么来→凭什么能→来了怎么做","突出与教师岗匹配的经历、特质、成果","真诚不浮夸，用具体小事印证品质"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"谈谈你记忆中最深刻的一件事（成功或失败均可）。",a:["选有教育意涵的真实片段，不编故事","讲清情境—行动—结果—反思","落脚点：这件事如何塑造了你的教师观"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"谈谈对你影响最深的一个人。",a:["优先讲老师/长辈等正面榜样","讲清他影响了你的哪些教育信念","关联：你愿成为那样的人"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"你最喜欢和最不喜欢和哪种人一起工作？为什么？",a:["喜欢：靠谱、善协作、愿担责","不喜欢：推诿/情绪化，但表达要克制","落脚：我更看重团队与共成长"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"你喜欢什么样的工作环境？",a:["要专业、有温度、能成长的环境","强调师生关系和教研氛围","表达：愿意在务实氛围里打磨自己"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"《论语》说「知之者不如好之者，好之者不如乐之者」，结合报考动机谈谈理解。",a:["释义：兴趣是最好的职业驱动力","我的「乐之」来自助人与见证成长","落到行动：以热爱抵御职业倦怠"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"入职后你发现学校工作环境比预期偏远落后、差距很大，你会怎么办？",a:["先接纳：基层/薄弱校更需要好老师","主动适应：调研学情、链接资源","把落差变舞台，用实绩证明价值"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"结合报考岗位，谈谈你的优势与劣势。",a:["优势：专业/实践/特质三匹配","劣势：选真实的、可改进的（如经验浅）","关键：劣势不致命，且有改进方案"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"你的座右铭是什么？它如何影响你做老师？",a:["选有教育意涵的话（如夸美纽斯/陶行知）","讲清它如何指引你的育人选择","避免空喊，落到具体行为"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"「授人以鱼，不如授人以渔」，你如何理解？",a:["释义：给知识不如给方法","教学要培养自主学习与迁移能力","做法：少灌多引，教策略、养习惯"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"有老师只让成绩差的学生值日，成绩好的不用值日，你怎么看？",a:["不妥：变相标签，伤自尊","值日是集体责任，不应与成绩挂钩","应：人人轮值，培养责任感与公平感"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"国家提出探索「增值评价」，请谈谈理解及教学落实。",a:["增值评价：看进步幅度而非绝对分数","意义：破除唯分数，看见每个孩子的成长","落实：建成长档案、多元评价、以评促学"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"部分学生沉迷短视频、网络游戏，有人建议全面禁止未成年人接触网络，你怎么看？",a:["理解担忧，但「一刀切禁止」不现实","关键：引导而非隔绝，培养数字素养","家校社协同：限时使用+替代活动+媒介教育"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"某地允许教师上课「坐着讲课」引发争议，你怎么看？",a:["支持方：人文关怀、减少职业损耗","反对方：关乎威严与课堂管理","我的看法：坐姿是形式，关键在投入与掌控"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"重庆万人高考弃考、出现「读书无用论」，你怎么看？",a:["警醒：折射教育回报与公平焦虑","根源：就业、成本与价值感错位","教师应：用成长案例重建「读书有用」信念"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"北大招办表示自主招生不招不孝敬父母的学生，你怎么看？",a:["肯定价值导向：立德为先","孝亲是健全人格底色，师者亦重德行","教育要：育人先育德，家校共养品行"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"有人说「得第一并不难，只要愿意另起一行，每个人都是第一」，你怎么看？",a:["释义：多元评价，人人可拔尖","教育启示：尊重差异、各扬其长","反对唯分数，看见每个孩子的第一"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"有人说「细节决定成败」，也有人说要「抓大放小」，你怎么理解？",a:["二者辩证：战略上抓大，执行上重细","教学：目标要清（大），落实要细","因事而宜，避免极端"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"有人说谦虚使人进步，也有人说求职中骄傲使人进步，你怎么看？",a:["谦虚是底色，自信也不可少","教师需谦逊向学，也需自信表达","关键：谦而不卑、信而不傲"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"温家宝说「要让人民活得更有尊严」，请谈谈你的理解。",a:["尊严来自被尊重、被看见、有盼头","教育公平就是给孩子尊严与机会","师者应：平等对待、唤醒自尊"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"五个手指虽然不一样长，却能弹出美妙的旋律，请谈谈看法。",a:["寓意：差异不是缺陷，协作才成曲","教育：尊重个性，各展其长","班级：多元共生，和而不同"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"世界上只有两种动物能到金字塔顶端：雄鹰和蜗牛，谈谈理解。",a:["雄鹰喻天赋，蜗牛喻坚持","多数人靠日积月累的韧劲登顶","教育：相信慢就是稳，陪学生爬坡"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"「刺猬理论」说人与人之间要保持适当距离，谈谈对教师人际的启示。",a:["师生/同事都需「亲密有间」","太近失边界，太远失温度","把握分寸：关爱而不越界"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"高考状元被媒体热炒，你怎么看？",a:["理解关注，但过度炒作易误导价值观","警惕唯状元、唯分数的导向","应宣传多元成才，淡化单一成功"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"用人单位要求外貌好，引发求职者美容减肥，你怎么看？",a:["折射容貌焦虑与就业歧视隐忧","教师应传递：价值不在皮相在内在","引导学生建立健康自我认同"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"班里遇到调皮、不服管的学生，你怎么办？",a:["先读懂「调皮」背后的需求与原因","关系先行：用信任替代压制","因势利导，把精力引向正向舞台"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"老教师总让你帮她带自习、批改作业，你怎么办？",a:["先当作锻炼与学习的机会","真诚沟通：表达想亲自把控教学环节的意愿","保持尊重，建立互利共赢的同事关系"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"家长不配合辅导作业，觉得都是老师的事，你怎么办？",a:["理解家长压力，不指责","讲清家庭陪伴的独特价值","给具体、可操作的轻量建议"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"你是新班主任建了班级群，老教师提醒「别发太多通知，家长事儿多」，你怎么沟通？",a:["感谢前辈提醒，吸收经验","分类沟通：重要必发、日常精简","建立群规，提升沟通效率与体验"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"你的搭档性格急躁，常当众抱怨学生甚至拉你吐槽，影响你备课，怎么办？",a:["理解其情绪出口，但设边界","委婉约定：倾诉换时间地点","同向：聚焦如何帮学生，而非只抱怨"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"家长在校门口当众吵架，你怎么办？",a:["第一时间分开双方、稳住情绪","移至私下，了解原因、各做工作","引导：以孩子为念，理性解决分歧"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"你听到同事在背后议论你，你怎么办？",a:["不急于对质，先自省是否有可改之处","该当面聊的就坦诚沟通","用专业与行动赢得尊重"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"领导似乎总对你不满、一再批评你，你怎么办？",a:["先接纳，避免情绪化对抗","主动请教：明确标准与期望","用改进与实绩扭转印象"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"请组织一次班级春游，你会如何开展？",a:["事前：定方案、报审批、安全预案、家长知情","事中：分组管理、点名打卡、应急随行","事后：分享收获、总结复盘"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"学校要在「五四」组织「青春献给祖国」演讲比赛，你负责策划，怎么组织？",a:["定主题与赛制，广泛动员班级参与","过程：培训+初赛+决赛，重育人非形式","延伸：把爱国情转化为日常行动"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"组织一次校外研学活动，你的计划是？",a:["研学前：目标、路线、课程单、安全","研学中：任务驱动、过程记录、随队保障","研学后：成果展、反思评价、长效机制"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"作为教研组长，你如何组织一次听课评课活动？",a:["定主题（如探究式教学）与安排","听课重观察记录，评课重证据与共建","形成可推广的教学改进清单"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"上课时学生故意刁难你，问一个很难、超出进度的题，你如何应对？",a:["保持冷静，不正面冲突、不敷衍","当场：赞赏好问，约课后深聊，先回课堂","课后：真研究并回应当时，借机引导深度学习"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"学生打架受伤或发生意外伤害，作为班主任怎么办？",a:["救治第一：止血/送医/120，通知家长与学校","稳住现场秩序，保护其他学生","事后协调责任、加强安全与矛盾教育"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"你组织校外研学，大巴在高速上一名学生晕厥伴轻微抽搐，你怎么办？",a:["立即停车靠边、开窗通风，呼叫 120 与学校","让学生平躺侧卧防窒息，同伴看护","就近送医，同步通知家长，留存处置记录"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"课间操两学生争抢篮球推搡，一人撞台阶额头流血，周围惊慌，你是班主任怎么办？",a:["先护伤者：压迫止血、送校医/医院","稳住局面：疏散围观、安抚情绪","查清原委、家校沟通、强化规则教育"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"体育课上学生摔跤，当时没事，回家后疼痛加剧、家长带去查出骨折并找学校发火，你怎么办？",a:["先共情家长愤怒，诚恳致歉并担责","核对当时处置与记录，配合就医理赔","补安全预案：运动前热身、意外即报医"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"你在教室看到一名学生在传纸条，怎么办？",a:["课上：眼神/走近轻收，不扩大事态","课后：了解内容（闲聊/传递情绪）再引导","班级：立专注公约，丰富课堂参与感"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"上课时有个学生突然晕倒，你采取哪些紧急措施？",a:["先判断意识与呼吸，呼叫校医/120","平移通风、解开衣领，不随意搬动","通知家长与学校，持续陪护至交接"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"考试时发现试卷印刷有误，你怎么办？",a:["当场说明、安抚情绪，联系考务换卷","等待期间安排安静活动，不慌不乱","记录备案，事后复盘命题与校对流程"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"公开课上你准备的多媒体突然故障，你怎么办？",a:["不卡壳：立即切回板书/口述主线","体现功底：把意外化为从容示范","课后反馈设备，备好双方案再上公开课"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"你认为一堂好课的标准是什么？",a:["目标清、内容实、方法活、参与高","以学定教，学生有真实获得","有生成、有温度、可检测"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"作为班主任，如何组织与培养班集体？",a:["定共同目标，选拔培养班干部","建正确舆论与班风，严而有爱","以活动凝心，让集体成为成长磁场"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"新课程改革倡导哪些学习方式？",a:["自主学习、合作学习、探究学习","自主重导向，合作重分工，探究重发现","教师角色：从讲授者转为引导者"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生偏科严重，你怎么办？",a:["归因：教师风格/家庭/兴趣/方法","激发兴趣，帮定学习策略，小步进阶","家校协同，营造轻松的学科氛围"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"班上来了一名有自闭症倾向、独来独往的学生，如何帮他融入集体？",a:["先接纳差异，不贴标签、不强迫社交","安排温和同伴与结构化任务逐步参与","联动特教/家长，给予专业与支持性环境"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"一次测验全班平均分很低，分析发现多因计算粗心丢分，请设计一个班会方案。",a:["主题：和「粗心」过招","活动：错因展、细心锦囊、互查互改","延伸：建错题本与检查清单，养成习惯"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生厌学情绪严重，你怎么办？",a:["先找因：难度/关系/家庭/自我效能","重建意义感：用小目标与成功体验点火","家校合力，减压力、增陪伴"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生作业拖沓、总完不成，你怎么办？",a:["降起点、拆任务、给清单，降低启动门槛","建即时反馈与正向激励","家校约定固定时段，培养节奏感"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生上课注意力涣散、容易走神，你怎么办？",a:["优化设计：短任务、多互动、强表征","关注生理与心理诱因，个别帮扶","训练专注：从 10 分钟高质量开始"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何做好学困生转化？",a:["不放弃、低期待变高关注","找闪光点、给台阶、小步前进","多元评价，让进步被看见"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生上课睡觉，你怎么办？",a:["先不激化，走近轻提醒、课后了解原因","区分生理/心理/听不懂，对症施策","班级建作息与课堂参与机制"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何培养学生的创新能力？",a:["保护好奇心，鼓励提问与试错","给开放任务与探究空间，少标准答案","多元评价，让「不一样」被鼓励"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何培养学生的阅读能力？",a:["从兴趣书单入手，保证足量阅读","教策略：预测/提问/联结/思辨","以读促写，建分享与展示舞台"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何进行有效的家校沟通？",a:["尊重平等、主动及时、就事论事","多报喜也报忧，建信任再谈问题","用专业建议替代单纯「告状」"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何对学生进行心理健康教育？",a:["常态化：班会+活动+个别谈心中渗透","建信任关系，早发现情绪波动","联动家长与专业资源，不孤军作战"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"课堂上学生不举手、不敢回答，你怎么办？",a:["降低提问门槛，给思考时间","用无错氛围与小组接力破冰","正向反馈，让「敢说」成为习惯"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何落实「因材施教」？",a:["先识材：摸清差异与起点","分层目标、任务、作业与评价","给不同学生不同的「最近发展区」支架"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"学生沉迷手机，你怎么办？",a:["共定规则：时段、场景、时长契约","用丰富活动替代屏幕依赖","家校一致，示范而非只禁"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何处理学生的「早恋」倾向？",a:["不贴标签、不公开、保护自尊","借青春期教育谈边界与责任","引导把情感转化为互相促进的动力"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"班级纪律松散、学生自由散漫，你怎么办？",a:["立共同约定，让学生参与制定班规","抓关键少数与正向榜样","用活动与责任把「散」聚成「力」"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何设计分层作业？",a:["依学情分基础/提升/拓展三层","保底不封顶，学生可自选挑战","配套反馈，让每层都有获得感"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何帮助学生缓解考试焦虑？",a:["正常化焦虑，教呼吸与积极暗示","重过程复习、模拟演练降陌生感","家校减压迫，关注努力而非仅分数"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"新接班级，学生基础薄弱、习惯差，你怎么办？",a:["先摸底建立学情档案","低起点起步，抓习惯先于抓成绩","用小成功积累自信，逐步提标"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何在学科教学中渗透劳动教育？",a:["挖学科中的劳动元素与工匠精神","设计动手实践与项目任务","联动家庭日常劳动，形成习惯"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何培养学生的审题与规范答题能力？",a:["教划关键词、拆指令、理思路","示范错题归因，建答题模板","以练促悟，从「会做」到「做对」"],s:"经典题（练习用）"},
+  {c:"通用",t:"自我认知",q:"你为什么坚定地选择成为教师，而不是更赚钱的行业？",a:["价值排序：成就感与意义感优先","教师工作的长期回报不可替代","用稳定与热爱支撑职业长跑"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"有人说「没有教不好的学生，只有不会教的老师」，你怎么看？",a:["肯定其责任担当，但须理性","教育受家庭、社会等多因素制约","更认同：让每个学生成为更好的自己"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"「千教万教，教人求真；千学万学，学做真人」（陶行知），你怎么理解？",a:["求真：教知识更教诚实与理性","做真人：培养完整、真诚的人","教师要以真示人，以身立教"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"家长在微信群里发长文指责你，其他家长围观，你怎么办？",a:["不公开对线，先私信家长单独沟通","弄清诉求，诚恳回应并跟进","群内适度说明处理进展，维护理性氛围"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"学校要举办校园文化节，你如何策划与落地？",a:["定主题与板块（展演/展示/体验）","分工到组、宣传预热、安全预案","事后沉淀作品与经验，形成传统"],s:"经典题（练习用）"},
+  {c:"通用",t:"组织管理",q:"如何策划一次有效的家长会？",a:["会前定主题、发邀请、备材料","会中讲整体+分科+互动，不只读成绩","会后收集反馈，形成持续沟通"],s:"经典题（练习用）"},
+  {c:"通用",t:"时政热点",q:"请谈谈你对「双减」政策的理解。",a:["减负提质，让教育回归育人本质","教师：提课堂效率、优作业设计","协同：引导家长与社会共护成长"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"谈谈你对「新课标」核心素养导向的理解。",a:["从知识本位转向素养本位","教学：真实情境+任务驱动+学科实践","评价：看能力迁移而非死记"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"请阐释「教育家精神」的内涵，你如何在岗位上践行？",a:["内涵：心有大我、言为士则、躬耕态度等","落实到爱岗敬业与关爱学生","以榜样为镜，做经师与人师统一"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"教育部要求加强中小学科学教育，你如何在教学中落实？",a:["保护好奇心，多做探究与实验","联通生活与前沿，播科学报国种子","跨学科融合，重思维与动手"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"人工智能赋能教育，教师应如何应对？",a:["拥抱工具：用 AI 备课、学情分析","守住根本：情感与价值不可替代","提升素养：会用、会判、会管"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"教育评价改革强调「破五唯」，你怎么理解？",a:["破除唯分数、唯升学等单一导向","转向：增值、综合、过程评价","让每个孩子的努力被看见"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"谈谈「五育并举」如何在班级日常落地。",a:["德为首、智为基、体为本、美为涵、劳为用","融入课程与活动，而非另起炉灶","让全面发展可感可及"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"「立德树人」是教育根本任务，你怎么理解并落实？",a:["立德为先，树人靠全过程浸润","学科+活动+关系三线育人","教师以身作则是最有力的立德"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"谈谈你对「核心素养」的理解。",a:["学生带得走的能力，而非背得下的知识","含正确价值观、必备品格、关键能力","教学要围绕它重构目标与方式"],s:"时政热点（练习用）"},
+  {c:"通用",t:"时政热点",q:"劳动教育纳入必修，你怎么看其意义与落地？",a:["意义：树观念、增本领、尊劳动","落地：家校协同，有任务有评价","避免形式化，重真实体验"],s:"时政热点（练习用）"},
+  {c:"通用",t:"综合分析",q:"关于教师的「惩戒权」，你怎么看？",a:["惩戒是教育的必要手段，非体罚","前提：有法可依、有度、有爱","重在教化，让家长与学生理解"],s:"经典题（练习用）"},
+  {c:"通用",t:"综合分析",q:"社会上「教育内卷」严重，你如何看待？",a:["警惕过度竞争伤及身心与兴趣","根源：评价单一与焦虑传导","教师作为：守育人本真，减无效负担"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"你发现有学生正遭受校园霸凌，如何处理？",a:["立即制止、保护受欺方、分隔双方","核查伤情与事实，严肃处置并上报","后续：心理支持、班级教育、家校联动"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"学生离家出走或失联，你怎么办？",a:["第一时间上报学校并联系家长报警","调取线索、发动同伴与监控排查","事后关怀：查清动因，长期陪伴疏导"],s:"经典题（练习用）"},
+  {c:"通用",t:"应急应变",q:"课堂上学生突然呕吐不止，你怎么办？",a:["先照护：隔离、清理、送校医","安顿其余学生，维持秩序","通知家长，排查病因，消毒防疫"],s:"经典题（练习用）"},
+  {c:"通用",t:"人际沟通",q:"你与领导在工作思路上有分歧，怎么办？",a:["尊重层级，先执行再沟通","用数据与方案说事，不情绪化","求同存异，以学校利益最大化为锚"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何设计一节课的「导入」环节？",a:["原则：有趣、有疑、有用、有关","形式：情境/故事/问题/实验切入","目标：快速聚焦，引向核心问题"],s:"经典题（练习用）"},
+  {c:"通用",t:"教育教学",q:"如何布置「有效作业」？",a:["少而精，分层且可反馈","重迁移应用，少机械重复","有批改有讲评，形成闭环"],s:"经典题（练习用）"}
+];
+
+/* ===== 渲染逻辑 ===== */
+const typeKeys = Object.keys(TYPES);
+let curRegion = "全部";
+let curType = "全部";
+let curSrc = "全部";
+let curKw = "";
+
+/* 判断题目来源类别：真题 / 经典练习 / 模拟 */
+function qSource(x){
+  const s=(x.s||"");
+  if(/机构模拟题/.test(s)) return "模拟";
+  if(/经典题/.test(s)) return "经典练习";
+  if(/教资结构化真题/.test(s)) return "真题";   // 教资也是真考过的题
+  return "真题";
+}
+
+const rtabs = document.getElementById("rtabs");
+const regions = ["全部地市", "杭州", "宁波", "温州", "绍兴", "湖州", "嘉兴", "金华", "衢州", "台州", "丽水", "舟山"];
+const cityName = r=>r==="全部地市"?"全部":r;
+regions.forEach(r=>{
+  const city=cityName(r);
+  const b = document.createElement("div");
+  b.className = "rtab" + (city==="全部"?" on":"");
+  b.textContent = r;
+  b.onclick = ()=>{ curRegion=city; syncTabs(); render(); };
+  rtabs.appendChild(b);
+});
+
+const typeChips = document.getElementById("typeChips");
+[["全部","var(--ink)"], ...typeKeys.map(k=>[k,TYPES[k].c])].forEach(([k,c])=>{
+  const b = document.createElement("div");
+  b.className = "chip" + (k==="全部"?" on":"");
+  b.textContent = k;
+  b.style.color = k==="全部"?"":"";
+  b.onclick = ()=>{ curType=k; syncChips(); render(); };
+  typeChips.appendChild(b);
+});
+
+/* 来源过滤（真题 / 经典练习 / 模拟） */
+const srcChips = document.getElementById("srcChips");
+["全部","真题","经典练习","模拟"].forEach(k=>{
+  const b = document.createElement("div");
+  b.className = (k==="全部"?"on":"");
+  b.textContent = k==="全部"?"全部来源":k;
+  b.onclick = ()=>{ curSrc=k; syncSrc(); render(); };
+  srcChips.appendChild(b);
+});
+function syncSrc(){ [...srcChips.children].forEach((e,i)=>e.classList.toggle("on", ["全部","真题","经典练习","模拟"][i]===curSrc)); updateSrcNote(); }
+function srcCount(src){ return Q.filter(x=>qSource(x)===src).length; }
+function updateSrcNote(){
+  const n=document.getElementById("srcNote");
+  if(!n) return;
+  if(curSrc==="全部") n.textContent = "真题 "+srcCount("真题")+" · 经典 "+srcCount("经典练习")+" · 模拟 "+srcCount("模拟");
+  else n.textContent = curSrc+"共 "+srcCount(curSrc)+" 题";
+}
+
+document.getElementById("search").addEventListener("input", e=>{ curKw=e.target.value.trim(); render(); });
+document.getElementById("randBtn").onclick = ()=>{
+  const list = filtered();
+  if(!list.length) return;
+  const idx = Math.floor(Math.random()*list.length);
+  const item = list[idx];
+  const targetQid=qid(item);
+  // 确保目标卡已被渲染（分页下可能需要多加载几页）
+  while(idx >= document.getElementById("grid").children.length && document.getElementById("loadMore").style.display!=="none") loadMore();
+  const el = document.querySelector('[data-qid="'+targetQid+'"]');
+  if(el){ el.scrollIntoView({behavior:"smooth",block:"center"}); el.style.outline="2px solid var(--brand)"; setTimeout(()=>el.style.outline="",1600);
+    const ans = el.querySelector(".ans"); if(ans) ans.classList.add("show"); }
+};
+
+function syncTabs(){ document.querySelectorAll(".rtab").forEach((e,i)=>e.classList.toggle("on", cityName(regions[i])===curRegion)); }
+function syncChips(){ const labels=["全部",...typeKeys]; document.querySelectorAll(".chip").forEach((e,i)=>e.classList.toggle("on", labels[i]===curType)); }
+
+function filtered(){
+  return Q.filter(x=>(curRegion==="全部"||x.c===curRegion) && (curType==="全部"||x.t===curType) &&
+    (curSrc==="全部"||qSource(x)===curSrc) &&
+    (!curKw || x.q.includes(curKw) || x.a.join("").includes(curKw) || x.c.includes(curKw)));
+}
+
+function renderFeature(){
+  const f = document.getElementById("feature");
+  if(curRegion==="全部"){
+    f.innerHTML = '<h3>📍 浙江 11 大地市考情总览</h3>'+
+      '<p>结构化面试题型全省通用（7 大类），但<b>每个地市的「口味」差很多</b>：杭州重教育热点综合分析、宁波重教育实践与名言、嘉兴金华偏实务与新教师适应、温州重面谈与求职动机、绍兴台州偏情景、湖州偏稳重、衢州重立德树人（无领导小组讨论）、舟山丽水以浙江通用题型为主。点上方地市切换，看当地特色再针对性练。</p>';
+    return;
+  }
+  const r = REGIONS[curRegion];
+  f.innerHTML = '<h3>📍 '+curRegion+' · 考情特色</h3>'+
+    '<div class="meta"><span>⏱ '+r.time+'</span>'+r.focus.map(x=>'<span>'+x+'</span>').join('')+'</div>'+
+    '<p>'+r.tip+'</p>';
+}
+
+let lastFiltered=[];
+function qid(x){ let s=x.q+x.c+x.t,h=2166136261; for(let i=0;i<s.length;i++){ h^=s.charCodeAt(i); h+=(h<<1)+(h<<4)+(h<<7)+(h<<8)+(h<<24); h=h>>>0; } return 'q'+h; }
+function getQNotes(){ try{ return JSON.parse(localStorage.getItem('zj_q_notes')||'{}'); }catch(e){ return {}; } }
+function setQNotes(o){ localStorage.setItem('zj_q_notes',JSON.stringify(o)); }
+const FAV_KEY='zj_favs';
+function getFavs(){ try{ return JSON.parse(localStorage.getItem(FAV_KEY)||'[]'); }catch(e){ return []; } }
+function setFavs(arr){ localStorage.setItem(FAV_KEY,JSON.stringify(arr)); }
+function toggleFav(id, btn){
+  let favs=getFavs(); const i=favs.indexOf(id);
+  if(i>=0){
+    favs.splice(i,1);
+    btn.classList.remove('on'); btn.innerHTML='☆';
+    const card=btn.closest('.q');
+    if(card && card.closest('#favList')){
+      card.remove();
+      if(!getFavs().length){ const grid=document.getElementById('favList'); if(grid) grid.innerHTML='<div class="ck-empty">还没有收藏题目，去真题库点 ⭐ 收藏几道题吧～</div>'; }
+    }
+  }
+  else { favs.push(id); btn.classList.add('on'); btn.innerHTML='★'; }
+  setFavs(favs);
+  const cnt=document.getElementById('favCount'); if(cnt) cnt.textContent=favs.length;
+}
+function favCardHTML(x, i, inFavView){
+  const id=qid(x); const saved=getQNotes()[id]; const isFav=getFavs().indexOf(id)>=0;
+  const favCls=isFav?'card-fav on':'card-fav';
+  const src=qSource(x);
+  const srcTag = src==="真题" ? "" :
+    '<span class="badge src-'+ (src==="经典练习"?"cls":"sim") +'">'+src+'</span>';
+  return '<div class="q" data-idx="'+i+'" data-qid="'+id+'">'+
+    '<div class="'+favCls+'" onclick="toggleFav(\''+id+'\',this)" title="收藏 / 取消收藏">'+(isFav?'★':'☆')+'</div>'+
+    '<div class="tags"><span class="badge b-region">'+x.c+'</span>'+srcTag+
+    '<span class="badge" style="background:'+TYPES[x.t].c+'1a;color:'+TYPES[x.t].c+'">'+x.t+'</span></div>'+
+    '<div class="qt">'+x.q+'</div>'+
+    '<button class="speak-btn" data-q="'+encodeURIComponent(x.q)+'" onclick="speakQ(this)">🔊 朗读</button>'+
+    (x.s?'<div class="src">📌 '+x.s+'</div>':'')+
+    '<div class="toggle" onclick="this.nextElementSibling.classList.toggle(\'show\')">▾ 看答题思路</div>'+
+    '<div class="ans"><span class="lab">参考思路 · '+x.t+' 答题框架</span>'+
+    '<div class="frame-steps">'+((FRAMEWORK[x.t]||FRAMEWORK['综合分析']).stages.map(s=>'<span>'+s.label+'</span>').join(''))+'</div>'+
+    '<ul>'+assignPointsToStages(x.t,x.a).map(function(it){var fw=FRAMEWORK[x.t]||FRAMEWORK['综合分析'];return '<li><b class="fs">'+fw.stages[it.stageIdx].label+'</b> '+escapeHtml(it.point||fw.stages[it.stageIdx].hint)+'</li>';}).join('')+'</ul>'+tipsHTML(x.t)+
+    '<div class="q-note">'+
+      '<label>✍️ 我的作答 / 笔记</label>'+
+      '<textarea placeholder="点开思路后，在这里写下你自己的作答或关键词… 保存后下次还在。">'+(saved?saved.text:'')+'</textarea>'+
+      '<div class="q-note-actions">'+
+        '<button class="save" onclick="saveQNote(this)">💾 保存</button>'+
+        '<button onclick="clearQNote(this)">清空</button>'+
+        '<button class="ex-btn" onclick="showQExemplar(this)">📝 看本题模板</button>'+
+        '<span class="q-note-tip">'+(saved?'已保存于 '+saved.time:'还没保存')+'</span>'+
+      '</div>'+
+      '<div class="q-note-saved" style="display:'+(saved?'block':'none')+'"><b>已保存：</b><span>'+(saved?escapeHtml(saved.text):'')+'</span></div>'+
+      '<div class="q-note-exemplar" style="display:none"><span class="lab">📝 本题满分模板（照着背 · 基于参考要点生成，非唯一标准答案）</span><p></p></div>'+
+    '</div>'+
+    '</div>'+
+  '</div>';
+}
+const PAGE=30;
+function render(){
+  renderFeature();
+  updateSrcNote();
+  lastFiltered = filtered();
+  const list=lastFiltered;
+  document.getElementById("count").textContent = "共 "+list.length+" 题";
+  document.getElementById("stQ").textContent = Q.length;
+  const grid = document.getElementById("grid");
+  const loadBox=document.getElementById("loadMore"); if(loadBox){loadBox.style.display="none";loadBox.innerHTML="";}
+  if(!list.length){
+    grid.innerHTML='<div class="ck-empty">没有符合条件的题目，试试换一个地区 / 题型 / 来源，或清空搜索词。</div>';
+    return;
+  }
+  grid.innerHTML = list.slice(0,PAGE).map((x,i)=>favCardHTML(x,i,false)).join('');
+  updateLoadMore(list.length);
+}
+function updateLoadMore(total){
+  const box=document.getElementById("loadMore");
+  if(!box) return;
+  const shown=document.getElementById("grid").children.length;
+  if(total>shown){
+    box.style.display="block";
+    box.innerHTML='<button onclick="loadMore()">加载更多（已显示 '+shown+' / '+total+'）</button>'+
+      '<span class="lm-info">还剩 '+(total-shown)+' 题 · 建议先练真题</span>';
+  } else {
+    box.style.display="none";
+    box.innerHTML="";
+  }
+}
+function loadMore(){
+  const list=lastFiltered, grid=document.getElementById("grid");
+  const shown=grid.children.length;
+  const next=list.slice(shown, shown+PAGE);
+  // 一次性把新卡片拼好再插入，避免反复改 DOM 变慢
+  const div=document.createElement("div");
+  div.innerHTML=next.map((x,i)=>favCardHTML(x, shown+i,false)).join('');
+  const frag=document.createDocumentFragment();
+  while(div.firstChild) frag.appendChild(div.firstChild);
+  grid.appendChild(frag);
+  updateLoadMore(list.length);
+}
+function renderFav(){
+  const favs=getFavs();
+  const cnt=document.getElementById('favCount'); if(cnt) cnt.textContent=favs.length;
+  const list=Q.filter(x=>favs.indexOf(qid(x))>=0);
+  const grid=document.getElementById('favList');
+  if(!grid) return;
+  if(!list.length){ grid.innerHTML='<div class="ck-empty">还没有收藏题目，去真题库点 ⭐ 收藏几道题吧～</div>'; return; }
+  grid.innerHTML=list.map((x,i)=>favCardHTML(x,i,true)).join('');
+}
+function escapeHtml(s){ return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;'); }
+function getQCard(btn){ return btn.closest('.q'); }
+function currentQ(btn){ const card=getQCard(btn), idx=+card.dataset.idx, qidVal=card.dataset.qid; if(card.closest('#favList')) return Q.find(x=>qid(x)===qidVal); return lastFiltered[idx]; }
+function saveQNote(btn){
+  const q=currentQ(btn), notes=getQNotes();
+  const text=btn.closest('.q-note').querySelector('textarea').value.trim();
+  if(!text){ alert('先写点什么再保存吧～'); return; }
+  notes[qid(q)]={text,time:new Date().toLocaleString('zh-CN',{month:'numeric',day:'numeric',hour:'2-digit',minute:'2-digit'})};
+  setQNotes(notes);
+  const tip=btn.closest('.q-note').querySelector('.q-note-tip');
+  const savedBox=btn.closest('.q-note').querySelector('.q-note-saved');
+  const savedSpan=savedBox.querySelector('span');
+  tip.textContent='已保存于 '+notes[qid(q)].time; savedSpan.textContent=text; savedBox.style.display='block';
+}
+function clearQNote(btn){
+  const card=getQCard(btn), q=currentQ(btn), notes=getQNotes();
+  if(!notes[qid(q)] && !btn.closest('.q-note').querySelector('textarea').value.trim()) return;
+  if(!confirm('确定清空这道题的作答/笔记？')) return;
+  delete notes[qid(q)]; setQNotes(notes);
+  const note=btn.closest('.q-note'); note.querySelector('textarea').value='';
+  note.querySelector('.q-note-tip').textContent='还没保存';
+  note.querySelector('.q-note-saved').style.display='none';
+}
+function showQExemplar(btn){
+  const q=currentQ(btn), exBox=getQCard(btn).querySelector('.q-note-exemplar'), p=exBox.querySelector('p');
+  if(exBox.style.display==='block'){
+    exBox.style.display='none';
+    btn.textContent='📝 看本题模板';
+  }else{
+    p.textContent=buildExemplar(q);
+    exBox.style.display='block';
+    exBox.scrollIntoView({behavior:'smooth',block:'nearest'});
+    btn.textContent='🔼 收起模板';
+  }
+}
+
+/* 方法论弹层 */
+const methodList = document.getElementById("methodList");
+methodList.innerHTML = typeKeys.map(k=>{
+  return '<div class="m"><div class="mt" style="color:'+TYPES[k].c+'">'+k+'</div>'+
+    '<div class="md">'+TYPES[k].desc+'</div></div>';
+}).join('');
+document.getElementById("methodBtn").onclick = ()=>document.getElementById("overlay").classList.add("show");
+document.getElementById("closeSheet").onclick = ()=>document.getElementById("overlay").classList.remove("show");
+document.getElementById("overlay").onclick = e=>{ if(e.target.id==="overlay") e.target.classList.remove("show"); };
+
+/* ===== AI 模拟考官（规则打分版，纯前端） ===== */
+function showView(v){
+  if(ckRec){ ckStopRec(); }
+  document.getElementById("bankView").style.display = v==="bank"?"":"none";
+  document.getElementById("coachView").style.display = v==="coach"?"":"none";
+  document.getElementById("checkinView").style.display = v==="checkin"?"":"none";
+  document.getElementById("reviewView").style.display = v==="review"?"":"none";
+  document.getElementById("favView").style.display = v==="fav"?"":"none";
+  document.querySelectorAll(".navtab").forEach(e=>e.classList.toggle("on", e.dataset.v===v));
+  document.getElementById("methodBtn").style.display = v==="bank"?"":"none";
+  if(v==="coach") renderHistory();
+  if(v==="fav") renderFav();
+  if(v==="checkin") renderCheckin();
+  if(v==="review") renderReview();
+  window.scrollTo({top:0,behavior:"smooth"});
+}
+
+const coachTypeSel=document.getElementById("coachType");
+coachTypeSel.innerHTML='<option value="全部">全部题型</option>'+typeKeys.map(k=>'<option value="'+k+'">'+k+'</option>').join('');
+const coachRegionSel=document.getElementById("coachRegion");
+coachRegionSel.innerHTML='<option value="全部">全部地市</option>'+Object.keys(REGIONS).map(k=>'<option value="'+k+'">'+k+'</option>').join('');
+
+let curCoach=null;
+const cq=document.getElementById("coachQuestion"),
+      cqRegion=document.getElementById("cqRegion"),
+      cqType=document.getElementById("cqType"),
+      cqText=document.getElementById("cqText"),
+      cqSrc=document.getElementById("cqSrc"),
+      cqAns=document.getElementById("cqAns"),
+      cqAnsList=document.getElementById("cqAnsList"),
+      cqShowAns=document.getElementById("coachShowAns"),
+      coachAnswer=document.getElementById("coachAnswer"),
+      coachInput=document.getElementById("coachInput"),
+      coachResult=document.getElementById("coachResult"),
+      coachHist=document.getElementById("coachHistory"),
+      cqEx=document.getElementById("cqEx"),
+      cqExText=document.getElementById("cqExText"),
+      coachTimer=document.getElementById("coachTimer"),
+      coachDur=document.getElementById("coachDur"),
+      coachTimerReset=document.getElementById("coachTimerReset");
+
+document.getElementById("coachDraw").onclick=function(){
+  const t=coachTypeSel.value, r=coachRegionSel.value;
+  const pool=Q.filter(x=>(t==="全部"||x.t===t)&&(r==="全部"||x.c===r));
+  if(!pool.length){ alert("该筛选下暂无题目，换个条件试试"); return; }
+  const item=pool[Math.floor(Math.random()*pool.length)];
+  curCoach=item;
+  cqRegion.textContent=item.c;
+  cqType.textContent=item.t;
+  cqType.style.background=TYPES[item.t].c+"1a";
+  cqType.style.color=TYPES[item.t].c;
+  cqText.textContent=item.q;
+  cqSrc.textContent=item.s?("📌 "+item.s):"";
+  cqAns.style.display="none";
+  cqAnsList.innerHTML=item.a.map(p=>"<li>"+p+"</li>").join("");
+  cqShowAns.style.display=(item.a&&item.a.length)?"inline-block":"none";
+  coachShowEx.style.display=(item.a&&item.a.length)?"inline-block":"none";
+  cqEx.classList.remove("show");
+  cq.style.display="block";
+  coachAnswer.style.display="block";
+  coachResult.style.display="none";
+  coachInput.value="";
+  document.getElementById("coachWordCount").textContent="0 字";
+  resetTimer();
+  cq.scrollIntoView({behavior:"smooth",block:"start"});
+};
+cqShowAns.onclick=function(){ cqAns.style.display = (cqAns.style.display==="none")?"block":"none"; };
+coachInput.addEventListener("input",function(){ document.getElementById("coachWordCount").textContent=coachInput.value.trim().length+" 字"; });
+document.getElementById("coachScore").onclick=async function(){
+  const text=coachInput.value.trim();
+  if(!curCoach){ alert("请先抽一道题"); return; }
+  if(text.length<10){ alert("先写点作答内容，考官才好打分哦～"); return; }
+  const cfg=loadCfg();
+  if(cfg && cfg.key){
+    this.disabled=true; const oldTxt=this.textContent; this.textContent="🤖 AI 评分中…";
+    try{
+      const ai=await callAIScore(curCoach,text,cfg);
+      renderResult(ai,true);
+      saveHistory(curCoach,ai,text.length);
+    }catch(e){
+      alert("AI 评分失败："+e.message+"\n已自动改用规则打分。");
+      const res=scoreAnswer(curCoach,text);
+      renderResult(res,false);
+      saveHistory(curCoach,res,text.length);
+    }finally{
+      this.disabled=false; this.textContent=oldTxt;
+    }
+  } else {
+    const res=scoreAnswer(curCoach,text);
+    renderResult(res,false);
+    saveHistory(curCoach,res,text.length);
+  }
+};
+document.getElementById("coachClearHist").onclick=function(){
+  if(confirm("确定清空所有练习记录？")){ localStorage.removeItem("zj_coach_hist"); renderHistory(); }
+};
+
+/* AI 设置面板 */
+const aiPanel=document.getElementById("aiPanel"),
+      aiSetBtn=document.getElementById("aiSetBtn"),
+      aiClose=document.getElementById("aiClose"),
+      aiProvider=document.getElementById("aiProvider"),
+      aiKey=document.getElementById("aiKey"),
+      aiBase=document.getElementById("aiBase"),
+      aiModel=document.getElementById("aiModel"),
+      aiSave=document.getElementById("aiSave"),
+      aiCancel=document.getElementById("aiCancel");
+function fillProvider(p){
+  const d=AI_PROVIDERS[p];
+  if(d&&d.base) aiBase.value=d.base;
+  if(d&&d.model) aiModel.value=d.model;
+}
+aiSetBtn.onclick=function(){
+  const cfg=loadCfg()||{};
+  aiProvider.value=cfg.provider||"deepseek";
+  aiKey.value=cfg.key||"";
+  fillProvider(cfg.provider||"deepseek");
+  if(cfg.base) aiBase.value=cfg.base;
+  if(cfg.model) aiModel.value=cfg.model;
+  aiPanel.style.display="block";
+};
+aiClose.onclick=aiCancel.onclick=function(){ aiPanel.style.display="none"; };
+aiProvider.onchange=function(){ fillProvider(this.value); };
+aiSave.onclick=function(){
+  const cfg={provider:aiProvider.value, key:aiKey.value.trim(), base:aiBase.value.trim(), model:aiModel.value.trim()};
+  if(!cfg.key){ alert("至少填 API Key 才能用真 AI 哦"); return; }
+  saveCfg(cfg);
+  aiPanel.style.display="none";
+  alert("已保存 ✅ 之后点「让考官打分」就会用真 AI 评，还能智能追问。\n想退回规则打分，把 Key 清空再保存即可。");
+};
+
+/* 满分模板生成（基于参考要点，按题型给话术骨架，可照着背） */
+/* ===== 各题型专业答题框架（调研自 233网校 / 华图 / 库课 / 齐鸟等主流机构） ===== */
+const FRAMEWORK = {
+  '自我认知':{
+    lead:'各位考官好，这道题考查的是我与教师岗位的匹配度。',
+    stages:[
+      {label:'一、基本信息与表态', hint:'开场问好，亮明身份与岗位认同，态度真诚。', sol:'我是…，毕业于小学教育专业，今天报考的是小学数学教师岗。我选择当老师，是因为真心喜欢和孩子打交道，也认可教育的价值。'},
+      {label:'二、自身优势（STAR）', hint:'用真实经历证明"我适合"，行动(A)占 60% 篇幅，结果带数字+反思。', sol:'结合我的实习/见习，我曾……这让我具备了课堂组织与家校沟通的底气，也证明我能把教育理念落到实际。'},
+      {label:'三、职业理解与规划', hint:'从八大素养挑 3-4 个，每个配一句自己的例子。', sol:'我理解的好老师，要因材施教、关爱学生、终身学习——比如面对不同基础的学生，我会分层设计任务，让每个人都能跳一跳够得着。'},
+      {label:'四、总结升华', hint:'表态扎根岗位，说到短期适应与长期成长。', sol:'如果有幸加入贵校，我将脚踏实地，尽快站稳讲台，把青春写在家乡的教育一线。'}
+    ],
+    tail:'以上就是我真实的想法，感谢各位考官。'
+  },
+  '人际沟通':{
+    lead:'遇到这种情况，我不会急于辩解，而是先稳住对方情绪，再一步步解决。',
+    stages:[
+      {label:'一、安抚情绪', hint:'先接住情绪，尊重理解，以工作和学生发展为重。', sol:'我会先耐心倾听对方的诉求，让对方把话说完，不急着反驳，先用一句"我理解您的心情"稳住场面。'},
+      {label:'二、表态与了解', hint:'不偏不倚，有错认错、没错解释，约谈了解实情。', sol:'我会表明"一切以孩子成长为重"的立场，再找合适时机单独了解事情原委，不偏听偏信。'},
+      {label:'三、化解矛盾', hint:'换位思考、针对性沟通，给出可操作的方案。', sol:'若对方送礼，我会委婉拒收："孩子的进步就是给我最好的礼物"；若是误会，就用事实和方案把话说开。'},
+      {label:'四、治本与跟进', hint:'日常主动反馈，把"对手"变"同盟军"。', sol:'事后我会主动、定期反馈孩子的闪光点，让家长成为教育的合伙人，而不是出了问题才见面。'}
+    ],
+    tail:'把关系理顺、把事办妥，我相信问题能妥善解决。'
+  },
+  '组织管理':{
+    lead:'如果由我来牵头这项活动，我心里会按一套清晰流程推进。',
+    stages:[
+      {label:'一、信息收集', hint:'摸清背景与学情，让策划有依据。', sol:'我会向同事请教、上网查资料、必要时用 AI 辅助，先把活动的目的、对象和时间摸清楚。'},
+      {label:'二、策划方案', hint:'定目标、写流程、做预案，大活动报领导审批。', sol:'形成书面方案：主题、流程、人员、预算、风险预案，报领导审批后再执行，体现程序意识。'},
+      {label:'三、通知与分工', hint:'及时通知到位，责任落实到人。', sol:'发告家长书/通知，明确每位老师的分工与时间点，谁负责签到、谁负责环节都落到纸上。'},
+      {label:'四、物资与场地', hint:'提前准备，避免现场抓瞎。', sol:'提前采购物资、布置场地、调试设备，并预留备用方案应对突发。'},
+      {label:'五、秩序与安全', hint:'现场把控，设计互动，安全第一条。', sol:'当天我主控节奏、关注秩序与安全，同时把舞台留给学生，让他们成为活动主角。'},
+      {label:'六、影像采集', hint:'留存过程性资料，便于复盘与宣传。', sol:'安排专人拍照录像，记录真实过程，为后续总结和宣传积累素材。'},
+      {label:'七、总结宣传', hint:'沉淀经验，扩大育人影响。', sol:'活动后写总结，经审批后在公众号或短视频平台宣传，让一次活动变成持续的教育影响。'},
+      {label:'八、反思提升', hint:'复盘效果、收集反馈，优化下次。', sol:''}
+    ],
+    tail:'有准备、有执行、有复盘，活动才能真正落到学生身上。'
+  },
+  '应急应变':{
+    lead:'这种突发状况，关键就一个字——稳，而且顺序绝对不能乱。',
+    stages:[
+      {label:'一、救（生命安全第一）', hint:'以人为本，先救后报，维护秩序、安抚情绪。', sol:'我会第一时间冲到现场，查看学生伤情、保护现场、制止危险扩大，同时安排班干部维持班级秩序。'},
+      {label:'二、告（第一时间上报）', hint:'报领导 + 通知家长，"大领导、小家长"。', sol:'迅速向值日领导/校医汇报，并第一时间联系家长说明情况，不隐瞒、不拖延。'},
+      {label:'三、沟通（掌握情况）', hint:'了解体质与缘由，为后续处理打底。', sol:'接班即做健康信息登记、掌握特殊体质学生，事后与当事学生、目击同学分别沟通还原事实。'},
+      {label:'四、关怀（后续跟进）', hint:'看望、电访、补课、必要的赔偿。', sol:'事后看望学生、电话回访、安排补课与心理疏导，把关怀延伸到课堂之外。'},
+      {label:'五、教育（防患未然）', hint:'开展安全教育，完善预案。', sol:''}
+    ],
+    tail:'救人第一、先报后教，把每一次突发都变成守护学生的机会。'
+  },
+  '综合分析':{
+    lead:'对题干这个现象或观点，我自己的看法比较明确，下面分几点说。',
+    stages:[
+      {label:'一、是什么（表态+危害）', hint:'亮明态度，用"忧虑/警惕"，点出危害维度。', sol:'对此我持忧虑和警惕的态度：这类现象若放任，会伤害学生的身心健康、败坏班级风气，必须引起重视。'},
+      {label:'二、为什么（主体剖析）', hint:'用主体分析法：学生/家庭/学校/社会，挑 2-3 个。', sol:'究其原因，学生心智未熟、家庭教养缺位、学校引导不足、社会风气推波助澜，多方合力才造成这一问题。'},
+      {label:'三、怎么办（三道防线）', hint:'学校/家庭/社会三道防线，或加减乘除，措施要具体。', sol:'治理上筑起学校、家庭、社会三道防线：校内建机制、家庭强陪伴、社会净环境，而不是空喊"加强引导"。'},
+      {label:'四、总结升华', hint:'回归教育初心，联系自身表态。', sol:''}
+    ],
+    tail:'以上是我对这道题的思考，回答完毕，谢谢考官。'
+  },
+  '教育教学':{
+    lead:'这道题说到底，是怎么把教育理念真正落到学生身上。',
+    stages:[
+      {label:'一、现场处置', hint:'冷静、不中断教学，用眼神/轻拍/提问拉回。', sol:'课堂上我会先一个眼神或轻拍示意，把注意力拉回，不扩大事态、不中断全班教学节奏。'},
+      {label:'二、课后了解', hint:'先听后导，必要时惩戒，查清原因。', sol:'课后单独约谈，先听学生怎么说，再结合事实教育，必要时依规惩戒，但始终对事不对人。'},
+      {label:'三、教育转化', hint:'活动育人、民主约定、因材施教。', sol:'借机开主题班会、和学生民主约定班规，对基础不同的孩子分层要求、个别跟进。'},
+      {label:'四、家校协同与反思', hint:'家校沟通 + 反思提升，持续关注。', sol:'我会同步和家长沟通形成合力，并反思自己的课堂管理，持续学习、长期跟踪这个孩子。'}
+    ],
+    tail:'教师的功夫在课堂，我会朝着这个方向一直努力。'
+  },
+  '时政热点':{
+    lead:'这项政策我平时有留意，落到一线其实就是几件具体的事。',
+    stages:[
+      {label:'一、解释含义', hint:'点明核心内涵与出台背景。', sol:'这项政策的核心是……，出台背景是回应当前教育中的现实问题，方向值得肯定。'},
+      {label:'二、分析意义', hint:'从教师/学生/学校/社会看积极影响。', sol:'它能让教学更聚焦育人本质，减轻不必要负担，让学生、教师、学校都回归各自该在的位置。'},
+      {label:'三、如何践行', hint:'校本化落地，变成学生能参与的具体行动。', sol:'我会和教研组研讨，把政策变成学生能听懂、能参与的具体活动，而不是停在文件里。'},
+      {label:'四、展望', hint:'持续学习、常态推进。', sol:''}
+    ],
+    tail:'把政策变成学生能受益的行动，才是最关键的。'
+  }
+};
+
+/* ===== 答题弹药库（取自备考报告：表态词 / 措施四套 / 八大素养 / 名言 / 学科三会） ===== */
+const AMMO = {
+  stance:{ neg:['忧虑','警惕','忧心忡忡'], pos:['定心丸','风向标','拨乱反正','激浊扬清'], dia:['辩证统一','一分为二'] },
+  measures:['三道防线','四方合力','角色法（守门员）','加减乘除'],
+  ending:{ image:'一棵树摇动一棵树，一朵云推动一朵云', mission:'三寸讲台系国运，一盏微灯照童心', tri:'让家长放心、让学生安心、让社会开心' },
+  qualities:['因材施教','关爱学生','终身学习','循序渐进','启发诱导','为人师表','长善救失','爱岗敬业','一视同仁'],
+  quotes:['陶行知：没有爱就没有教育','苏霍姆林斯基：把整个心灵献给孩子','孔子：其身正，不令而行','于漪：一辈子学做教师'],
+  subjects:{ math:'会用数学的眼光观察、用数学的思维思考、用数学的语言表达现实世界', chinese:'语言建构与运用、思维发展与提升、审美鉴赏与创造、文化传承与理解' }
+};
+
+/* 每种题型的专属「避坑」与「答完自查」（取自报告反面清单 + 自测清单） */
+function getTips(t){
+  const base = {
+    avoid:[
+      '别只喊"加强引导/家校合作"这种空话，要落到你自己的具体动作。',
+      '中间必须填自己的实习/见习/学科例子，否则模板味重，评委一天听 30 遍。',
+      '开口 15 秒内先亮明态度，别"辩证地看一方面…另一方面…"然后没了。'
+    ],
+    check:[
+      '有没有亮明态度（"是什么"不能省）？',
+      '措施是具体动作，还是空喊口号？',
+      '有没有自己的案例（实习/见习）？口头禅（然后/就是/那个）多不多？'
+    ]
+  };
+  const extra = {
+    '应急应变':{ avoid:['顺序不能乱：救人第一，先报领导后报家长，再沟通关怀教育。','别只顾处置现场忘了上报和通知家长。'], check:['优先级判断对不对？救→告→沟通→关怀→教育走全了没？'] },
+    '组织管理':{ avoid:['别说"我会认真组织"这种空话，要落具体步骤。','大活动记得"报领导审批"，体现程序意识。'], check:['8 步流程里信息收集/方案/分工/安全/总结走全了没？'] },
+    '自我认知':{ avoid:['这是开卷题，必须考前脱稿背熟，别临场瞎编。','"为什么来本校"要结合真实查到的办学理念，别说假话。'], check:['求职缘由有没有结合真实目标校？优势是不是用 STAR 讲故事？'] },
+    '人际沟通':{ avoid:['不偏不倚，有错认错、没错解释，别一味讨好或硬怼。','别把情绪对立升级，先处理情绪再处理事。'], check:['有没有先接住对方情绪？解决方案具体吗？'] },
+    '综合分析':{ avoid:['别只说一层原因，要用多主体（学生/家庭/学校/社会）分析。','危害/意义别空谈，点到"身心健康/班级风气"等具体维度。'], check:['主体分析够不够？对策有没有落到自己课堂？'] },
+    '教育教学':{ avoid:['别说"我会关爱每一位学生"这种无动作的话，要分层、要跟进。','别只批评，要给出可操作的教育转化办法。'], check:['有没有因材施教的针对性做法？课后跟进做了没？'] },
+    '时政热点':{ avoid:['别只背政策标题，要说清校本化怎么落地。','别喊"大力支持"这种空话。'], check:['有没有联系自己的课堂？落地动作具体吗？'] }
+  };
+  const e=extra[t]||{};
+  return { avoid: base.avoid.concat(e.avoid||[]), check: base.check.concat(e.check||[]) };
+}
+function ammoLine(t){
+  const A=AMMO;
+  const map={
+    '自我认知':'素养弹药：'+A.qualities.slice(0,4).join('、')+'；可引名言「'+A.quotes[0]+'」',
+    '人际沟通':'沟通口诀：先接住情绪、再处理事；角色定位：做家校「守门员」',
+    '组织管理':'流程口诀：大活动「报领导审批」体现程序意识；影像留存 + 总结宣传扩大育人影响',
+    '应急应变':'优先级口诀：救人第一、大领导小家长、先报后教',
+    '综合分析':'措施弹药：三道防线 / 加减乘除；表态词：忧虑·警惕（负面）或 定心丸·风向标（正面）',
+    '教育教学':'素养弹药：因材施教、长善救失、启发诱导；分层跟进不放弃任何一个',
+    '时政热点':'落地口诀：和教研组校本化研讨，把政策变成学生能参与的具体活动'
+  };
+  return map[t]||'';
+}
+function ammoHTML(t){ return '<div class="lab">📚 备考弹药</div><div class="ammo-line">'+ammoLine(t)+'</div>'; }
+function tipsHTML(t){
+  const tp=getTips(t);
+  return '<div class="lab">⚠️ 答题避坑</div><ul class="tips-list">'+tp.avoid.map(x=>'<li>'+x+'</li>').join('')+'</ul>'+
+         '<div class="lab">✅ 答完自查</div><ul class="tips-list">'+tp.check.map(x=>'<li>'+x+'</li>').join('')+'</ul>'+
+         ammoHTML(t);
+}
+
+/* 提取题干主题，用于模板里“点这道题的名” */
+function extractTopic(qText){
+  let s=(qText||'').replace(/\s/g,'');
+  s=s.replace(/[?？。.！!]$/,'');
+  s=s.replace(/^(请)?(谈谈|说说|讲讲)?(你)?(怎么看|怎么看待|如何看待|怎么理解|怎么认识|如何|为什么)?(对|关于|对于)?/,'');
+  s=s.replace(/(的)?(理解|看法|认识|想法|观点|现象|问题|事情|这件事|这一现象)/g,'');
+  s=s.replace(/(你(怎么看|怎么看待|如何看待|怎么理解|怎么认识|怎么办|怎么处理|怎么组织|认为|有何看法)|怎么看|怎么看待|如何看待|怎么理解|怎么认识|怎么办|怎么处理|怎么组织|你认为|有何看法|对此|如何|谈谈你的看法|谈谈理解|谈谈看法|说说你的想法|请谈谈|谈谈)/g,'');
+  s=s.replace(/你/g,'');
+  s=s.replace(/[，,。；;、：:（）()【】""''「」]/g,'');
+  if(s.length>20) s=s.slice(0,20)+'…';
+  return s||'这道题';
+}
+
+/* 按关键词把要点归到正确阶段：0=点题/控场/目标/含义，1=准备/反思/剖析/原因，2=实施/行动/落实/跟进；无匹配则轮转兜底 */
+function classifyPoint(p){
+  const k=p||'';
+  const rules=[
+    /(表态|认为|热爱|喜欢|理解|认同|目标|目的|宗旨|含义|内涵|定义|安全|稳定|冷静|首先|开场|点题|初心|职业|匹配|为什么|适合)/,
+    /(准备|方案|计划|通知|前期|反思|原因|分析|剖析|意义|了解|调研|设计|备课|课前|沟通前|自身|不足|优势|性格|经历)/,
+    /(实施|进行|开展|行动|落实|践行|措施|对策|课后|跟进|沟通|处理|解决|教育|关注|个别|家访|总结|复盘|长期|持续)/
+  ];
+  for(let s=0;s<rules.length;s++){ if(rules[s].test(k)) return s; }
+  return -1;
+}
+
+/* 把要点按骨架阶段分配：每类题的参考要点本就按答题流程顺序书写（报告强调"流程固定、顺序不能乱"），
+   因此直接按要点顺序轮转填入各阶段，最稳妥；要点数少于阶段则后段留空（显示标准做法），多于阶段则合并不丢 */
+function assignPointsToStages(t, pts){
+  const fw=FRAMEWORK[t]||FRAMEWORK['综合分析'];
+  const n=fw.stages.length;
+  const res=fw.stages.map((st,i)=>({stageIdx:i,point:null}));
+  if(!pts||!pts.length) return res;
+  pts.forEach((p,k)=>{
+    const slot=k%n;
+    res[slot].point = res[slot].point ? res[slot].point+'；'+p : p;
+  });
+  return res;
+}
+
+function buildExemplar(q){
+  const t=q.t;
+  const fw=FRAMEWORK[t]||FRAMEWORK['综合分析'];
+  const topic=extractTopic(q.q);
+  const assigned=assignPointsToStages(t, q.a||[]);
+  let body='';
+  assigned.forEach((item,idx)=>{
+    const st=fw.stages[item.stageIdx];
+    const isLast = idx===assigned.length-1;
+    if(isLast){
+      body += '【'+st.label+'】'+st.hint+' 总之，围绕「'+topic+'」，我会坚守教育初心，把认识落到日常行动里，踏实做好每一项育人工作。';
+    } else {
+      const head = item.point ? item.point+'。' : '';
+      const sol = st.sol ? (head?(' '+st.sol):st.sol) : '';
+      body += '【'+st.label+'】'+st.hint+' '+head+sol;
+    }
+    if(!isLast) body+='\n\n';
+  });
+  const tp=getTips(t);
+  const tailSec='\n\n⚠️ 答题避坑：\n'+tp.avoid.map(x=>'• '+x).join('\n')+
+                '\n\n✅ 答完自查：\n'+tp.check.map(x=>'• '+x).join('\n');
+  return fw.lead+'\n\n'+body+'\n\n'+fw.tail+tailSec;
+}
+
+/* 计时作答（手动开始，到点仅提示、不强制中断） */
+let timer=null, timerLeft=0, timerTotal=180, timerRunning=false;
+function fmtT(s){ const m=Math.floor(s/60), ss=s%60; return String(m).padStart(2,"0")+":"+String(ss).padStart(2,"0"); }
+function stopTimer(){ if(timer){ clearInterval(timer); timer=null; } timerRunning=false; updateTimerBtn(); }
+function updateTimerBtn(){ if(coachTimerReset){ coachTimerReset.textContent=timerRunning?"↺ 重新开始":"▶ 开始计时"; coachTimerReset.classList.toggle("primary",!timerRunning); } }
+function updateTimer(){
+  if(!coachTimer) return;
+  if(timerTotal===0){ coachTimer.textContent="⏱ 不限时"; coachTimer.classList.remove("over","ready"); return; }
+  if(timerRunning && timerLeft<=0){ coachTimer.textContent="⏰ 时间到！请作答完毕"; coachTimer.classList.add("over"); coachTimer.classList.remove("ready"); }
+  else if(timerRunning){ coachTimer.textContent="⏱ 倒计时 "+fmtT(timerLeft); coachTimer.classList.remove("over","ready"); }
+  else { coachTimer.textContent="⏱ 准备中 "+fmtT(timerTotal); coachTimer.classList.add("ready"); coachTimer.classList.remove("over"); }
+}
+function resetTimer(){
+  stopTimer();
+  timerTotal=parseInt(coachDur.value,10)||0;
+  timerLeft=timerTotal;
+  updateTimer();
+}
+function startTimer(){
+  stopTimer();
+  timerTotal=parseInt(coachDur.value,10)||0;
+  timerLeft=timerTotal;
+  timerRunning=true;
+  updateTimer(); updateTimerBtn();
+  if(timerTotal>0){ timer=setInterval(()=>{ timerLeft--; updateTimer(); if(timerLeft<=0){ stopTimer(); } },1000); }
+}
+coachDur.addEventListener("change", resetTimer);
+coachTimerReset.addEventListener("click", startTimer);
+
+/* 满分模板开关 */
+document.getElementById("coachShowEx").onclick=function(){
+  if(!curCoach) return;
+  const show=cqEx.classList.toggle("show");
+  if(show){ cqExText.textContent=buildExemplar(curCoach); }
+};
+
+function extractKeys(arr){
+  if(!arr||!arr.length) return [];
+  const keys=[];
+  arr.forEach(s=>{
+    const parts=s.split(/[，,。；;、：:（）()]/).map(p=>p.trim()).filter(p=>p.length>=2&&p.length<=9);
+    parts.forEach(p=>keys.push(p));
+  });
+  return [...new Set(keys)].slice(0,12);
+}
+function scoreAnswer(q,text){
+  const len=text.length;
+  const structWords=["第一","首先","其一","一、","1.","①","其次","最后","一方面","第一步"];
+  const hasStruct=structWords.some(w=>text.includes(w));
+  const eduWords=["学生","以生为本","因材施教","关爱","尊重","引导","鼓励","耐心","立德树人","全面发展","兴趣","自主","合作","探究","表扬","倾听"];
+  const eduHit=eduWords.filter(w=>text.includes(w)).length;
+  const viewWords=["我认为","我觉得","应该","关键在于","本质是","核心是","我的看法","我的理解","在我看来"];
+  const hasView=viewWords.some(w=>text.includes(w));
+  const keys=extractKeys(q.a);
+  const hit=keys.filter(k=>text.includes(k)).length;
+  const cov=keys.length?hit/keys.length:0;
+  const expr=len<40?3:len<100?6:len<200?8:len<450?9:10;
+  const logic=hasStruct?9:(text.split("。").length>=3?7:5);
+  const edu=Math.min(10,4+eduHit*1.3);
+  const solve=Math.round(3+cov*7);
+  const view=hasView?8:5;
+  let situ=6;
+  if(["应急应变","人际沟通","组织管理"].includes(q.t)){
+    situ=/先|再|首先|然后|立即|第一时间|马上/.test(text)?9:(text.includes("。")?7:5);
+  } else { situ=logic; }
+  const conf=len>150?8:len>70?6:4;
+  const w={view:0.15,logic:0.18,edu:0.15,solve:0.27,expr:0.10,situ:0.10,conf:0.05};
+  let total=Math.round((view*w.view+logic*w.logic+edu*w.edu+solve*w.solve+expr*w.expr+situ*w.situ+conf*w.conf)*10);
+  total=Math.max(0,Math.min(100,total));
+  const level=total>=85?"优秀":total>=75?"良好":total>=60?"合格":"待提升";
+  const dimScores={"观点鲜明":view,"逻辑结构":logic,"教育理念":edu,"问题解决":solve,"语言表达":expr,"情境处置":situ,"仪态自信":conf};
+  const weak=Object.entries(dimScores).sort((a,b)=>a[1]-b[1]).slice(0,2);
+  return {total,level,dimScores,weak,cov:Math.round(cov*100),hit,keysLen:keys.length,advice:weak.map(([k])=>adviceFor(k,q.t))};
+}
+function levelClass(lv){return lv==="优秀"?"lv-good":lv==="良好"?"lv-good2":lv==="合格"?"lv-mid":"lv-low";}
+function adviceFor(k,qt){
+  const m={
+    "观点鲜明":
+      "❌ 这道题你<b>开头没先亮明立场</b>，考官得自己猜你的态度，印象分先丢一截。<br>"+
+      "✅ 改法：第一句就抛观点。综合分析用『我认为这现象值得警惕 / 值得肯定』；自我认知用『我的核心优势是…』。让考官 3 秒听懂你站哪边。",
+    "逻辑结构":
+      "❌ 作答<b>散、缺层次</b>，想到哪说到哪，考官抓不住你的框架。<br>"+
+      "✅ 改法：开口就『第一…第二…第三…』或『首先…其次…最后…』分点，每点只讲一件事，用『总-分-总』：先概说、再分述、末收一句。",
+    "教育理念":
+      "❌ 答题<b>像说大白话、没师范味</b>，看不出你是学教育的。<br>"+
+      "✅ 改法：主动嵌关键词——『以学生为中心』『因材施教』『尊重关爱』『立德树人』『启发式教学』。每题至少点 1–2 个，显出教育情怀与专业底色。",
+    "语言表达":
+      "❌ 作答<b>偏短 / 偏碎 / 口头禅多</b>，撑不起 1.5–3 分钟。<br>"+
+      "✅ 改法：控制 150–400 字；语速适中连贯；删掉『然后然后』『那个』；把短句连成有因果的长句。录一遍回听最管用。",
+    "仪态自信":
+      "❌ 作答<b>有头无尾 / 声音发虚</b>，显得底气不足。<br>"+
+      "✅ 改法：结尾加收束『以上是我的想法，谢谢考官』；眼神稳住、语速不抢，开口前停顿半秒更显从容。",
+    "情境处置":
+      "❌ 这类题你<b>没体现『先稳住、分轻重』的节奏</b>，一上来就讲长远方案。<br>"+
+      "✅ 改法：应急 / 人际 / 组织题一律『先…再…』——先保安全 / 稳情绪 / 控现场，再分角色沟通、长效解决，把『第一时间做什么』放最前面。",
+    "问题解决":
+      "❌ 回答<b>偏口号、缺抓手</b>，没说清到底怎么做、做到什么程度。<br>"+
+      "✅ 改法：每条对策套『对象 + 动作 + 效果』。别说『加强沟通』，改说『当天放学后单独找该生，用 10 分钟听他把委屈讲完，再一起找解法』。"
+  };
+  if(k==="问题解决" && qt){
+    if(qt==="综合分析") m[k]+="<br>🎯 综合分析套路：亮观点 → 析原因(家/校/社) → 提对策 → 升华育人本质。";
+    else if(qt==="教育教学") m[k]+="<br>🎯 教育教学套路：先讲理论依据(建构主义/最近发展区)，再给课堂实例，最后说评价反馈。";
+    else if(qt==="人际沟通") m[k]+="<br>🎯 人际套路：先换位共情，再分对象(生/家长/同事/领导)给具体沟通动作，不回避矛盾。";
+    else if(qt==="应急应变") m[k]+="<br>🎯 应急套路：先控场保安全 → 再核查处置 → 最后复盘防复发。";
+    else if(qt==="组织管理") m[k]+="<br>🎯 组织套路：定目标 → 分阶段(前/中/后) → 分工到人 → 留复盘。";
+  }
+  if(k==="情境处置" && (qt==="应急应变"||qt==="人际沟通"||qt==="组织管理")){
+    m[k]+="<br>🎯 万能框架：<b>『先稳住局面，再分轻重缓急，最后长效解决』</b>。";
+  }
+  return m[k]||"多练多说，开口即练，熟自然稳。";
+}
+/* ===== 真 AI 考官（自填 Key，前端直连大模型 API） ===== */
+const AI_PROVIDERS={
+  "deepseek":{base:"https://api.deepseek.com/v1", model:"deepseek-chat"},
+  "openrouter":{base:"https://openrouter.ai/api/v1", model:"deepseek/deepseek-chat"},
+  "custom":{base:"", model:""}
+};
+function loadCfg(){ try{ return JSON.parse(localStorage.getItem("zj_ai_cfg")||"null"); }catch(e){ return null; } }
+function saveCfg(c){ localStorage.setItem("zj_ai_cfg", JSON.stringify(c)); }
+async function callAIScore(q, text, cfg){
+  const base=(cfg.base||AI_PROVIDERS[cfg.provider]?.base||"").replace(/\/+$/,"");
+  const model=cfg.model || AI_PROVIDERS[cfg.provider]?.model;
+  if(!base||!model) throw new Error("请先填好 Base URL 和模型名");
+  const sys='你是浙江省教师招聘「结构化面试」的资深考官。请严格从以下7个维度给考生打分，每项0-10分：观点鲜明、逻辑结构、教育理念、问题解决、语言表达、情境处置、仪态自信。并给出总分(0-100)、一段整体评价、2-3条具体改进建议、以及1个可继续追问的问题。必须只输出一个JSON对象，不要任何解释或代码块标记，格式：{"total":整数,"dims":{"观点鲜明":0-10,...},"comment":"整体评价文字","advice":["建议1","建议2"],"followUp":"追问问题文字"}';
+  const user='【题型】'+q.t+'\n【题目】'+q.q+(q.s?('\n【题目来源】'+q.s):'')+'\n【参考答案要点】'+((q.a||[]).join('；'))+'\n【考生作答】'+text;
+  const resp=await fetch(base+"/chat/completions",{
+    method:"POST",
+    headers:{"Content-Type":"application/json","Authorization":"Bearer "+cfg.key},
+    body:JSON.stringify({model:model, messages:[{role:"system",content:sys},{role:"user",content:user}], temperature:0.7})
+  });
+  if(!resp.ok){ let m="HTTP "+resp.status; try{ const j=await resp.json(); m=j.error&&j.error.message?j.error.message:m; }catch(e){} throw new Error(m); }
+  const data=await resp.json();
+  const content=(data.choices&&data.choices[0]&&data.choices[0].message&&data.choices[0].message.content)||"";
+  let obj=null;
+  try{ obj=JSON.parse(content.trim().replace(/^```(?:json)?/i,"").replace(/```$/,"").trim()); }
+  catch(e){
+    const s=content.indexOf("{"); const e2=content.lastIndexOf("}");
+    if(s>=0&&e2>s){ try{ obj=JSON.parse(content.slice(s,e2+1)); }catch(e3){} }
+  }
+  if(!obj) throw new Error("AI 返回内容无法解析为评分 JSON");
+  const dimKeys=["观点鲜明","逻辑结构","教育理念","问题解决","语言表达","情境处置","仪态自信"];
+  const dims={};
+  dimKeys.forEach(k=>{ let v=Number(obj.dims&&obj.dims[k]); if(!isFinite(v)) v=5; dims[k]=Math.max(0,Math.min(10,Math.round(v))); });
+  const total=isFinite(Number(obj.total))?Math.max(0,Math.min(100,Math.round(Number(obj.total)))):Math.round(Object.values(dims).reduce((a,b)=>a+b,0)/7*10);
+  const level=total>=85?"优秀":total>=75?"良好":total>=60?"合格":"待提升";
+  return {
+    total:total, level:level, dimScores:dims,
+    advice:Array.isArray(obj.advice)?obj.advice.map(String):[],
+    comment:obj.comment?String(obj.comment):"",
+    followUp:obj.followUp?String(obj.followUp):"",
+    weak:[]
+  };
+}
+function renderResult(r, isAI){
+  const bars=Object.entries(r.dimScores).map(([k,v])=>
+    '<div class="dim"><div class="dim-top"><span>'+k+'</span><b>'+v+'/10</b></div><div class="bar"><i style="width:'+(v*10)+'%"></i></div></div>'
+  ).join('');
+  const badge=isAI?'<div class="ai-badge">🤖 AI 考官评分</div>':'';
+  const sub=isAI?'基于大模型真实评判 · 7 维度':'要点覆盖 '+r.hit+'/'+r.keysLen+'（'+r.cov+'%）｜ 7 维度加权';
+  const comment=(isAI&&r.comment)?'<div class="ai-comment"><b>📋 整体评价：</b>'+r.comment+'</div>':'';
+  const adviceTitle=isAI?'📌 AI 考官建议':'📌 考官建议（重点补这 '+r.weak.length+' 项）';
+  const advice=(r.advice||[]).map(x=>'<li>'+x+'</li>').join('');
+  const follow=(isAI&&r.followUp)?'<div class="followup"><b>🎤 考官追问：</b>'+r.followUp+'<div style="margin-top:9px"><button class="coach-mini" id="followBtn">✍️ 就这个追问继续答</button></div></div>':'';
+  coachResult.innerHTML=
+    '<div class="score-hero">'+badge+
+      '<div class="score-num">'+r.total+'<span>分</span></div>'+
+      '<div class="score-level '+levelClass(r.level)+'">'+r.level+'</div>'+
+      '<div class="score-sub">'+sub+'</div>'+
+    '</div>'+
+    comment+
+    '<div class="dims">'+bars+'</div>'+
+    '<div class="advice"><h4>'+adviceTitle+'</h4><ul>'+advice+'</ul></div>'+
+    follow;
+  coachResult.style.display="block";
+  coachResult.scrollIntoView({behavior:"smooth",block:"start"});
+  if(isAI&&r.followUp){
+    document.getElementById("followBtn").onclick=function(){
+      coachInput.value=(coachInput.value?coachInput.value+"\n\n":"")+"【考官追问】"+r.followUp+"\n我的回答：";
+      coachInput.focus();
+      coachInput.scrollIntoView({behavior:"smooth",block:"center"});
+    };
+  }
+}
+function saveHistory(q,r,len){
+  const h=JSON.parse(localStorage.getItem("zj_coach_hist")||"[]");
+  h.unshift({q:q.q,t:q.t,c:q.c,total:r.total,level:r.level,time:new Date().toLocaleString("zh-CN"),ts:Date.now()});
+  localStorage.setItem("zj_coach_hist",JSON.stringify(h.slice(0,100)));
+  try{ srsLearn(qid(q)); }catch(e){}
+  renderHistory();
+}
+function escH(s){ return (s||"").replace(/&/g,"&amp;").replace(/</g,"&lt;").replace(/>/g,"&gt;"); }
+/* 成绩趋势折线图（SVG，浅色） */
+function scoreTrendSVG(h){
+  if(h.length<2) return null;
+  const pts=[...h].reverse();                 // 旧→新
+  const W=560,H=150,padL=34,padR=12,padT=14,padB=26;
+  const x=(i)=>padL+(W-padL-padR)*(pts.length===1?0.5:i/(pts.length-1));
+  const max=Math.max(...pts.map(p=>p.total),60);
+  const min=Math.min(...pts.map(p=>p.total),40);
+  const span=Math.max(max-min,10);
+  const y=(v)=>padT+(H-padT-padB)*(1-(v-min)/span);
+  const step=Math.ceil(span/3);
+  let grid="";
+  for(let v=min,vv=0;v<=max&&vv<=4;v+=step,vv++){ const gy=y(v); grid+='<line x1="'+padL+'" y1="'+gy+'" x2="'+(W-padR)+'" y2="'+gy+'" stroke="#edf0f4" stroke-width="1"/>'; }
+  const line=pts.map((p,i)=>((i?'L':'M')+x(i).toFixed(1)+' '+y(p.total).toFixed(1))).join(' ');
+  const area=line+' L'+x(pts.length-1).toFixed(1)+' '+(H-padB)+' L'+x(0).toFixed(1)+' '+(H-padB)+' Z';
+  const dots=pts.map((p,i)=>{
+    const d=new Date(p.ts||Date.now());
+    return '<circle cx="'+x(i).toFixed(1)+'" cy="'+y(p.total).toFixed(1)+'" r="'+ (i===pts.length-1?4.5:3)+'" fill="'+(i===pts.length-1?'#3b6ef5':'#7ba3f7')+'" stroke="#fff" stroke-width="1.5">'+
+      '<title>'+d.getMonth()+1+'/'+d.getDate()+' '+d.getHours()+':'+String(d.getMinutes()).padStart(2,'0')+' · '+p.total+'分 · '+escH(p.level)+'</title></circle>';
+  }).join('');
+  return '<svg viewBox="0 0 '+W+' '+H+'" style="width:100%;height:auto;display:block" role="img" aria-label="最近练习成绩趋势">'+
+    grid+
+    '<path d="'+area+'" fill="url(#tg)" opacity="0.14"/>'+
+    '<defs><linearGradient id="tg" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#3b6ef5"/><stop offset="1" stop-color="#3b6ef5" stop-opacity="0"/></linearGradient></defs>'+
+    '<path d="'+line+'" fill="none" stroke="#3b6ef5" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>'+
+    dots+
+    '</svg>';
+}
+function renderHistory(){
+  const h=JSON.parse(localStorage.getItem("zj_coach_hist")||"[]");
+  if(!h.length){ coachHist.innerHTML='<div class="empty">还没有练习记录，去抽一道题练练吧 👆</div>'; return; }
+  const trend=scoreTrendSVG(h);
+  const avg=Math.round(h.reduce((s,p)=>s+p.total,0)/h.length);
+  const best=Math.max(...h.map(p=>p.total));
+  const listHtml=h.slice(0,20).map(x=>
+    '<div class="hist"><div class="hist-top"><span class="hist-q">'+escH(x.q).slice(0,30)+(x.q.length>30?"…":"")+'</span>'+
+    '<span class="hist-score '+levelClass(x.level)+'">'+x.total+'分 · '+x.level+'</span></div>'+
+    '<div class="hist-meta">'+escH(x.c)+' · '+escH(x.t)+' · '+escH(x.time)+'</div></div>'
+  ).join('');
+  coachHist.innerHTML=
+    (trend?'<div class="hist-card"><div class="hist-card-top"><b>📈 成绩趋势</b>'+
+      '<span class="hist-sum">共 '+h.length+' 次 · 平均 <b class="'+levelClass(avg>=85?"优秀":avg>=75?"良好":avg>=60?"合格":"待提升")+'">'+avg+'</b> · 最高 <b class="lv-good">'+best+'</b></span></div>'+
+      trend+'</div>':'')+
+    '<div class="coach-history-list">'+listHtml+'</div>';
+}
+/* ===== 每日打卡 ===== */
+const CK_KEY="zj_ck_checkins";
+const TYPE_KEYS=Object.keys(TYPES);
+let currentAnswers={};
+let ckViewM=new Date();
+let ckRec=null, ckChunks=[], ckStream=null, ckKind=null, ckQid=null, ckTimer=null, ckSec=0;
+let ckActiveBtn=null; // 当前录制按钮引用，用于停止时重置 UI
+
+function getCheckins(){ try{ return JSON.parse(localStorage.getItem(CK_KEY)||"{}"); }catch(e){ return {}; } }
+function setCheckins(o){ localStorage.setItem(CK_KEY, JSON.stringify(o)); }
+
+function localDateStr(d){ const y=d.getFullYear(),m=String(d.getMonth()+1).padStart(2,'0'),da=String(d.getDate()).padStart(2,'0'); return y+'-'+m+'-'+da; }
+function dayIndex(d){ const base=new Date(2026,0,1); return Math.floor((d-base)/86400000); }
+function drawDaily(d){
+  const di=dayIndex(d);
+  const tA=TYPE_KEYS[((di%7)+7)%7], tB=TYPE_KEYS[((di+1)%7+7)%7];
+  const gA=Q.filter(x=>x.t===tA), gB=Q.filter(x=>x.t===tB);
+  if(!gA.length||!gB.length) return Q.slice(0,2);
+  const iA=((di*3)%gA.length+gA.length)%gA.length, iB=(((di*5+2)%gB.length)+gB.length)%gB.length;
+  return [gA[iA], gB[iB]];
+}
+function streakInfo(){
+  const ck=getCheckins(); let streak=0; const d=new Date();
+  if(!ck[localDateStr(d)]) d.setDate(d.getDate()-1);
+  while(ck[localDateStr(d)]){ streak++; d.setDate(d.getDate()-1); }
+  return streak;
+}
+function fmtSec(s){ return Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
+
+/* IndexedDB 存音视频 */
+function openDB(){ return new Promise((res,rej)=>{ const r=indexedDB.open('zjCkMedia',1); r.onupgradeneeded=e=>{ if(!e.target.result.objectStoreNames.contains('media')) e.target.result.createObjectStore('media'); }; r.onsuccess=e=>res(e.target.result); r.onerror=()=>rej(e); }); }
+function dbPut(id,val){ return openDB().then(db=>new Promise((res,rej)=>{ const tx=db.transaction('media','readwrite'); tx.objectStore('media').put(val,id); tx.oncomplete=()=>res(); tx.onerror=()=>rej(); })); }
+function dbGet(id){ return openDB().then(db=>new Promise((res,rej)=>{ const tx=db.transaction('media','readonly'); const g=tx.objectStore('media').get(id); g.onsuccess=()=>res(g.result); g.onerror=()=>rej(); })); }
+
+function ckResetRecUI(kind, qid){
+  if(ckTimer){ clearInterval(ckTimer); ckTimer=null; }
+  ckSec=0; ckRec=null; ckStream=null; ckKind=null; ckQid=null; ckChunks=[]; ckActiveBtn=null;
+  if(!kind || !qid) return;
+  const card=document.querySelector('.ck-q[data-qid="'+qid+'"]');
+  if(card){
+    const tm=card.querySelector('.ck-pane[data-kind="'+kind+'"] .ck-rectime');
+    if(tm) tm.textContent='';
+    const rb=card.querySelector('.ck-pane[data-kind="'+kind+'"] .ck-rec button');
+    if(rb){ rb.classList.remove('recording'); rb.textContent=kind==='audio'?'🎙 重录':'🎥 重录'; rb.onclick=()=>ckStartRec(kind,qid,rb); }
+  }
+}
+function ckStartRec(kind, qid, btn){
+  if(ckRec){ alert('请先结束当前录制再开始新的'); return; }
+  if(!navigator.mediaDevices || !window.MediaRecorder){ alert('当前浏览器不支持录音/录像，请用 Chrome/Edge/Safari，或改用「上传文件」'); return; }
+  const constraints={audio: kind==='audio' || kind==='video', video: kind==='video'};
+  navigator.mediaDevices.getUserMedia(constraints).then(stream=>{
+    ckStream=stream; ckKind=kind; ckQid=qid; ckChunks=[]; ckSec=0; ckActiveBtn=btn;
+    ckRec=new MediaRecorder(stream);
+    ckRec.ondataavailable=e=>{ if(e.data&&e.data.size) ckChunks.push(e.data); };
+    ckRec.onstop=()=>{
+      try{ stream.getTracks().forEach(t=>t.stop()); }catch(_){}
+      const blob=new Blob(ckChunks,{type:ckRec.mimeType||(kind==='audio'?'audio/webm':'video/webm')});
+      const id='m_'+Date.now()+'_'+Math.random().toString(36).slice(2,7);
+      dbPut(id,{blob,kind}).then(()=>{
+        currentAnswers[qid]={type:kind, mediaId:id, dur:ckSec};
+        const card=document.querySelector('.ck-q[data-qid="'+qid+'"]');
+        if(card){
+          const prev=card.querySelector('.ck-media-prev'); const url=URL.createObjectURL(blob);
+          prev.innerHTML = kind==='audio'?'<audio controls src="'+url+'"></audio>':'<video controls width="260" src="'+url+'"></video>';
+        }
+        updateSubmit();
+      }).finally(()=>{ ckResetRecUI(kind,qid); });
+    };
+    ckRec.onerror=e=>{ alert('录制出错：'+(e.message||'未知错误')); ckResetRecUI(kind,qid); };
+    ckRec.start();
+    btn.classList.add('recording'); btn.textContent='⏹ 停止'; btn.onclick=()=>ckStopRec();
+    const tm=btn.parentElement.querySelector('.ck-rectime'); if(tm) tm.textContent='已录 0:00';
+    ckTimer=setInterval(()=>{ ckSec++; if(tm) tm.textContent='已录 '+fmtSec(ckSec); },1000);
+  }).catch(err=>alert('无法访问'+(kind==='audio'?'麦克风':'摄像头')+'：'+err.message+'（需用 https 或 localhost 打开）'));
+}
+function ckStopRec(){
+  if(ckTimer){ clearInterval(ckTimer); ckTimer=null; }
+  if(ckRec && ckRec.state!=='inactive'){ try{ ckRec.stop(); }catch(e){} }
+  if(ckStream){ try{ ckStream.getTracks().forEach(t=>t.stop()); }catch(e){} }
+  const kind=ckKind, qid=ckQid;
+  setTimeout(()=>{ ckResetRecUI(kind,qid); }, 80);
+}
+function ckFile(e, qid){
+  const f=e.target.files[0]; if(!f) return;
+  const kind=f.type.indexOf('video')>=0?'video':'audio';
+  const id='m_'+Date.now()+'_'+Math.random().toString(36).slice(2,7);
+  dbPut(id,{blob:f,kind}).then(()=>{
+    currentAnswers[qid]={type:kind, mediaId:id, dur:0};
+    const card=document.querySelector('.ck-q[data-qid="'+qid+'"]');
+    if(card){ const prev=card.querySelector('.ck-media-prev'); const url=URL.createObjectURL(f);
+      prev.innerHTML = kind==='audio'?'<audio controls src="'+url+'"></audio>':'<video controls width="260" src="'+url+'"></video>'; }
+    updateSubmit();
+  });
+}
+function ckText(e, qid){
+  const v=e.target.value.trim();
+  if(v){ const a=currentAnswers[qid]||{}; a.type='text'; a.text=v; currentAnswers[qid]=a; }
+  else if(currentAnswers[qid] && !currentAnswers[qid].mediaId){ delete currentAnswers[qid]; }
+  updateSubmit();
+}
+function ckSwitchTab(btn, kind){
+  const card=btn.closest('.ck-q');
+  const id=card.dataset.qid;
+  if(ckRec && ckQid===id){ ckStopRec(); }
+  card.querySelectorAll('.ck-tab').forEach(t=>t.classList.toggle('on',t===btn));
+  card.querySelectorAll('.ck-pane').forEach(p=>p.classList.toggle('on',p.dataset.kind===kind));
+}
+function updateSubmit(){
+  const btn=document.getElementById('ckSubmit'); if(!btn) return;
+  const today=localDateStr(new Date());
+  if(getCheckins()[today]){ btn.disabled=true; btn.textContent='✅ 今日已打卡'; return; }
+  const qs=drawDaily(new Date()); const ok=qs.every(q=>{ const a=currentAnswers[qid(q)]; return a&&(a.text||a.mediaId); });
+  btn.disabled=!ok; btn.textContent= ok?'📅 完成今日打卡':'📅 完成今日打卡（两题都作答后可用）';
+}
+function renderQuestions(){
+  const today=localDateStr(new Date());
+  const done=getCheckins()[today];
+  const doneMap={};
+  if(done){ done.q.forEach((qidv,i)=>{ doneMap[qidv]=(i===0?done.a1:done.a2); }); }
+  Object.keys(currentAnswers).forEach(k=>{ if(!drawDaily(new Date()).some(q=>qid(q)===k)) delete currentAnswers[k]; });
+  const qs=drawDaily(new Date());
+  const wrap=document.getElementById('ckQuestions');
+  wrap.innerHTML=qs.map(q=>{
+    const id=qid(q);
+    const a=currentAnswers[id]||doneMap[id]||null;
+    const isDone=!!doneMap[id];
+    const dis=isDone?'disabled style="opacity:.55;cursor:not-allowed"':'';
+    const prevMedia = a&&a.mediaId? '<div class="ck-media-prev" data-id="'+a.mediaId+'"></div>' : '<div class="ck-media-prev"></div>';
+    const prevText = a&&a.text? a.text : '';
+    const doneTag = isDone?'<div class="ck-done-tag">✅ 今日已作答</div>':'';
+    const ro = isDone? "readonly" : "";
+    return `<div class="ck-q" data-qid="${id}">
+      ${doneTag}
+      <div class="ck-q-head"><div class="tags"><span class="badge" style="background:${TYPES[q.t].c}">${q.t}</span><span class="badge b-region">${q.c}</span></div><button class="speak-btn" data-q="${encodeURIComponent(q.q)}" onclick="speakQ(this)">🔊 朗读</button></div>
+      <div class="qt">${escapeHtml(q.q)}</div>
+      ${q.s?`<div class="src">${escapeHtml(q.s)}</div>`:''}
+      <div class="ck-tabs">
+        <div class="ck-tab on" onclick="ckSwitchTab(this,'text')">✍️ 文字</div>
+        <div class="ck-tab" onclick="ckSwitchTab(this,'audio')">🎙 录音</div>
+        <div class="ck-tab" onclick="ckSwitchTab(this,'video')">🎥 视频</div>
+      </div>
+      <div class="ck-pane on" data-kind="text"><textarea class="ck-textarea" placeholder="口述作答的文字版，或先打草稿…" oninput="ckText(event,'${id}')" ${ro}>${escapeHtml(prevText)}</textarea></div>
+      <div class="ck-pane" data-kind="audio"><div class="ck-rec"><button ${dis} onclick="ckStartRec('audio','${id}',this)">🎙 开始录音</button><label class="filelabel">📁 上传音频<input type="file" accept="audio/*" onchange="ckFile(event,'${id}')" ${dis}></label><span class="ck-rectime"></span></div>${prevMedia}</div>
+      <div class="ck-pane" data-kind="video"><div class="ck-rec"><button ${dis} onclick="ckStartRec('video','${id}',this)">🎥 录制视频</button><label class="filelabel">📁 上传视频<input type="file" accept="video/*" onchange="ckFile(event,'${id}')" ${dis}></label><span class="ck-rectime"></span></div>${prevMedia}</div>
+      <div class="ck-q-actions"><button class="ck-advice-btn" onclick="ckAdvice('${id}')">🤖 AI 点评</button><button class="ck-ref-btn" onclick="ckShowRef(this,'${id}')">📖 看参考思路</button><span class="ck-advice-hint">${isDone?'回看自己作答':'文字作答才能自动点评'}</span></div>
+      <div class="ck-advice-out" style="display:none"></div>
+      <div class="ck-ref" style="display:none"><div class="lab">参考思路 · ${q.t} 答题框架</div><div class="frame-steps">${(FRAMEWORK[q.t]||FRAMEWORK['综合分析']).stages.map(s=>'<span>'+s.label+'</span>').join('')}</div><ul>${assignPointsToStages(q.t,q.a).map(function(it){var fw=FRAMEWORK[q.t]||FRAMEWORK['综合分析'];return '<li><b class="fs">'+fw.stages[it.stageIdx].label+'</b> '+escapeHtml(it.point||fw.stages[it.stageIdx].hint)+'</li>';}).join('')}</ul><div class="lab">📝 本题满分模板（照着背，非唯一标准答案）</div><div class="ck-ex">${escapeHtml(buildExemplar(q))}</div></div>
+    </div>`;
+  }).join('');
+  wrap.querySelectorAll('.ck-media-prev[data-id]').forEach(async el=>{
+    const rec=await dbGet(el.dataset.id);
+    if(rec&&rec.blob){ const url=URL.createObjectURL(rec.blob); el.innerHTML= rec.kind==='audio'?'<audio controls src="'+url+'"></audio>':'<video controls width="260" src="'+url+'"></video>';
+      const card=el.closest('.ck-q'); const btn=card.querySelector('.ck-pane[data-kind="'+rec.kind+'"] .ck-rec button'); if(btn) btn.textContent=rec.kind==='audio'?'🎙 重录':'🎥 重录'; }
+  });
+  updateSubmit();
+}
+async function ckAdvice(id){
+  const q=Q.find(x=>qid(x)===id); if(!q) return;
+  const a=currentAnswers[id];
+  const out=document.querySelector('.ck-q[data-qid="'+id+'"] .ck-advice-out');
+  if(!a||!a.text){ out.style.display='block'; out.innerHTML='<div class="ai-comment">先写点文字作答，AI 才能点评～（录音/视频暂不支持自动转文字，可先打字）</div>'; return; }
+  out.style.display='block'; out.innerHTML='<div class="ai-comment">⏳ 评分中…</div>';
+  const cfg=loadCfg(); let r, isAI=false, errMsg='';
+  try{ if(cfg&&cfg.key){ r=await callAIScore(q,a.text,cfg); isAI=true; } else { r=scoreAnswer(q,a.text); } }
+  catch(e){ errMsg=e.message; r=scoreAnswer(q,a.text); isAI=false; }
+  let html=ckAdviceHTML(r,isAI);
+  if(errMsg) html='<div class="ai-comment">⚠️ 真 AI 评分失败（'+escapeHtml(errMsg)+'），已用规则评分：</div>'+html;
+  out.innerHTML=html;
+}
+function ckAdviceHTML(r,isAI){
+  const bars=Object.entries(r.dimScores).map(([k,v])=>'<div class="dim"><div class="dim-top"><span>'+k+'</span><b>'+v+'/10</b></div><div class="bar"><i style="width:'+(v*10)+'%"></i></div></div>').join('');
+  const badge=isAI?'<div class="ai-badge">🤖 AI 点评</div>':'';
+  const comment=(isAI&&r.comment)?'<div class="ai-comment"><b>📋 整体评价：</b>'+r.comment+'</div>':'';
+  const advice=(r.advice||[]).map(x=>'<li>'+x+'</li>').join('');
+  const follow=(isAI&&r.followUp)?'<div class="followup"><b>🎤 考官追问：</b>'+r.followUp+'</div>':'';
+  return '<div class="score-hero">'+badge+'<div class="score-num">'+r.total+'<span>分</span></div><div class="score-level '+levelClass(r.level)+'">'+r.level+'</div></div>'+comment+'<div class="dims">'+bars+'</div><div class="advice"><h4>📌 '+(isAI?'AI 建议':'考官建议')+'</h4><ul>'+advice+'</ul></div>'+follow;
+}
+function submitCheckin(){
+  const today=localDateStr(new Date()); const ck=getCheckins();
+  const qs=drawDaily(new Date()); const ids=qs.map(q=>qid(q));
+  if(!ids.every(id=>{ const a=currentAnswers[id]; return a&&(a.text||a.mediaId); })){ alert('两道题都作答了再打卡哦～'); return; }
+  ck[today]={ q:ids, a1:currentAnswers[ids[0]], a2:currentAnswers[ids[1]], time:new Date().toLocaleString('zh-CN') };
+  setCheckins(ck); currentAnswers={};
+  ids.forEach(id=>{ try{ srsLearn(id); }catch(e){} });
+  renderCheckin();
+  showCkSuccess(qs);
+}
+function showCkSuccess(qs){
+  const modal=document.getElementById('ckSuccessModal');
+  document.getElementById('ckModalStreak').innerHTML=streakInfo()+'<span>连续打卡天数</span>';
+  const total=Object.keys(getCheckins()).length;
+  const tags=[
+    '<div class="ck-modal-q"><b>累计打卡 '+total+' 天 · '+todayDateCN()+'</b>',
+    '<div>'+escapeHtml(qs[0].t)+'｜'+escapeHtml((qs[0].q||'').slice(0,50))+'</div>',
+    '<div>'+escapeHtml(qs[1].t)+'｜'+escapeHtml((qs[1].q||'').slice(0,50))+'</div></div>'
+  ].join('');
+  document.getElementById('ckModalQs').innerHTML=tags;
+  modal.classList.add('on');
+}
+function closeCkSuccess(){ document.getElementById('ckSuccessModal').classList.remove('on'); }
+function todayDateCN(){ const d=new Date(); return (d.getMonth()+1)+'月'+d.getDate()+'日'; }
+function renderCalendar(){
+  const y=ckViewM.getFullYear(), m=ckViewM.getMonth();
+  document.getElementById('ckCalTitle').textContent=y+'年'+(m+1)+'月';
+  const cal=document.getElementById('ckCal');
+  const wd=['日','一','二','三','四','五','六'];
+  let html=wd.map(w=>'<div class="wd">'+w+'</div>').join('');
+  const first=new Date(y,m,1).getDay();
+  const days=new Date(y,m+1,0).getDate();
+  const ck=getCheckins(); const today=localDateStr(new Date());
+  for(let i=0;i<first;i++) html+='<div class="day muted"></div>';
+  for(let d=1;d<=days;d++){
+    const ds=y+'-'+String(m+1).padStart(2,'0')+'-'+String(d).padStart(2,'0');
+    const checked=!!ck[ds]; const isToday=ds===today;
+    const cls='day'+(checked?' checked':'')+(isToday?' today':'')+(checked?' clickable':'');
+    html+='<div class="'+cls+'"'+(checked?' onclick="ckViewDay(\''+ds+'\')"':'')+'>'+d+'</div>';
+  }
+  cal.innerHTML=html;
+}
+function renderCkDayHTML(ds,rec){
+  const getQ=id=>Q.find(x=>qid(x)===id);
+  const q1=getQ(rec.q[0]), q2=getQ(rec.q[1]);
+  const item=(q,a)=>{
+    if(!q) return '';
+    const media=a.mediaId?'<div class="ck-hist-media" data-id="'+a.mediaId+'"></div>':'';
+    const txt=a.text?'<div class="ck-hist-text">'+escapeHtml(a.text)+'</div>':'';
+    const tag=a.type==='text'?'文字':(a.type==='audio'?'🎙 音频'+(a.dur?(' '+fmtSec(a.dur)):''):'🎥 视频'+(a.dur?(' '+fmtSec(a.dur)):''));
+    return '<div class="ck-hist-q">▸ '+escapeHtml(q.t)+'｜'+escapeHtml((q.q||'').slice(0,38))+' <span class="ck-hist-dur">['+tag+']</span></div>'+media+txt;
+  };
+  return '<div class="ck-hist" id="ckhist-'+ds+'"><div class="ck-hist-top"><span class="ck-hist-date">📅 '+ds+'</span><span class="ck-hist-dur">'+rec.time+'</span></div>'+item(q1,rec.a1)+item(q2,rec.a2)+'</div>';
+}
+function renderCkHistory(){
+  const ck=getCheckins();
+  const dates=Object.keys(ck).sort().reverse();
+  const h=document.getElementById('ckHistory');
+  if(!dates.length){ h.innerHTML='<div class="ck-empty">还没有打卡记录，今天就来第一天的 💪</div>'; return; }
+  h.innerHTML=dates.map(ds=>renderCkDayHTML(ds,ck[ds])).join('');
+  loadCkDayMedia();
+}
+async function loadCkDayMedia(){
+  document.querySelectorAll('.ck-hist-media[data-id]').forEach(async el=>{
+    if(el.dataset.loaded) return; el.dataset.loaded='1';
+    const rec=await dbGet(el.dataset.id);
+    if(rec&&rec.blob){ const url=URL.createObjectURL(rec.blob); el.innerHTML=rec.kind==='audio'?'<audio controls src="'+url+'"></audio>':'<video controls width="260" src="'+url+'"></video>'; }
+  });
+}
+function ckViewDay(ds){ renderCkHistory(); setTimeout(()=>{ const el=document.getElementById('ckhist-'+ds); if(el) el.scrollIntoView({behavior:'smooth',block:'center'}); },60); }
+function renderCheckin(){
+  const today=localDateStr(new Date()); const ck=getCheckins();
+  document.getElementById('ckStreak').textContent=streakInfo();
+  document.getElementById('ckTotalLab').textContent='累计打卡 '+Object.keys(ck).length+' 天';
+  document.getElementById('ckDate').textContent=today+' · 今日 2 题';
+  const st=document.getElementById('ckStatus');
+  if(ck[today]){ st.className='ck-status done'; st.innerHTML='<span class="dot"></span> 今日已打卡 ✅ 连续 '+streakInfo()+' 天'; }
+  else{ st.className='ck-status'; st.innerHTML='<span class="dot" style="background:#f59e0b"></span> 今天还没打卡，完成 2 题作答即可点亮日历'; }
+  renderQuestions(); renderCalendar(); renderCkHistory();
+  renderBadges(); renderWeak();
+  document.getElementById('ckRedo').style.display = ck[today]? 'inline-block':'none';
+}
+
+/* 朗读 / 打卡参考思路 / 徽章 / 薄弱统计 / 重答 / 收藏导出 */
+let ckSpeaking=null;
+function speakQ(btn){
+  const text=decodeURIComponent(btn.dataset.q||'');
+  if(ckSpeaking===btn && window.speechSynthesis && speechSynthesis.speaking){ speechSynthesis.cancel(); btn.classList.remove('on'); btn.textContent='🔊 朗读'; ckSpeaking=null; return; }
+  if(!('speechSynthesis' in window)){ alert('当前浏览器不支持朗读，请手动读题～'); return; }
+  speechSynthesis.cancel();
+  document.querySelectorAll('.speak-btn.on').forEach(b=>{ b.classList.remove('on'); b.textContent='🔊 朗读'; });
+  const u=new SpeechSynthesisUtterance(text); u.lang='zh-CN'; u.rate=1; u.pitch=1;
+  u.onend=()=>{ btn.classList.remove('on'); btn.textContent='🔊 朗读'; ckSpeaking=null; };
+  speechSynthesis.speak(u);
+  btn.classList.add('on'); btn.textContent='🔇 停止'; ckSpeaking=btn;
+}
+function ckShowRef(btn,id){
+  const card=document.querySelector('.ck-q[data-qid="'+id+'"]'); if(!card) return;
+  const box=card.querySelector('.ck-ref');
+  if(box.style.display==='block'){ box.style.display='none'; btn.classList.remove('on'); btn.textContent='📖 看参考思路'; }
+  else{ box.style.display='block'; btn.classList.add('on'); btn.textContent='🔼 收起思路'; box.scrollIntoView({behavior:'smooth',block:'nearest'}); }
+}
+function renderBadges(){
+  const s=streakInfo();
+  const ms=[{d:7,e:'🥉',n:'7天'},{d:21,e:'🥈',n:'21天'},{d:30,e:'🏆',n:'30天'}];
+  const box=document.getElementById('ckBadges'); if(!box) return;
+  let next=null;
+  const html=ms.map(m=>{ const on=s>=m.d; if(!on&&!next) next=m; return '<span class="ck-badge'+(on?'':' locked')+'">'+(on?m.e:'🔒')+' '+m.n+(on?' 已解锁':'')+'</span>'; }).join('');
+  box.innerHTML=html+(next?'<div class="ck-next">再坚持 '+(next.d-s)+' 天解锁 '+next.e+' '+next.n+' 徽章</div>':'<div class="ck-next">🎉 已解锁全部徽章，太强了！</div>');
+}
+function renderWeak(){
+  const h=JSON.parse(localStorage.getItem('zj_coach_hist')||'[]');
+  const box=document.getElementById('ckWeak'); if(!box) return;
+  if(!h.length){ box.innerHTML='<h3>📊 我的练习画像</h3><div class="ck-weak-empty">还没有模拟考官练习记录，去「🎯 AI 模拟考官」练几题，这里会显示你的薄弱题型～</div>'; return; }
+  const map={};
+  h.forEach(x=>{ if(!map[x.t]) map[x.t]={sum:0,n:0}; map[x.t].sum+=x.total; map[x.t].n++; });
+  const rows=Object.keys(map).map(t=>({t,avg:Math.round(map[t].sum/map[t].n),n:map[t].n})).sort((a,b)=>a.avg-b.avg);
+  const maxAvg=Math.max.apply(null,rows.map(r=>r.avg))||1;
+  const minT=rows[0].t;
+  const color=t=>TYPES[t]?TYPES[t].c:'#64748b';
+  const html=rows.map(r=>{
+    const pct=Math.max(8,Math.round(r.avg/maxAvg*100));
+    const weak=r.t===minT?'<span class="weak-tag">最薄弱</span>':'';
+    return '<div class="ck-weak-row"><span class="ck-weak-name">'+r.t+'</span><span class="ck-weak-bar"><i style="width:'+pct+'%;background:'+color(r.t)+'"></i></span><span class="ck-weak-val">'+r.avg+'分 · '+r.n+'次'+weak+'</span></div>';
+  }).join('');
+  box.innerHTML='<h3>📊 我的练习画像（按题型平均分，越低越要练）</h3>'+html;
+}
+function ckRedoToday(){
+  if(!confirm('确定覆盖今天的打卡记录、重新作答吗？（之前的作答会清空）')) return;
+  const today=localDateStr(new Date()); const ck=getCheckins();
+  delete ck[today]; setCheckins(ck); currentAnswers={};
+  renderCheckin();
+}
+function ckRedoFromModal(){
+  closeCkSuccess();
+  const today=localDateStr(new Date()); const ck=getCheckins();
+  delete ck[today]; setCheckins(ck); currentAnswers={};
+  renderCheckin();
+}
+function exportFav(type){
+  const favs=getFavs(); const list=Q.filter(x=>favs.indexOf(qid(x))>=0);
+  if(!list.length){ alert('还没有收藏题目～'); return; }
+  const notes=getQNotes();
+  let text='我的结构化面试收藏题（共 '+list.length+' 题）\n生成时间：'+new Date().toLocaleString('zh-CN')+'\n\n';
+  list.forEach((x,i)=>{
+    text+=(i+1)+'. 【'+x.t+'｜'+x.c+'】'+x.q+'\n';
+    if(x.s) text+='   📌 '+x.s+'\n';
+    text+='   参考思路：\n';
+    x.a.forEach(p=>text+='     · '+p+'\n');
+    const nid=qid(x); if(notes[nid]) text+='   ✍️ 我的笔记：'+notes[nid].text+'\n';
+    text+='\n';
+  });
+  if(type==='print'){
+    const w=window.open('','_blank');
+    if(!w){ alert('浏览器拦截了打印窗口，改用「下载清单」吧～'); return; }
+    w.document.write('<pre style="font-family:system-ui;white-space:pre-wrap;padding:24px;line-height:1.7">'+escapeHtml(text)+'</pre>');
+    w.document.close(); w.focus(); w.print();
+  } else {
+    const blob=new Blob([text],{type:'text/plain;charset=utf-8'});
+    const a=document.createElement('a'); a.href=URL.createObjectURL(blob); a.download='结构化面试收藏题.txt'; a.click();
+    setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+  }
+}
+
+/* ===== 间隔复习（SRS，Leitner 式） ===== */
+const SRS_KEY="zj_srs";
+const SRS_INTERVALS=[1,3,7,14,30];      // box0..4 对应的下次复习间隔（天）
+function getSrs(){ try{ return JSON.parse(localStorage.getItem(SRS_KEY)||"{}"); }catch(e){ return {}; } }
+function setSrs(o){ localStorage.setItem(SRS_KEY,JSON.stringify(o)); }
+function addDays(ts,n){ return ts + n*86400000; }
+/* 把一题纳入复习计划（首次作答后调用）：新题进 box0，已存在则顺延其到期日 */
+function srsLearn(qidV){
+  const s=getSrs();
+  if(!s[qidV]){
+    s[qidV]={box:0,next:addDays(Date.now(),SRS_INTERVALS[0]),last:Date.now(),reps:0};
+  } else if(s[qidV].next < Date.now()){
+    s[qidV].next=addDays(Date.now(), SRS_INTERVALS[Math.min(s[qidV].box,SRS_INTERVALS.length-1)]);
+  }
+  setSrs(s);
+}
+function srsRate(qidV, verdict){
+  const s=getSrs(), now=Date.now();
+  let e=s[qidV]||{box:0,last:now,reps:0};
+  e.reps=(e.reps||0)+1; e.last=now;
+  if(verdict==="good"){                 // 记住了 → 升一档，间隔拉长
+    e.box=Math.min(e.box+1, SRS_INTERVALS.length-1);
+    e.next=addDays(now, SRS_INTERVALS[e.box]);
+  } else if(verdict==="mid"){           // 模糊 → 不升档，1~3 天后重看
+    e.next=addDays(now, Math.max(1, Math.floor(SRS_INTERVALS[e.box]/3)));
+  } else {                              // 忘了 → 重置到最短
+    e.box=0; e.next=addDays(now, 1);
+  }
+  s[qidV]=e; setSrs(s);
+}
+function srsStats(){
+  const s=getSrs(); const now=Date.now();
+  let due=0, newCnt=0, learned=0;
+  const ids=Object.keys(s);
+  ids.forEach(id=>{ if(s[id].next<=now) due++; });
+  learned=ids.length;
+  // 待学新题 = 还没练过但可学的（从真题里挑没进计划的）——为避免超纲只算数量提示
+  const inPlan=new Set(ids);
+  const availNew=Q.filter(x=>!inPlan.has(qid(x)) && qSource(x)!=="模拟").length;
+  return {due, learned, newAvail:availNew};
+}
+function dueCards(limit){
+  const s=getSrs(), now=Date.now();
+  const arr=Object.keys(s).filter(id=>s[id].next<=now).map(id=>{
+    const q=Q.find(x=>qid(x)===id);
+    return q?{q, e:s[id]}:null;
+  }).filter(Boolean).sort((a,b)=>a.e.next-b.e.next);
+  return arr.slice(0,limit||20);
+}
+let rvSession=null;   // {cards:[{q,e}], idx}
+function renderReview(){
+  const due=dueCards(20);
+  document.getElementById("rvDue").textContent=due.length;
+  const st=srsStats();
+  const statsBox=document.getElementById("rvStats");
+  const learnedNames=["😐","🟢","🔵","🟣","🟠"];
+  let tiers={};
+  Object.values(getSrs()).forEach(e=>{ tiers[e.box]=(tiers[e.box]||0)+1; });
+  statsBox.innerHTML=
+    '<div class="rv-stat"><b>'+st.learned+'</b><span>已纳入计划</span></div>'+
+    '<div class="rv-stat"><b>'+st.due+'</b><span>今天到期</span></div>'+
+    '<div class="rv-stat"><b>'+(st.newAvail>0?st.newAvail:0)+'</b><span>还可学习</span></div>'+
+    '<div class="rv-stat" style="min-width:150px"><span style="display:block;font-size:12px;color:var(--sub);margin-bottom:4px">已掌握进度</span><span style="font-size:12.5px;letter-spacing:1px">'+[0,1,2,3,4].map(i=>(tiers[i]||0)>0?(i+1)+'档×'+tiers[i]:'').filter(Boolean).join(' · ')||'还没有复习记录'+'</span></div>';
+  const startBox=document.getElementById("rvStart");
+  const body=document.getElementById("rvBody");
+  if(!due.length){
+    startBox.innerHTML="";
+    body.innerHTML='<div class="rv-empty">'+ 
+      (Object.keys(getSrs()).length?"<b>今日复习完成 🎉</b><br>到期题目都已复习完。明天再来，或用 AI 考官 / 打卡练新题，会自动加入计划。":
+      "<b>复习计划还是空的</b><br>在「🎯 AI 模拟考官」或「📅 每日打卡」答过一题后，会自动进入这里；到期时回到本页，按记忆曲线重练就能记得牢。")+
+      '</div>';
+    return;
+  }
+  startBox.innerHTML='<button class="rv-startbtn" onclick="rvStart()">开始复习 · 今天 '+due.length+' 题</button>';
+  body.innerHTML='';   // 开始后逐个展示
+}
+function rvStart(){
+  const cards=dueCards(20);
+  if(!cards.length) return;
+  rvSession={cards, idx:0};
+  rvShowOne();
+}
+function rvShowOne(){
+  const body=document.getElementById("rvBody");
+  const startBox=document.getElementById("rvStart"); startBox.innerHTML="";
+  if(!rvSession || rvSession.idx>=rvSession.cards.length){ rvSession=null; renderReview(); return; }
+  const {q,e}=rvSession.cards[rvSession.idx];
+  const total=rvSession.cards.length, cur=rvSession.idx+1;
+  const qidV=qid(q);
+  const src=qSource(q);
+  const srcTag= src==="真题"?"":'<span class="badge '+(src==="经典练习"?"src-cls":"src-sim")+'">'+src+'</span>';
+  body.innerHTML=
+    '<div class="rv-progress">复习 '+cur+' / '+total+' · 当前第 '+(e.box+1)+' 档，下次本应 '+(e.box>=1?SRS_INTERVALS[e.box]+' 天':'1 天')+'后</div>'+
+    '<div class="rv-q" id="rvCard">'+
+      '<div class="rv-q-head tags"><span class="badge b-region">'+q.c+'</span>'+srcTag+'<span class="badge" style="background:'+TYPES[q.t].c+'1a;color:'+TYPES[q.t].c+'">'+q.t+'</span></div>'+
+      '<div class="qt">'+escapeHtml(q.q)+'</div>'+
+      (q.s?'<div class="src">📌 '+escapeHtml(q.s)+'</div>':'')+
+      '<button class="rv-reveal" onclick="rvReveal()">👀 先自己口述，再点开参考答案</button>'+
+      '<div class="rv-ans" id="rvAns"><span class="lab">参考思路 · '+q.t+' 答题框架</span>'+
+        '<div class="frame-steps">'+((FRAMEWORK[q.t]||FRAMEWORK['综合分析']).stages.map(s=>'<span>'+s.label+'</span>').join(''))+'</div>'+
+        '<ul>'+assignPointsToStages(q.t,q.a).map(function(it){var fw=FRAMEWORK[q.t]||FRAMEWORK['综合分析'];return '<li><b class="fs">'+fw.stages[it.stageIdx].label+'</b> '+escapeHtml(it.point||fw.stages[it.stageIdx].hint)+'</li>';}).join('')+'</ul>'+
+        '<div style="margin-top:12px" class="rv-rate">'+
+          '<button class="low" onclick="rvRate(\''+qidV+'\',\'forgot\')">😵 忘了</button>'+
+          '<button class="mid" onclick="rvRate(\''+qidV+'\',\'mid\')">🤔 有点模糊</button>'+
+          '<button class="good" onclick="rvRate(\''+qidV+'\',\'good\')">😎 记住了</button>'+
+        '</div>'+
+      '</div>'+
+    '</div>';
+}
+function rvReveal(){
+  const a=document.getElementById("rvAns"); if(a) a.classList.add("show");
+  const btn=document.querySelector(".rv-reveal"); if(btn) btn.style.display="none";
+}
+function rvRate(qidV, verdict){
+  srsRate(qidV, verdict);
+  rvSession.idx++;
+  rvShowOne();
+}
+
+/* 打卡初始化绑定 */
+document.getElementById('ckSubmit').onclick=submitCheckin;
+document.getElementById('ckPrevM').onclick=()=>{ ckViewM.setMonth(ckViewM.getMonth()-1); renderCalendar(); };
+document.getElementById('ckNextM').onclick=()=>{ ckViewM.setMonth(ckViewM.getMonth()+1); renderCalendar(); };
+
+/* 初始渲染（放在所有定义之后，避免 const 初始化顺序问题） */
+render();
+updateSrcNote();
+resetTimer();
+
+/* 回到顶部按钮 */
+const toTop=document.getElementById("toTop");
+window.addEventListener("scroll",()=>{ if(toTop) toTop.classList.toggle("show", window.scrollY>400); });
+if(toTop) toTop.onclick = ()=>{
+  // 点下去时按钮自己"飞走"出去，同时页面平滑回顶；按钮落到视口外
+  // （移动端对 window.scrollTo 的 smooth 支持度不一致，所以也加这个视觉过渡避免突兀）
+  toTop.classList.add("flying");
+  const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  setTimeout(()=>{ toTop.classList.remove("flying"); }, 950);
+};
+</script>
+
+<!-- 打卡成功弹窗 -->
+<div id="ckSuccessModal" class="ck-modal" onclick="if(event.target===this)closeCkSuccess()">
+  <div class="ck-modal-box">
+    <div class="ck-modal-icon">🎉</div>
+    <div class="ck-modal-title">今日打卡成功</div>
+    <div class="ck-modal-streak" id="ckModalStreak">0<span>连续打卡天数</span></div>
+    <div id="ckModalQs"></div>
+    <div class="ck-modal-tip">点「继续学习」关闭后，截下方 <b>连续天数 + 打卡日历 + 记录</b>，发到学习群一起坚持 💪</div>
+    <button class="ck-modal-btn ghost" onclick="ckRedoFromModal()">🔄 重新作答</button>
+    <button class="ck-modal-btn" onclick="closeCkSuccess()">继续学习</button>
+  </div>
+</div>
+
+<footer>
+  数据来源于各机构整理的「考生回忆版」真题，仅供备考参考，具体以当年各地公告为准。<br>
+  答题思路为通用参考框架，非标准答案。祝宝宝顺利上岸 🌟
+</footer>
+
+<button class="to-top" id="toTop" title="回到顶部" aria-label="回到顶部">↑</button>
+</body>
+</html>
